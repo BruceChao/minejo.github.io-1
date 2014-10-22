@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Jonathan's Blog]]></title>
-  <link href="http://jonathan-li.me/atom.xml" rel="self"/>
-  <link href="http://jonathan-li.me/"/>
-  <updated>2014-10-22T17:09:32+08:00</updated>
-  <id>http://jonathan-li.me/</id>
+  <link href="http://minejo.github.io/atom.xml" rel="self"/>
+  <link href="http://minejo.github.io/"/>
+  <updated>2014-10-22T18:17:20+08:00</updated>
+  <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[《陆犯焉识》读书笔记]]></title>
-    <link href="http://jonathan-li.me/blog/2014/06/08/criminal-lu-readnote/"/>
+    <link href="http://minejo.github.io/blog/2014/06/08/criminal-lu-readnote/"/>
     <updated>2014-06-08T13:14:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/06/08/criminal-lu-readnote</id>
+    <id>http://minejo.github.io/blog/2014/06/08/criminal-lu-readnote</id>
     <content type="html"><![CDATA[<blockquote><p>要是他跑到婉喻面前，跟她说，我和你发生了一场误会……也许我跟自己发生了一场误会；我爱的，却认为不爱。一代代的小说家戏剧家苦苦地写了那么多，就是让我们人能了解自己，而我们人还是这么不了解自己。一定要倾国倾城，一定要来一场灭顶之灾，一场无期流放才能了解自己，知道自己曾经是爱的。</p></blockquote>
 
 <p>-At Kindle page:1395-1398</p>
@@ -141,9 +141,9 @@
   
   <entry>
     <title type="html"><![CDATA[《围城》读书笔记]]></title>
-    <link href="http://jonathan-li.me/blog/2014/05/17/fortress-besieged/"/>
+    <link href="http://minejo.github.io/blog/2014/05/17/fortress-besieged/"/>
     <updated>2014-05-17T08:37:11+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/05/17/fortress-besieged</id>
+    <id>http://minejo.github.io/blog/2014/05/17/fortress-besieged</id>
     <content type="html"><![CDATA[<blockquote><p>这一张文凭，仿佛有 亚当、夏娃下身那片树叶的功用，可以遮羞包丑；小小一方纸能把一个人的空疏 、寡陋、愚笨都掩盖起来。</p></blockquote>
 
 <p>-At Kindle page:149-151</p>
@@ -193,9 +193,9 @@
   
   <entry>
     <title type="html"><![CDATA[《遇见未知的自己》读书笔记]]></title>
-    <link href="http://jonathan-li.me/blog/2014/03/14/run-into-the-unkown-myself-readnote/"/>
+    <link href="http://minejo.github.io/blog/2014/03/14/run-into-the-unkown-myself-readnote/"/>
     <updated>2014-03-14T15:03:29+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/03/14/run-into-the-unkown-myself-readnote</id>
+    <id>http://minejo.github.io/blog/2014/03/14/run-into-the-unkown-myself-readnote</id>
     <content type="html"><![CDATA[<blockquote><p>“所以呀，记住，管好自己的事最重要。”老人提醒她，“为我们的亲人担心，其实是一种不负责任的加害行为！”</p></blockquote>
 
 <p>-At Kindle page:1191-1192</p>
@@ -269,9 +269,9 @@
   
   <entry>
     <title type="html"><![CDATA[《没有色彩的多崎作和他的巡礼之年》读书笔记]]></title>
-    <link href="http://jonathan-li.me/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote/"/>
+    <link href="http://minejo.github.io/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote/"/>
     <updated>2014-03-02T15:52:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote</id>
+    <id>http://minejo.github.io/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote</id>
     <content type="html"><![CDATA[<blockquote><p>长相是端正的，尽管时常被人夸奖，但那也只不过是在“没什么特别破绽”范畴中。他自己看着镜子的脸时，时常会感觉到一种无可救药的乏味。</p></blockquote>
 
 <p>-At Kindle page:118-119</p>
@@ -345,9 +345,9 @@
   
   <entry>
     <title type="html"><![CDATA[通过8个技巧让你成为一个超强的Linux终端用户]]></title>
-    <link href="http://jonathan-li.me/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks/"/>
+    <link href="http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks/"/>
     <updated>2014-02-28T16:52:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks</id>
+    <id>http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks</id>
     <content type="html"><![CDATA[<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/bash-tricks-header.png" alt="ternimal" /></p>
 
 <p>使用Linux终端不仅仅是只输入命令。学习这些基本的技巧，你就会逐渐掌握Bash shell，这个在大多数Linux发行版上默认使用的终端工具。</p>
@@ -448,9 +448,9 @@
   
   <entry>
     <title type="html"><![CDATA[如何在Linux上提高文本文件的搜索效率]]></title>
-    <link href="http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
+    <link href="http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
     <updated>2014-02-26T00:00:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently</id>
+    <id>http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently</id>
     <content type="html"><![CDATA[<p>对于系统管理员或程序员来说，当需要在复杂配置的目录中或者在大型源码树中搜寻特定的文本或模式时，grep类型的工具大概是最受欢迎的。</p>
 
 <p>如果grep是你最喜欢的工具之一，那么你可能会更喜欢ack。ack是一个基于Perl的类似于grep的命令行工具，但是搜索速度更快，能力比grep更强。尤其是当你是程序员时，我强烈推荐你使用ack来取代grep。
@@ -553,9 +553,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[使用kindle笔记来做fortune名言后的玩法]]></title>
-    <link href="http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
+    <link href="http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
     <updated>2014-02-18T14:48:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
+    <id>http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
     <content type="html"><![CDATA[<p>kde桌面上有一个fortune插件，可随机显示名言名句，但是默认的都是英文的名句，看了没什么意思，于是我想到用我在kindle上的笔记来做名言显示给自己看，多有意义，又能经常温习之前读过的好书。</p>
 
 <p>首先说下<code>fortune</code>，这是一个随机显示名言名句的linux命令行软件，算是比较简单而又非常有名的Linux程序了,安装相信应该不用我说了。fortune安装好后默认有许多英文名言，如果装了中文包的话可能还有唐诗300首。fortune支持使用自定义文本来做名言。</p>
@@ -636,7 +636,7 @@ $ sudo chmod 0755 /usr/local/bin/ack
 
 
 <p>效果如下：
-<img src="http://jonathan-li.me/images/blog_kindle_fortune_t.png"></p>
+<img src="http://minejo.github.io/images/blog_kindle_fortune_t.png"></p>
 
 <p>同时你可以把这个脚本加到<code>.bashrc</code>中，这样每次打开终端就能看到笔记啦。</p>
 
@@ -648,15 +648,15 @@ $ sudo chmod 0755 /usr/local/bin/ack
 </code></pre>
 
 <p>效果图：
-<img src="http://jonathan-li.me/images/blog_kindle_fortune.png"></p>
+<img src="http://minejo.github.io/images/blog_kindle_fortune.png"></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[我最喜欢的Linux应用]]></title>
-    <link href="http://jonathan-li.me/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong/"/>
+    <link href="http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong/"/>
     <updated>2014-02-16T20:25:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong</id>
+    <id>http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong</id>
     <content type="html"><![CDATA[<ul>
 <li>发行版：Arch</li>
 <li>桌面环境：KDE</li>
@@ -690,9 +690,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[解决chromium播放豆瓣fm重影问题]]></title>
-    <link href="http://jonathan-li.me/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/"/>
+    <link href="http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/"/>
     <updated>2014-01-27T12:22:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti</id>
+    <id>http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti</id>
     <content type="html"><![CDATA[<p>由于在linux下用惯了chroium，更新快，最适合我们这帮爱折腾的人了。但是chromium放豆瓣fm的时候flash会出问题，即歌名会重影。</p>
 
 <p>去论坛查了下，原来是chromium用的flash版本是11.2,而chrome的flash是11.7，要么换成chrome，要么手动装个高版本flash。</p>
@@ -705,9 +705,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[Exercises For the Muscle]]></title>
-    <link href="http://jonathan-li.me/blog/2014/01/10/exercises-for-the-muscle/"/>
+    <link href="http://minejo.github.io/blog/2014/01/10/exercises-for-the-muscle/"/>
     <updated>2014-01-10T22:32:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/01/10/exercises-for-the-muscle</id>
+    <id>http://minejo.github.io/blog/2014/01/10/exercises-for-the-muscle</id>
     <content type="html"><![CDATA[<p>按照视频《8分钟给你6块腹肌》练了一周后，我发现效果真的好不错，而且睡觉还更香了，锻炼身体什么的果然有益啊。</p>
 
 <p>今天练完后顺便去原视频发布的网站上逛了下，<a href="http://www.passion4profession.net/">http://www.passion4profession.net/</a> ,really nice website，顺便注册了下，同时找了下锻炼Pectoral, Biceps and Triceps的方法，直接附youtube视频如下，mark下,勤加练习。</p>
@@ -747,9 +747,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[2013年读过的一些不错的书]]></title>
-    <link href="http://jonathan-li.me/blog/2014/01/01/2013nian-du-shu-zong-jie/"/>
+    <link href="http://minejo.github.io/blog/2014/01/01/2013nian-du-shu-zong-jie/"/>
     <updated>2014-01-01T00:44:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/01/01/2013nian-du-shu-zong-jie</id>
+    <id>http://minejo.github.io/blog/2014/01/01/2013nian-du-shu-zong-jie</id>
     <content type="html"><![CDATA[<p>总的来说，自从6月7号买了kindle后，今年看的书比往年来说还是比较多的。哈哈，kindle还是物有所值的。但其实看书时间还是远远不够的，现在基本都是晚上在床上看1-2小时，但是每次都看到半夜，第二天效率不太高，所以2014年要更合理的安排读书时间，嗯！</p>
 
 <p>下面我就我看过的书一个一个做个总结吧。</p>
@@ -908,9 +908,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[10000 hours 开源项目设计]]></title>
-    <link href="http://jonathan-li.me/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji/"/>
+    <link href="http://minejo.github.io/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji/"/>
     <updated>2013-11-25T17:32:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji</id>
+    <id>http://minejo.github.io/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji</id>
     <content type="html"><![CDATA[<p>前天偶然间逛知乎发现了彭莹的<a href="http://yingpeng.me/">blog</a>, 惊叹与她的10000 hour的计划和她超强的自律能力外，我了解了10000 hours of practice。</p>
 
 <pre><code>In the book Outliers, author Malcolm Gladwell says that it takes roughly ten thousand hours of practice to achieve mastery in a field. 
@@ -930,14 +930,14 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[使用Gtick做吉他的节拍器]]></title>
-    <link href="http://jonathan-li.me/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi/"/>
+    <link href="http://minejo.github.io/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi/"/>
     <updated>2013-11-20T23:40:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi</id>
+    <id>http://minejo.github.io/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi</id>
     <content type="html"><![CDATA[<p>今天练和弦的时候突然发现节拍什么的真的不好掌握，忽快忽慢的，本来想买个现成的节拍器的，突然想起不就是打节拍吗？这么简单的功能专门买个节拍器有点不划算，于是我就是AUR中心找了下，找到了这个<code>gtick</code>,它的介绍是这样的：
     A Gtk metronome application supporting different meters and speeds.</p>
 
 <p>安装完之后发现，界面确实挺简单的，不过但从节拍这个功能来说已经够用了。
-<img src="http://jonathan-li.me/images/gtick.png"></p>
+<img src="http://minejo.github.io/images/gtick.png"></p>
 
 <p>不过要理解这个软件，还要对BGM这个概率有所了解，<a href="http://en.wikipedia.org/wiki/Tempo">you can see this</a>,看完后应该就差不多会用了哈，我吉他用的话，好多曲子都是120拍的，可以保存到profile里。</p>
 ]]></content>
@@ -945,9 +945,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[self-introduce for interview]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview/"/>
+    <link href="http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview/"/>
     <updated>2013-10-12T15:32:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview</id>
+    <id>http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview</id>
     <content type="html"><![CDATA[<p>   Good morning, my name is Li Chao, it is really a great honor to have this opportunity for a interview. Now I will introduce myself briefly, I am 21 years old, born in jiangsu province. My major is communication engineering.</p>
 
 <p>   During the school, I have obtained a second-class scholarship three times and merit student and outstanding members and other honorary titles.</p>
@@ -973,9 +973,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[重新部署octopress]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/10/zhong-xin-bu-shu-octopress/"/>
+    <link href="http://minejo.github.io/blog/2013/10/10/zhong-xin-bu-shu-octopress/"/>
     <updated>2013-10-10T15:27:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/10/zhong-xin-bu-shu-octopress</id>
+    <id>http://minejo.github.io/blog/2013/10/10/zhong-xin-bu-shu-octopress</id>
     <content type="html"><![CDATA[<p>今天不小心手贱把博客目录给删了，没办法只好去github重新clone了一遍，结果配置了几次都不对，最后还是网上搜了一下才搞对的，看来我对git的用法还不是很了解啊。</p>
 
 <p>重新配置时的基本操作我就不说，我这篇文章里有<a href="http://minejo.github.io/blog/2013/08/09/shi-yong-github-plus-octopresszuo-blog/">使用Github+Octopress做Blog</a>,重新配置只要把github上的那个代码clone下来即可。</p>
@@ -996,9 +996,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[ArchLinux中用Hostapd创建热点给手机使用]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/"/>
+    <link href="http://minejo.github.io/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/"/>
     <updated>2013-10-10T11:32:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong</id>
+    <id>http://minejo.github.io/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong</id>
     <content type="html"><![CDATA[<p>折腾了一天，终于把linux的无线共享搞定了，之前总是搞不定是因为hostapd2.0和NetworkManager冲突了，吐嘈无力，
 好不容易从gnome切换到kde，安享NM还没多长时间，没想到又出事了，罢了，只有卸载了NetworkManager了，以后上网就准备转向netctl了。</p>
 
@@ -1104,9 +1104,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[弃用gnome转向KDE]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/"/>
+    <link href="http://minejo.github.io/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/"/>
     <updated>2013-10-08T20:46:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde</id>
+    <id>http://minejo.github.io/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde</id>
     <content type="html"><![CDATA[<p>用了好久的gnome，今天终于受不了了，arch里的gnome阉割了ibus功能，但是gnome又依赖ibus，于是就有了各种蛋疼的问题，比如Qt，GTK等程序经常用不了fcitx输入法，即使重定义的im方法都没用，而且NetworkManager也有问题，每次上网都要先手动开网卡，而后手动开无线或拨号，好麻烦，忍无可忍终于切换到KDE了，先<code>sudo pacman -S kde</code>,然后<code>sudo pacman -Rdd gnome</code>就搞定了，就目前的体验来看，kde还挺让我满意的，听说偶尔会有内存泄露的情形，但我估计我运气应该不会那么差吧。</p>
 
 <p>用kde的感觉和window没啥区别，习惯度好一点，gnome的状态栏有点恶心，kde的就很好，自定义度也高。</p>
@@ -1121,9 +1121,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[使用Mutagen解决mp3文件名乱码问题]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/"/>
+    <link href="http://minejo.github.io/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/"/>
     <updated>2013-10-08T19:12:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti</id>
+    <id>http://minejo.github.io/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti</id>
     <content type="html"><![CDATA[<p>很多在window上显示正常的mp3到了linux下文件名就乱码了，非常烦人，这无非是mp3标签的编码格式不对。</p>
 
 <p>解决方法之一就是用<code>mutagen</code>来修改mp3文件的标签信息。</p>
@@ -1145,9 +1145,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[修改VIM ESC键的映射]]></title>
-    <link href="http://jonathan-li.me/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/"/>
+    <link href="http://minejo.github.io/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/"/>
     <updated>2013-09-26T17:23:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she</id>
+    <id>http://minejo.github.io/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she</id>
     <content type="html"><![CDATA[<p>用了这么长时间的vim，发现每次把手挪动那么远去按个esc键非常麻烦，于是就想把esc键位映射成比怎么用的Caps Lock键，而且还比较靠近。</p>
 
 <p>网上查了一下，由于Caps Lock键位是辅助键位，要配合其他键才能有响应，在vim里面用map映射的话貌似有点问题，于是有人想到了在X里面修改。</p>
@@ -1166,9 +1166,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[论大四我可以干些什么]]></title>
-    <link href="http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/"/>
+    <link href="http://minejo.github.io/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/"/>
     <updated>2013-09-23T16:39:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao</id>
+    <id>http://minejo.github.io/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao</id>
     <content type="html"><![CDATA[<p>保研的事经过这些天的忙碌终于定下来了，专硕，其实我不读博的话和学硕是没啥差别的，所以也不怎么在意。</p>
 
 <p>不知不觉开学快一个月了，感觉这一个月啥事都没有做，没有心思去做，反倒没有假期在家学习Linux时的那份逍遥，倒是陪室友LOL的不少。</p>

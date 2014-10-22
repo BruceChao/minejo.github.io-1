@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ack | Jonathan's Blog]]></title>
-  <link href="http://jonathan-li.me/blog/categories/ack/atom.xml" rel="self"/>
-  <link href="http://jonathan-li.me/"/>
-  <updated>2014-10-22T17:09:32+08:00</updated>
-  <id>http://jonathan-li.me/</id>
+  <link href="http://minejo.github.io/blog/categories/ack/atom.xml" rel="self"/>
+  <link href="http://minejo.github.io/"/>
+  <updated>2014-10-22T18:17:20+08:00</updated>
+  <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[如何在Linux上提高文本文件的搜索效率]]></title>
-    <link href="http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
+    <link href="http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
     <updated>2014-02-26T00:00:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently</id>
+    <id>http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently</id>
     <content type="html"><![CDATA[<p>对于系统管理员或程序员来说，当需要在复杂配置的目录中或者在大型源码树中搜寻特定的文本或模式时，grep类型的工具大概是最受欢迎的。</p>
 
 <p>如果grep是你最喜欢的工具之一，那么你可能会更喜欢ack。ack是一个基于Perl的类似于grep的命令行工具，但是搜索速度更快，能力比grep更强。尤其是当你是程序员时，我强烈推荐你使用ack来取代grep。

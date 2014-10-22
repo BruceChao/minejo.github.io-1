@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: vimwiki | Jonathan's Blog]]></title>
-  <link href="http://jonathan-li.me/blog/categories/vimwiki/atom.xml" rel="self"/>
-  <link href="http://jonathan-li.me/"/>
-  <updated>2014-10-22T17:09:32+08:00</updated>
-  <id>http://jonathan-li.me/</id>
+  <link href="http://minejo.github.io/blog/categories/vimwiki/atom.xml" rel="self"/>
+  <link href="http://minejo.github.io/"/>
+  <updated>2014-10-22T18:17:20+08:00</updated>
+  <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vimwiki输入特殊字符$的解决方案]]></title>
-    <link href="http://jonathan-li.me/blog/2013/09/01/vimwikishu-ru-te-shu-$de-jie-jue-fang-an/"/>
+    <link href="http://minejo.github.io/blog/2013/09/01/vimwikishu-ru-te-shu-$de-jie-jue-fang-an/"/>
     <updated>2013-09-01T15:32:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/09/01/vimwikishu-ru-te-shu-$de-jie-jue-fang-an</id>
+    <id>http://minejo.github.io/blog/2013/09/01/vimwikishu-ru-te-shu-$de-jie-jue-fang-an</id>
     <content type="html"><![CDATA[<p>在vimwiki中由于$是特殊字符，用于Math表达式的时候使用，转换成html后显示不出来，解决方案就是改源码，开源就是好。</p>
 
 <p>要改的文件是vimwiki安装路径的<code>html.vim</code>,我的路径是<code>.vim/bundle/vimwiki/html.vim</code>,将$相关的那一句改一下即可。</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[修改Octopress主题fabric为Vimwiki站点模板]]></title>
-    <link href="http://jonathan-li.me/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/"/>
+    <link href="http://minejo.github.io/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/"/>
     <updated>2013-08-17T22:04:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban</id>
+    <id>http://minejo.github.io/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban</id>
     <content type="html"><![CDATA[<p> 整Vimwiki的模板也有2-3天了，先是自己DIY，然后用bootstrap来DIY，但总是达不到我要的效果，唉，我果然是没有做UI的天赋啊。</p>
 
 <p> 无奈之下，只好求助于开源模板，恰好想顺便换下Octopress主题，于是就开始找Octopress的开源主题，找了好久终于发现了一个好看又简洁的模板<a href="http://panks.me/blog/2013/01/new-octopress-theme-fabric/">fabric</a>,Octopress主题的安装我就不说了，直接开始修改wiki模板吧。</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: life | Jonathan's Blog]]></title>
-  <link href="http://jonathan-li.me/blog/categories/life/atom.xml" rel="self"/>
-  <link href="http://jonathan-li.me/"/>
-  <updated>2014-10-22T17:09:32+08:00</updated>
-  <id>http://jonathan-li.me/</id>
+  <link href="http://minejo.github.io/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://minejo.github.io/"/>
+  <updated>2014-10-22T18:17:20+08:00</updated>
+  <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[self-introduce for interview]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview/"/>
+    <link href="http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview/"/>
     <updated>2013-10-12T15:32:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview</id>
+    <id>http://minejo.github.io/blog/2013/10/12/self-introduce-for-interview</id>
     <content type="html"><![CDATA[<p>   Good morning, my name is Li Chao, it is really a great honor to have this opportunity for a interview. Now I will introduce myself briefly, I am 21 years old, born in jiangsu province. My major is communication engineering.</p>
 
 <p>   During the school, I have obtained a second-class scholarship three times and merit student and outstanding members and other honorary titles.</p>
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[弃用gnome转向KDE]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/"/>
+    <link href="http://minejo.github.io/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/"/>
     <updated>2013-10-08T20:46:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde</id>
+    <id>http://minejo.github.io/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde</id>
     <content type="html"><![CDATA[<p>用了好久的gnome，今天终于受不了了，arch里的gnome阉割了ibus功能，但是gnome又依赖ibus，于是就有了各种蛋疼的问题，比如Qt，GTK等程序经常用不了fcitx输入法，即使重定义的im方法都没用，而且NetworkManager也有问题，每次上网都要先手动开网卡，而后手动开无线或拨号，好麻烦，忍无可忍终于切换到KDE了，先<code>sudo pacman -S kde</code>,然后<code>sudo pacman -Rdd gnome</code>就搞定了，就目前的体验来看，kde还挺让我满意的，听说偶尔会有内存泄露的情形，但我估计我运气应该不会那么差吧。</p>
 
 <p>用kde的感觉和window没啥区别，习惯度好一点，gnome的状态栏有点恶心，kde的就很好，自定义度也高。</p>
@@ -60,9 +60,9 @@
   
   <entry>
     <title type="html"><![CDATA[论大四我可以干些什么]]></title>
-    <link href="http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/"/>
+    <link href="http://minejo.github.io/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/"/>
     <updated>2013-09-23T16:39:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao</id>
+    <id>http://minejo.github.io/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao</id>
     <content type="html"><![CDATA[<p>保研的事经过这些天的忙碌终于定下来了，专硕，其实我不读博的话和学硕是没啥差别的，所以也不怎么在意。</p>
 
 <p>不知不觉开学快一个月了，感觉这一个月啥事都没有做，没有心思去做，反倒没有假期在家学习Linux时的那份逍遥，倒是陪室友LOL的不少。</p>
@@ -122,9 +122,9 @@
   
   <entry>
     <title type="html"><![CDATA[保研之事尘埃落，继续努力]]></title>
-    <link href="http://jonathan-li.me/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li/"/>
+    <link href="http://minejo.github.io/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li/"/>
     <updated>2013-09-06T23:41:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li</id>
+    <id>http://minejo.github.io/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li</id>
     <content type="html"><![CDATA[<p>今天是个特殊的日子，so需要mark一下。</p>
 
 <h4>去了趟校医院，屁股挨了一针</h4>

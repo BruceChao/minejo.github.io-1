@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: vim | Jonathan's Blog]]></title>
-  <link href="http://jonathan-li.me/blog/categories/vim/atom.xml" rel="self"/>
-  <link href="http://jonathan-li.me/"/>
-  <updated>2014-10-22T17:09:32+08:00</updated>
-  <id>http://jonathan-li.me/</id>
+  <link href="http://minejo.github.io/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://minejo.github.io/"/>
+  <updated>2014-10-22T18:17:20+08:00</updated>
+  <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[修改VIM ESC键的映射]]></title>
-    <link href="http://jonathan-li.me/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/"/>
+    <link href="http://minejo.github.io/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/"/>
     <updated>2013-09-26T17:23:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she</id>
+    <id>http://minejo.github.io/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she</id>
     <content type="html"><![CDATA[<p>用了这么长时间的vim，发现每次把手挪动那么远去按个esc键非常麻烦，于是就想把esc键位映射成比怎么用的Caps Lock键，而且还比较靠近。</p>
 
 <p>网上查了一下，由于Caps Lock键位是辅助键位，要配合其他键才能有响应，在vim里面用map映射的话貌似有点问题，于是有人想到了在X里面修改。</p>

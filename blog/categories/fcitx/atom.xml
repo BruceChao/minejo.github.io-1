@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: fcitx | Jonathan's Blog]]></title>
-  <link href="http://jonathan-li.me/blog/categories/fcitx/atom.xml" rel="self"/>
-  <link href="http://jonathan-li.me/"/>
-  <updated>2014-10-22T17:09:32+08:00</updated>
-  <id>http://jonathan-li.me/</id>
+  <link href="http://minejo.github.io/blog/categories/fcitx/atom.xml" rel="self"/>
+  <link href="http://minejo.github.io/"/>
+  <updated>2014-10-22T18:17:20+08:00</updated>
+  <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Gnome3中部分程序无法使用fcitx的问题与解决方法]]></title>
-    <link href="http://jonathan-li.me/blog/2013/08/12/gnome3zhong-bu-fen-fcifa-de-wen/"/>
+    <link href="http://minejo.github.io/blog/2013/08/12/gnome3zhong-bu-fen-fcifa-de-wen/"/>
     <updated>2013-08-12T11:32:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/08/12/gnome3zhong-bu-fen-fcifa-de-wen</id>
+    <id>http://minejo.github.io/blog/2013/08/12/gnome3zhong-bu-fen-fcifa-de-wen</id>
     <content type="html"><![CDATA[<p>一直习惯用fcitx输入法，转到gnome3后，发现gnome3默认ibus输入法，而且ibus也是gnome3的依赖，不能删除掉。</p>
 
 <p>可是这样子用fcitx问题就来了，有些QT写的程序里就无法使用输入法了，查看一下

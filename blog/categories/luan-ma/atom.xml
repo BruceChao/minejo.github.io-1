@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 乱码 | Jonathan's Blog]]></title>
-  <link href="http://jonathan-li.me/blog/categories/luan-ma/atom.xml" rel="self"/>
-  <link href="http://jonathan-li.me/"/>
-  <updated>2014-10-22T17:09:32+08:00</updated>
-  <id>http://jonathan-li.me/</id>
+  <link href="http://minejo.github.io/blog/categories/luan-ma/atom.xml" rel="self"/>
+  <link href="http://minejo.github.io/"/>
+  <updated>2014-10-22T18:17:20+08:00</updated>
+  <id>http://minejo.github.io/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用Mutagen解决mp3文件名乱码问题]]></title>
-    <link href="http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/"/>
+    <link href="http://minejo.github.io/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/"/>
     <updated>2013-10-08T19:12:00+08:00</updated>
-    <id>http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti</id>
+    <id>http://minejo.github.io/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti</id>
     <content type="html"><![CDATA[<p>很多在window上显示正常的mp3到了linux下文件名就乱码了，非常烦人，这无非是mp3标签的编码格式不对。</p>
 
 <p>解决方法之一就是用<code>mutagen</code>来修改mp3文件的标签信息。</p>
