@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>emacs_usage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">Basic Movement</a>
+<li><a href="#toc_0.2">Insert and Delete Option</a>
+<li><a href="#toc_0.3">UNDO</a>
+<li><a href="#toc_0.4">Files</a>
+<li><a href="#toc_0.5">Buffers</a>
+<li><a href="#toc_0.6">Extending the command set</a>
+<li><a href="#toc_0.7">Auto Save</a>
+<li><a href="#toc_0.8">Searching</a>
+<li><a href="#toc_0.9">Multiple Windows/Frame</a>
+<li><a href="#toc_0.10">Help</a>
+</ul>
+</ul>
+</div>
+<h2 id="toc_0.1">Basic Movement</h2>
+<table>
+<tr>
+<td>
+Action
+</td>
+<td>
+KEY
+</td>
+</tr>
+<tr>
+<td>
+Next Screen
+</td>
+<td>
+C-v
+</td>
+</tr>
+<tr>
+<td>
+Previous Screen
+</td>
+<td>
+M-v
+</td>
+</tr>
+<tr>
+<td>
+Next Line
+</td>
+<td>
+C-n
+</td>
+</tr>
+<tr>
+<td>
+Previous Line
+</td>
+<td>
+C-p
+</td>
+</tr>
+<tr>
+<td>
+Backward
+</td>
+<td>
+C-b
+</td>
+</tr>
+<tr>
+<td>
+Forward
+</td>
+<td>
+C-f
+</td>
+</tr>
+<tr>
+<td>
+Forward Next Word
+</td>
+<td>
+M-f
+</td>
+</tr>
+<tr>
+<td>
+Backward Previous Word
+</td>
+<td>
+M-b
+</td>
+</tr>
+<tr>
+<td>
+Beginning of a line
+</td>
+<td>
+C-a
+</td>
+</tr>
+<tr>
+<td>
+End of a line
+</td>
+<td>
+C-e
+</td>
+</tr>
+<tr>
+<td>
+Beginning of a sentence
+</td>
+<td>
+M-a
+</td>
+</tr>
+<tr>
+<td>
+End of a sentence
+</td>
+<td>
+M-e
+</td>
+</tr>
+<tr>
+<td>
+Beginning of the whole text
+</td>
+<td>
+M-&lt;
+</td>
+</tr>
+<tr>
+<td>
+End of the whole text
+</td>
+<td>
+M-&gt;
+</td>
+</tr>
+<tr>
+<td>
+Give commands numeric argument
+</td>
+<td>
+C-u(eg: C-u 8 C-f)
+</td>
+</tr>
+<tr>
+<td>
+Jump to specified line
+</td>
+<td>
+M-g g
+</td>
+</tr>
+</table>
+
+<h2 id="toc_0.2">Insert and Delete Option</h2>
+<table>
+<tr>
+<td>
+Action
+</td>
+<td>
+KEY
+</td>
+</tr>
+<tr>
+<td>
+Delete the character before the cursor
+</td>
+<td>
+&lt; DEL &gt;
+</td>
+</tr>
+<tr>
+<td>
+Delete next character
+</td>
+<td>
+C-d
+</td>
+</tr>
+<tr>
+<td>
+Kill the word before the cursor
+</td>
+<td>
+M-&lt; DEL &gt;
+</td>
+</tr>
+<tr>
+<td>
+Kill the word after cursor
+</td>
+<td>
+M-d
+</td>
+</tr>
+<tr>
+<td>
+Kill from the cursor to end of line
+</td>
+<td>
+C-k
+</td>
+</tr>
+<tr>
+<td>
+Kill to the end of the current sentence
+</td>
+<td>
+M-k
+</td>
+</tr>
+<tr>
+<td>
+Select text and Kill them
+</td>
+<td>
+C-&lt;SPC&gt; &lt;Move&gt; C-w
+</td>
+</tr>
+<tr>
+<td>
+Reinserting killed text(called "yanking"
+</td>
+<td>
+C-y
+</td>
+</tr>
+<tr>
+<td>
+Yank the privious killed text
+</td>
+<td>
+M-y
+</td>
+</tr>
+</table>
+
+<p>
+<strong>Note</strong>: single C-k kill the contents of the line, and a second C-k kills the line itself. While numeric argument directly kill the content and the line.
+</p>
+
+<h2 id="toc_0.3">UNDO</h2>
+<p>
+Key: C-/ or C-_ or C-x u
+</p>
+
+<h2 id="toc_0.4">Files</h2>
+
+
+<table>
+<tr>
+<td>
+Action
+</td>
+<td>
+KEY
+</td>
+</tr>
+<tr>
+<td>
+Find a file or Create the file
+</td>
+<td>
+C-x C-f
+</td>
+</tr>
+<tr>
+<td>
+Cancel the minibuffer
+</td>
+<td>
+C-g
+</td>
+</tr>
+<tr>
+<td>
+Save the file
+</td>
+<td>
+C-x C-s
+</td>
+</tr>
+<tr>
+<td>
+Quit Emacs
+</td>
+<td>
+C-x C-c
+</td>
+</tr>
+</table>
+
+<h2 id="toc_0.5">Buffers</h2>
+<table>
+<tr>
+<td>
+Action
+</td>
+<td>
+KEY
+</td>
+</tr>
+<tr>
+<td>
+List Buffers
+</td>
+<td>
+C-x C-b
+</td>
+</tr>
+<tr>
+<td>
+Switch to Buffer
+</td>
+<td>
+C-x b
+</td>
+</tr>
+<tr>
+<td>
+Save some buffers
+</td>
+<td>
+C-x s
+</td>
+</tr>
+</table>
+
+<h2 id="toc_0.6">Extending the command set</h2>
+<ul>
+<li>
+C-x Character eXtend. Followed by one character.
+
+<li>
+M-x Named command eXtend. Followed by a long name.
+
+</ul>
+
+<table>
+<tr>
+<td>
+Action
+</td>
+<td>
+KEY
+</td>
+</tr>
+<tr>
+<td>
+Replace String
+</td>
+<td>
+M-x replace-string (type "repl s&lt;TAB&gt;")
+</td>
+</tr>
+</table>
+
+<h2 id="toc_0.7">Auto Save</h2>
+<p>
+ Emacs periodically writes an "auto save" file for each file that
+you are editing.  The auto save file name has a # at the beginning and
+the end.
+</p>
+
+<ul>
+<li>
+M-x recover-file &lt;Return&gt; to recover the auto-save data
+
+</ul>
+
+<h2 id="toc_0.8">Searching</h2>
+
+<ul>
+<li>
+C-s &lt;String&gt; start searching
+
+<li>
+C-s go to the next matched string while C-r go to the privious matched string
+
+</ul>
+
+<h2 id="toc_0.9">Multiple Windows/Frame</h2>
+
+<ul>
+<li>
+C-x 2 splits the screen vertically into two windows while C-x 3 splits horizontally
+
+<li>
+C-M-v to scroll the bottom window
+
+<li>
+C-x o to switch the window
+
+</ul>
+
+<hr />
+
+<ul>
+<li>
+M-x make-frame &lt;Return&gt;
+
+<li>
+M-x delete-frame &lt;Return&gt;
+
+</ul>
+
+
+
+<h2 id="toc_0.10">Help</h2>
+
+<ul>
+<li>
+C-h c &lt;Command&gt; very brief documentation
+
+<li>
+C-h k &lt;Command&gt; detailed documentation in another window
+
+<li>
+C-h f Describe a function
+
+<li>
+C-h a Type in a keyword and Emacs will list all the commands whose names contain that keyword
+
+<li>
+C-h t Open the tutorial
+
+<li>
+C-h r Read the Emacs Manual
+
+</ul>
+
+</div>
+</body>
+</html>

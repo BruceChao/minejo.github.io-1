@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>Linux</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">Advance</a>
+<li><a href="#toc_0.2">Online Resource</a>
+<li><a href="#toc_0.3">最喜欢的Linux应用</a>
+<li><a href="#toc_0.4">常见问题</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="toc_0.1">Advance</h2>
+<p>
+<a href="http://oss.org.cn/kernel-book/index.htm">内核源码分析</a>
+</p>
+
+<h2 id="toc_0.2">Online Resource</h2>
+<p>
+<a href="http://cb.vu/unixtoolbox.xhtml">Unix Toolbox</a>
+</p>
+
+<h2 id="toc_0.3">最喜欢的Linux应用</h2>
+<ul>
+<li>
+发行版：Arch
+
+<li>
+桌面环境：KDE
+
+<li>
+浏览器：Chromium
+
+<li>
+终端：Terminator
+
+<li>
+编辑器：Vim
+
+<li>
+输入法：Fcitx-rime
+
+<li>
+云端备份：Dropbox
+
+<li>
+音乐客户端：Clementine
+
+<li>
+影片客户端：Smplayer
+
+<li>
+启动器：Synapse
+
+<li>
+桌面启动器：Cairo-dock
+
+<li>
+邮件客户端：ThunderBird
+
+<li>
+图形处理：GIMP
+
+<li>
+图片管理：Shotwell
+
+<li>
+即时通讯：Kopete
+
+<li>
+FTP管理：Filezilla
+
+<li>
+文本处理：WPS office
+
+<li>
+图书管理：Calibre
+
+<li>
+思维导图：Xmind
+
+<li>
+字典软件：StarDict
+
+<li>
+流程图处理软件：Dia
+
+<li>
+截屏软件：Shutter
+
+<li>
+云端笔记：Wiznote
+
+<li>
+项目开发：Eclipse,Vim
+
+<li>
+MySQL管理：wine带SQLyog
+
+</ul>
+
+<h2 id="toc_0.4">常见问题</h2>
+<ol>
+<li>
+archlinux中android usb设备连接
+
+</ol>
+  
+<p>
+  使用kio-mtp（kde集成mtp软件），具体见<a href="https://wiki.archlinux.org/index.php/MTP">wiki</a>
+</p>
+
+<ol>
+<li>
+arch时间不准
+
+</ol>
+
+<p>
+  使用<code>ntpd -s</code>同步
+</p>
+  
+<ol>
+<li>
+挂载Android设备
+
+</ol>
+  
+<p>
+  Use these commands to mount and unmount your device :
+</p>
+
+<p>
+  <code>jmtpfs ~/mtp</code>
+</p>
+
+<p>
+ <code>fusermount -u ~/mtp</code>
+</p>
+ 
+<ol>
+<li>
+挂载window盘
+
+</ol>
+<p>
+看<a href="https://wiki.archlinux.org/index.php/NTFS-3G_(简体中文)">ntfs-3g wiki</a>
+</p>
+
+<ol>
+<li>
+使用zsh和ruby时出现：__rvm_cleanse_variables: function definition file not found
+
+</ol>
+<p>
+rm -f ~/.zcompdump*
+</p>
+
+<ol>
+<li>
+ape音乐分轨
+
+</ol>
+<p>
+<a href="https://wiki.archlinux.org/index.php/APE+CUE_Splitting">Arch Wiki</a>
+</p>
+
+</div>
+</body>
+</html>

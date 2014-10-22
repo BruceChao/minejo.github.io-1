@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>vimwiki使用笔记 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<h1 id="toc_1">vimwiki</h1>
+<div class="toc">
+<ul>
+<li><a href="#toc_1">vimwiki</a>
+<ul>
+<li><a href="#toc_1.1">installation</a>
+<li><a href="#toc_1.2">syntax</a>
+<ul>
+<li><a href="#toc_1.2.1">Inline links</a>
+<li><a href="#toc_1.2.2">Image Link</a>
+<li><a href="#toc_1.2.3">Header</a>
+<li><a href="#toc_1.2.4">List</a>
+<li><a href="#toc_1.2.5">Table</a>
+<li><a href="#toc_1.2.6">code</a>
+<li><a href="#toc_1.2.7">blockquotes</a>
+<li><a href="#toc_1.2.8">Horizontal line</a>
+<li><a href="#toc_1.2.9">Schemes</a>
+<li><a href="#toc_1.2.10">Thumbnails</a>
+<li><a href="#toc_1.2.11">folding/outline</a>
+</ul>
+<li><a href="#toc_1.3">key</a>
+</ul>
+</ul>
+</div>
+
+<hr />
+<blockquote>
+Vimwiku is a personal wiki for Vim -- a number of linked text files that
+have their own syntax hignlighting.
+</blockquote>
+
+<p>
+with Vimwiki,you can:
+</p>
+<ul>
+<li>
+organize notes and ideas
+
+<li>
+manage todo-lists
+
+<li>
+write documentation
+
+</ul>
+    
+<h2 id="toc_1.1">installation</h2>
+<pre>
+    cd ~/.vim/bundle
+    git clone https://github.com/vim-scripts/vimwiki.git
+</pre>
+
+<h2 id="toc_1.2">syntax</h2>
+<h3 id="toc_1.2.1">Inline links</h3>
+<p>
+   <code> [[ url | description ]] </code>
+</p>
+<h3 id="toc_1.2.2">Image Link</h3>
+<p>
+  <code> {{imageurl}}</code>
+</p>
+
+<h3 id="toc_1.2.3">Header</h3>
+<pre  = header1 =>
+   == header2 ==
+     = Centered Header1 =  
+</pre>
+     
+<h3 id="toc_1.2.4">List</h3>
+
+<p>
+ unordered list  use *
+</p>
+
+<ul>
+<li>
+list1
+
+<li>
+list2
+
+<ul>
+<li>
+list 11
+
+<li>
+list 22
+
+</ul>
+</ul>
+
+<p>
+  ordered list use #
+</p>
+<ol>
+<li>
+list1
+
+<li>
+list2
+
+<ol>
+<li>
+list 2.1
+
+</ol>
+<li>
+list3
+
+</ol>
+
+<p>
+   Definition lists:
+</p>
+<pre>
+   Term 1:: Definition 1
+   Term 2::
+   :: De 2
+   :: De 3
+</pre>
+
+<h3 id="toc_1.2.5">Table</h3>
+  
+<table class='center'>
+<tr>
+<td>
+year
+</td>
+<td>
+Temperature(low)
+</td>
+<td>
+Temperature(high)
+</td>
+</tr>
+<tr>
+<td>
+1900
+</td>
+<td>
+-10
+</td>
+<td>
+25
+</td>
+</tr>
+</table>
+
+<h3 id="toc_1.2.6">code</h3>
+<p>
+  can use ` or {{{
+</p>
+
+<h3 id="toc_1.2.7">blockquotes</h3>
+<p>
+  text starts with 4 or more spaces is a blockquotes
+</p>
+  
+<h3 id="toc_1.2.8">Horizontal line</h3>
+
+<p>
+  ------------------------
+</p>
+  
+<h3 id="toc_1.2.9">Schemes</h3>
+<p>
+  special schemes are supported: "wiki#:", "local:", "diary:", "file:"
+  for instance, <a href="file:///home/li/Nutstore/vimwiki/html/index.html">index</a> 
+</p>
+
+<h3 id="toc_1.2.10">Thumbnails</h3>
+<p>
+ <code> [[ http://someaddr.com/bigpicture.jpg|{{http://someaddr.com/thumbnail.jpg}}]]</code> 
+ in html:
+in HTML: &gt;
+  &lt;a href="<a href="http://someaddr.com/">http://someaddr.com/</a> ... /.jpg"&gt;
+  &lt;img src="<a href="http://../thumbnail.jpg">http://../thumbnail.jpg</a> /&gt;&lt;/a&gt;
+</p>
+
+<h3 id="toc_1.2.11">folding/outline</h3>
+<pre>
+* [] Do stuff 1
+  * [] do substuff[ ] 1.1
+  * [ ] do substuff[ ] 1.2
+* [] Do stuff 2
+</pre>
+
+<ul>
+<li class="done4">
+Do stuff 1
+
+<ul>
+<li class="done4">
+do substuff[ ] 1.1
+
+<li class="done4">
+do substuff[ ] 1.2
+
+</ul>
+<li class="done4">
+Do stuff 2
+
+</ul>
+
+
+
+
+<h2 id="toc_1.3">key</h2>
+<p>
+<code> Leader </code> usually is <code>\</code>
+</p>
+  
+<ul>
+<li>
+&lt;Leader&gt;ww -- open defalut wiki index file
+
+<li>
+&lt;Leader&gt;wt -- open defalut wiki index file in a new tab
+
+<li>
+&lt;Leader&gt;ws -- select and open wiki index file
+
+<li>
+&lt;Leader&gt;wd -- delete wiki file you are in
+
+<li>
+&lt;Leader&gt;wr -- raname wiki file you are in
+
+<li>
+&lt;Leader&gt;wh -- convert current wiki page to HTML
+
+<li>
+&lt;Leader&gt;whh -- convert current wiki page to HTML and open it in  webbrowser.
+
+<li>
+&lt;Leader&gt;w&lt;Leader&gt;w -- open/new today's diary
+
+<li>
+&lt;Leader&gt;w&lt;Leader&gt;t -- open/new today's diary in a new tab
+
+<li>
+&lt;Leader&gt;w&lt;Leader&gt;i -- update diary section in diary index
+
+<li>
+&lt;Enter&gt; -- follow/create wiki link  
+
+<li>
+&lt;Shift-Enter&gt; -- split and follow/create wiki link
+
+<li>
+&lt;Ctrl-Enter&gt; -- Vertical split and follow/create wiki link
+
+<li>
+&lt;Backspace&gt; -- go back to parent wiki link
+
+<li>
+&lt;Tab&gt; -- find next wiki link
+
+<li>
+&lt;Shift-Tab&gt; -- find previous wiki link
+
+</ul>
+
+</div>
+</body>
+</html>

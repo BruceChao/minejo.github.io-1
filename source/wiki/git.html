@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>Git 基本用法by minejo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_1">Git基本技巧笔记</a>
+<ul>
+<li><a href="#toc_1.1">什么是Git</a>
+<li><a href="#toc_1.2">库结构</a>
+<li><a href="#toc_1.3">基本命令</a>
+<ul>
+<li><a href="#toc_1.3.1">初始化仓库</a>
+<li><a href="#toc_1.3.2">修改最近一次的提交</a>
+<li><a href="#toc_1.3.3">提交冲突时先合并再推送</a>
+<li><a href="#toc_1.3.4">使用别人的仓库</a>
+<li><a href="#toc_1.3.5">本地上传代码</a>
+<li><a href="#toc_1.3.6">查看文件状态</a>
+<li><a href="#toc_1.3.7">查看日志</a>
+<li><a href="#toc_1.3.8">Git 分支</a>
+<li><a href="#toc_1.3.9">Git标签</a>
+<li><a href="#toc_1.3.10">导出项目</a>
+<li><a href="#toc_1.3.11">取消操作</a>
+<ul>
+<li><a href="#toc_1.3.11.1">修改最后一次提交</a>
+<li><a href="#toc_1.3.11.2">取消已经暂存的文件</a>
+<li><a href="#toc_1.3.11.3">取消对文件的修改</a>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+<h1 id="toc_1">Git基本技巧笔记</h1>
+
+<h2 id="toc_1.1">什么是Git</h2>
+<p>
+Git是用于Linux内核开发的版本控制工具。与CVS、Subversion一类的集中式版本控制工具不同，它采用了分布式版本库的作法，不需要服务器端软件，就可以运作版本控制，使得源代码的发布和交流极其方便。Git的速度很快，这对于诸如Linux kernel这样的大项目来说自然很重要。Git最为出色的是它的合并追踪（merge tracing）能力。
+实际上内核开发团队决定开始开发和使用Git来作为内核开发的版本控制系统的时候，世界开源社群的反对声音不少，最大的理由是Git太艰涩难懂，从Git的内部工作机制来说，的确是这样。但是随着开发的深入，Git的正常使用都由一些友善的命令稿来执行，使Git变得非常好用。现在，越来越多的著名项目采用Git来管理项目开发，例如：wine、U-boot等。
+</p>
+
+<h2 id="toc_1.2">库结构</h2>
+<ul>
+<li>
+hooks：存储钩子的文件夹
+
+<li>
+logs：存储日志的文件夹
+
+<li>
+refs：存储指向各个分支的指针（SHA-1标识）文件
+
+<li>
+objects：存放git对象
+
+<li>
+config：存放各种设置文档
+
+<li>
+HEAD：指向当前所在分支的指针文件路径，一般指向refs下的某文件
+
+</ul>
+ 
+<h2 id="toc_1.3">基本命令</h2>
+
+<h3 id="toc_1.3.1">初始化仓库</h3>
+<blockquote>
+$ git init #初始化git仓库
+</blockquote>
+<blockquote>
+$ touch README.md #建立README文件
+</blockquote>
+<blockquote>
+$ git add . #添加当前目录所有文件到git仓库
+</blockquote>
+<blockquote>
+$ git commit -m 'first commit'
+</blockquote>
+<blockquote>
+$ git remote add origin git@github.com:minejo/repo.git #设置仓库
+</blockquote>
+
+<h3 id="toc_1.3.2">修改最近一次的提交</h3>
+<blockquote>
+$ git commit --amend -m "commit message."
+</blockquote>
+
+<h3 id="toc_1.3.3">提交冲突时先合并再推送</h3>
+<blockquote>
+$ git pull
+</blockquote>
+<blockquote>
+$ git push
+</blockquote>
+    
+<h3 id="toc_1.3.4">使用别人的仓库</h3>
+<blockquote>
+$ git clone repo.git
+</blockquote>
+
+<h3 id="toc_1.3.5">本地上传代码</h3>
+<blockquote>
+$ git push -u origin master
+</blockquote>
+
+<h3 id="toc_1.3.6">查看文件状态</h3>
+<blockquote>
+$ git status
+</blockquote>
+
+<h3 id="toc_1.3.7">查看日志</h3>
+<blockquote>
+$ git log
+</blockquote>
+<blockquote>
+$ git log --pretty=online #以整洁的单行形式显示提交信息
+</blockquote>
+    
+<h3 id="toc_1.3.8">Git 分支</h3>
+<blockquote>
+$ git branch #查看tags
+$ git branch source #添加分支source
+$ git branch checkout master #切换到主分支
+$ git branch -d source #删除source分支
+$ git push origin :branchname #删除远端分支
+</blockquote>
+    
+<h3 id="toc_1.3.9">Git标签</h3>
+<blockquote>
+$ git tag #查看分支 
+$ git tag v1.0 #添加标签v1.0
+$ git show v1.0 #查看标签v1.0的信息
+$ git tag -a v1.0 -m 'some message' #为之前的提交添加tag和标注
+$ git push --tags #提交时带上标签信息
+</blockquote>
+
+<h3 id="toc_1.3.10">导出项目</h3>
+<blockquote>
+$ git archive --format tar --output /path/to/file.tar master
+#将master导出为tar文件
+</blockquote>
+
+<h3 id="toc_1.3.11">取消操作</h3>
+<h4 id="toc_1.3.11.1">修改最后一次提交</h4>
+<blockquote>
+$ git commit --amend
+</blockquote>
+<h4 id="toc_1.3.11.2">取消已经暂存的文件</h4>
+<blockquote>
+$ git reset HEAD &lt;file&gt;
+</blockquote>
+
+<h4 id="toc_1.3.11.3">取消对文件的修改</h4>
+<blockquote>
+$ git checkout -- &lt;file&gt;
+</blockquote>
+
+</div>
+</body>
+</html>

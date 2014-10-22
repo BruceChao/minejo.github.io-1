@@ -1,0 +1,1440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>capwap</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_1">Related</a>
+<ul>
+<li><a href="#toc_1.1">LWAPP</a>
+<li><a href="#toc_1.2">SLAPP</a>
+</ul>
+<li><a href="#toc_2">CAPWAP Packet Format</a>
+<ul>
+<li><a href="#toc_2.0.1">Not protected by DTLS</a>
+<li><a href="#toc_2.0.2">DTLS Security Required</a>
+</ul>
+<li><a href="#toc_2.1">CAPWAP Pramble</a>
+<li><a href="#toc_2.2">CAPWAP Header</a>
+<li><a href="#toc_2.3">CAPWAP Control Message</a>
+<ul>
+<li><a href="#toc_2.3.1">Message Type</a>
+<li><a href="#toc_2.3.2">Seq Num</a>
+<li><a href="#toc_2.3.3">Msg Element Length</a>
+<li><a href="#toc_2.3.4">Flags</a>
+<li><a href="#toc_2.3.5">Message Element[0..N]</a>
+</ul>
+<li><a href="#toc_2.4">CAPWAP Protocol Message Elements</a>
+<li><a href="#toc_2.5">online resource</a>
+</ul>
+</ul>
+</div>
+<h1 id="toc_1">Related</h1>
+<h2 id="toc_1.1">LWAPP</h2>
+<p>
+Lightweight Access Point Protocol
+</p>
+
+<p>
+<img src="http://www.cs.wustl.edu/~jain/cse574-10/ftp/capwap/fig5.jpg" alt="cool" style="width:400px;height:380px;" />
+</p>
+
+<p>
+LWAPP defines the state machine that governs both the AP and the controller's communication with each other. The basic functionality that is encapsulated within this protocol is as follows.
+</p>
+
+<ol>
+<li>
+Discovery - New APs must seek out a controller with which to associate. This is accomplished by the AP broadcasting a Discovery Request. A controller must respond with a Discovery Response. The AP then joins to a controller, and is acknowledged by the controller.
+
+<li>
+Image Download - The newly joined AP then may request a firmware update, upon seeing the controller advertise a higher version of code. The AP then downloads the firmware, and once completed, enters the Reset state, and then attempts to rejoin a controller.
+
+<li>
+Configure - An AP with a sufficient version of code may then request to be configured by the controller. The AP sends the controller its current configuration, and the controller responds with an updated configuration. Once the AP has received the configuration, it may enter the Run state.
+
+<li>
+Run - Both the controller and AP operate in the Run state. The AP forwards packets to the controller, and maintains normal operation. From the Run state, an AP and controller may exchange new key material, by entering the Key Update state. This state updates the encryption keys on both devices, which is used to encrypt all further messages, until a new key is requested.
+
+</ol>
+<h2 id="toc_1.2">SLAPP</h2>
+<p>
+Secure Light Access Point Protocol
+</p>
+
+<p>
+<img src="http://www.cs.wustl.edu/~jain/cse574-10/ftp/capwap/fig6.jpg" />
+</p>
+
+<p>
+SLAPP operates as the framework to make a connection between two devices, and negotiate a protocol. The same SLAPP protocol would be used by an AP to decide how to download updated firmware, as would be used to determine a protocol to communicate with the controller. The state machine in [fig6] show the 4 states attainable during protocol negotiation by a device. [RFC5413]
+</p>
+
+<ol>
+<li>
+Discovery - Discovery is the initial broadcast from an AP, informing controllers that they are interested in communicating in a specific protocol. The controller awaits a Discovery Request from an AP. Once received, the controller moves to the Acquiring phase without responding yet.The AP broadcasts a Discovery Request, and upon reception of the response, moves to the Acquiring phase as well.
+
+<li>
+Acquiring - This state represents both devices connecting to each other, to begin encrypting their communications. The controller processes the Discovery Request, and if valid, responds in the positive, and moves to Securing. Otherwise it moves back to the Discovery state. The AP transitions to the Securing phase when a "client hello" message has been received. This marks the beginning of a DTLS conversation, or Datagram Transport Layer Security [RFC4347]. If a timer expires while the AP is in the Acquiring phase before receiving a "client hello", the AP goes back to Discovery mode.
+
+<li>
+Securing - This phase establishes an encrypted tunnel, over which a protocol can be agreed upon. The controller transmits a "client end" message, to signify the termination of the DTLS exchange. The controller then moves into the Negotiated Control Protocol state. The AP reciprocates the DTLS connection, and when finished, transmits the "server end" message. When the DTLS exchange is completed, the AP moves to Negotiated Control Protocol.
+
+<li>
+Negotiated Control Protocol - Here both devices begin communicating in the previously agreed-upon protocol. This protocol can be anything, as long as both sides agreed on it.
+
+</ol>
+
+<h1 id="toc_2">CAPWAP Packet Format</h1>
+<h3 id="toc_2.0.1">Not protected by DTLS</h3>
+<ol>
+<li>
+Discovery Request Message
+
+<li>
+Discovery Response message
+
+</ol>
+
+<p>
+CAPWAP Control Packet (Discovery Request/Response):
+</p>
+
+<table>
+<tr>
+<td>
+IP Hdr
+</td>
+<td>
+UDP Hdr
+</td>
+<td>
+CAPWAP Header
+</td>
+<td>
+Control Header
+</td>
+<td>
+Message Element(s)
+</td>
+</tr>
+</table>
+
+<h3 id="toc_2.0.2">DTLS Security Required</h3>
+
+<table>
+<tr>
+<td>
+IP Hdr
+</td>
+<td>
+UDP Hdr
+</td>
+<td>
+CAPWAP DTLS Hdr
+</td>
+<td>
+DTLS Hdr
+</td>
+<td>
+CAPWAP Header
+</td>
+<td>
+Control Header
+</td>
+<td>
+Message Element(s)
+</td>
+<td>
+DTLS Trlr
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td colspan="4">
+authenticated
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td colspan="4">
+encrypted
+</td>
+</tr>
+</table>
+
+<h2 id="toc_2.1">CAPWAP Pramble</h2>
+<p>
+CAPWAP 前导对于所有 CAPWAP 传输首部是通用的,并且用于标识跟在其后的首部
+类型。这个前导的作用是避免通过字节比较,来猜测是否这一帧是 DTLS 加密帧。它也提供
+可用于支持补充传输类型的扩展架构。
+</p>
+
+<table>
+<tr>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+</tr>
+<tr>
+<td colspan="4">
+Version
+</td>
+<td colspan="4">
+Type
+</td>
+</tr>
+</table>
+
+<ul>
+<li>
+Version:4 位字段,它包括这个分组使用的 CAPWAP 版本。这个规范的版本编号为 0。
+
+<li>
+Type:4 位字段,它规定跟在 UDP 首部后面的净荷类型。支持下述值:
+
+<ul>
+<li>
+0 - CAPWAP Header。CAPWAP Header(参阅第 4-3 节)紧跟在 UDP 首部后。如果分组是在 CAPWAP Data 通道上收到的, CAPWAP 栈必须将该分组看作明文 CAPWAP Data分组。如果分组是在 CAPWAP Control 通道上收到的,CAPWAP 栈必须将该分组看作明文 CAPWAP Control 分组。如果该控制分组既不是 Discovery Request 又不是Discovery Response 分组,必须丢弃该分组。
+
+<li>
+1 - CAPWAP DTLS Header。CAPWAP DTLS Header(和 DTLS 分组)紧跟在 UDP 首部后
+
+</ul>
+</ul>
+
+<h2 id="toc_2.2">CAPWAP Header</h2>
+<p>
+所有 CAPWAP 协议消息用共同的首部格式封装,与使用 CAPWAP Control 或 CAPWAP
+Data 传输方式携带消息无关。然而,某些标志不适用于给定的传输。为了确定哪些标志合
+法,请参考介绍特定传输的节。
+</p>
+
+<table>
+<tr>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td colspan="8">
+CAPWAP Pramble
+</td>
+<td colspan="5">
+HLEN
+</td>
+<td colspan="5">
+RID
+</td>
+<td colspan="5">
+WEBID
+</td>
+<td>
+T
+</td>
+<td>
+F
+</td>
+<td>
+L
+</td>
+<td>
+W
+</td>
+<td>
+M
+</td>
+<td>
+K
+</td>
+<td colspan="3">
+FLAG
+</td>
+</tr>
+<tr>
+<td colspan="16">
+Fragment ID
+</td>
+<td colspan="13">
+Frag Offset
+</td>
+<td colspan="3">
+Rsvd
+</td>
+</tr>
+<tr>
+<td colspan="32">
+(Option）Radio MAC Address
+</td>
+</tr>
+<tr>
+<td colspan="32">
+(Option）Wireless Specific Information
+</td>
+</tr>
+<tr>
+<td colspan="32">
+Paylaod...
+</td>
+</tr>
+</table>
+
+<h2 id="toc_2.3">CAPWAP Control Message</h2>
+<table>
+<tr>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td colspan="32">
+Meaage Type
+</td>
+</tr>
+<tr>
+<td colspan="8">
+Seq Num
+</td>
+<td colspan="16">
+Msg Element Length
+</td>
+<td colspan="8">
+Flags
+</td>
+</tr>
+<tr>
+<td colspan="32">
+Msg Element [0..N]...
+</td>
+</tr>
+</table>
+
+<h3 id="toc_2.3.1">Message Type</h3>
+<p>
+Message Type 字段指出 CAPWAP Control 消息的功能。为了有可扩展性,Message Type
+字段由 IANA Enterprise Number [RFC3232]和企业特定消息类型编码构成。前 3 个八位位组包含 IANA Enterprise Number,采用网络字节顺序,0 用于定义消息类型的 CAPWAP 基本
+协议(这个规范)。最后的八位位组是企业特定消息类型编码,它的取值范围从 0 到 255。
+</p>
+
+<p>
+Message Type 字段定义为:
+Message Type = IANA Enterprise Number*256 + Enterprise Specific Message Type Number
+</p>
+
+<p>
+CAPWAP 协议可靠性机制要求成对定义消息,由 Request 和 Response 消息构成。
+Response 消息必须确认 Request 消息。总是成对分配 CAPWAP Control Message Type Values。
+所有 Request 消息有奇数编码的 Message Type Values,所有 Response 消息有偶数编码的
+Message Type Values。必须先分配 Request 值。例如,为 Request 消息分配值为 3 的 Message
+Type Value,
+为 Response 消息分配值为 4 的 Message Type Value 是合法的;而为 Response 消
+息分配值为 4 的 Message Type Value,为 Request 消息分配值为 5 的 Message Type Value 是
+不合法的。
+</p>
+
+<p>
+当 WTP 或 AC 收到消息,该消息的 Message Type Value 字段不能识别并且是奇数,在
+Message Type Value Field 中的数加 1,带有包含该增加值的 Message Type Value 字段和包含
+带有该值(Unrecognized Request)的 Result Code 消息要素的 Response 消息被返回给所接收消
+息的发送方。如果未知的消息类型是偶数,忽略该消息。
+</p>
+
+<h3 id="toc_2.3.2">Seq Num</h3>
+<p>
+Sequence Number 字段是标识符值,用于匹配 Request 和 Response 分组。当收到带有
+Request Message Type Value 的 CAPWAP 分组时,Sequence Number 字段的值被复制到相应
+的 Response 消息中。
+</p>
+
+<p>
+当发送 CAPWAP Control 消息时,发送方的内部序列号计数器单调增加,确保不会出现
+两个未定的 Request 消息有相同序列号。Sequence Number 字段环回到 0。
+</p>
+<h3 id="toc_2.3.3">Msg Element Length</h3>
+<p>
+此 Length 字段指出 Sequence Number 字段后的字节数。
+</p>
+<h3 id="toc_2.3.4">Flags</h3>
+<p>
+必须将 Flags 字段设置为 0。
+</p>
+<h3 id="toc_2.3.5">Message Element[0..N]</h3>
+<p>
+消息要素携带与每个控制消息类型有关的信息。在本规范中的每个控制消息规定哪些消
+息要素是合法的。
+</p>
+
+<p>
+当 WTP 或 AC 收到 CAPWAP 消息,而该消息不携带按规定它必须携带的消息要素,
+那么,抛弃此 CAPWAP 消息。如果收到的消息是 Request 消息,与该消息相对应的 Response
+消息携带消息要素,那么,将对应的 Response 消息(该消息带有指出“Failure - Missing
+Mandatory Message Element”的 Result Code 消息要素)返回给发送方。
+</p>
+
+<p>
+当 WTP 或 AC 收到 CAPWAP 消息,该消息带有 WTP 或 AC 不能识别的消息要素,抛
+弃该 CAPWAP 消息。如果收到的消息是 Request 消息,与该消息对应的 Response 消息携带
+消息要素,那么,对应的 Response 消息(该消息带有指出“Failure - Unrecognized Message
+Element”的 Result Code 消息要素和一个或多个 Returned Message Element 消息要素)包括在
+内,包含不能识别的消息要素。
+</p>
+
+<h2 id="toc_2.4">CAPWAP Protocol Message Elements</h2>
+<p>
+这一节定义包含在 CAPWAP 协议控制消息中的 CAPWAP Protocol 消息要素。
+</p>
+
+<p>
+消息要素用于携带控制消息中需要的信息。每个消息要素由 Type Value 字段标识,如
+下面定义。在消息要素的长度字段指出消息要素的总长度。
+</p>
+
+<p>
+本文档中所有消息要素定义使用类似于下面的格式图来描述消息要素的格式。注意,为
+了简化本文档的介绍,这些格式图不包括首部字段(Type 和 Length)。在消息要素介绍中定
+义首部字段值。
+</p>
+
+<p>
+除非另有规定,控制消息(它列出一组支持的(或期盼的)消息要素),必须不指望这些消
+息要素以任何规定的次序出现。发送方可以以任何次序包括消息要素。除非另有说明,在给
+定的控制消息中每类消息要素只有一个。
+</p>
+
+<p>
+除非另有规定,由 AC 发送给 WTP 的任何配置信息可以保存到非易失性存储器中(更多
+信息参阅第 8-1 节)。
+</p>
+
+<p>
+在独立的 IETF 文档中可以定义补充消息要素。
+</p>
+
+<table>
+<tr>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+<td>
+2
+</td>
+<td>
+3
+</td>
+<td>
+4
+</td>
+<td>
+5
+</td>
+<td>
+6
+</td>
+<td>
+7
+</td>
+<td>
+8
+</td>
+<td>
+9
+</td>
+<td>
+0
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td colspan="16">
+Type
+</td>
+<td colspan="16">
+Length
+</td>
+</tr>
+<tr>
+<td colspan="32">
+Value...
+</td>
+</tr>
+</table>
+
+<p>
+16 位 Type 字段标识 Value 字段携带的信息,Length(16 位)指出 Value 字段的字节数。0
+值保留并且不能使用。字段值其余部分分配如下:
+<table>
+<tr>
+<td>
+用途
+</td>
+<td>
+类型值
+</td>
+</tr>
+<tr>
+<td>
+CAPWAP Protocol Message Elements
+</td>
+<td>
+1 - 1023
+</td>
+</tr>
+<tr>
+<td>
+IEEE 802.11Message Elements
+</td>
+<td>
+1024 – 2047
+</td>
+</tr>
+<tr>
+<td>
+保留将来使用
+</td>
+<td>
+2048 – 3071
+</td>
+</tr>
+<tr>
+<td>
+EPCGlobalMessage ElementsEPCGlobalMessage Elements
+</td>
+<td>
+3072 - 4095
+</td>
+</tr>
+<tr>
+<td>
+保留将来使用
+</td>
+<td>
+4096 - 65535
+</td>
+</tr>
+</table>
+</p>
+
+<p>
+下表列出 CAPWAP 协议消息要素(Message Elements)和它们的 Type 值。
+</p>
+
+<table>
+<tr>
+<td>
+CAPWAP Message Element
+</td>
+<td>
+Type Value
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AC Descriptor
+</td>
+<td>
+1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AC IPv4 List
+</td>
+<td>
+2
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AC IPv6 List
+</td>
+<td>
+3
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AC Name
+</td>
+<td>
+4
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AC Name with Priority
+</td>
+<td>
+5
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AC Timestamp
+</td>
+<td>
+6
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Add MAC ACL Entry
+</td>
+<td>
+7
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Add Station
+</td>
+<td>
+8
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Reserved
+</td>
+<td>
+9
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+CAPWAP Control IPV4 Address
+</td>
+<td>
+10
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+CAPWAP Control IPV6 Address
+</td>
+<td>
+11
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+CAPWAP Local IPV4 Address
+</td>
+<td>
+30
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+CAPWAP Local IPV6 Address
+</td>
+<td>
+50
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+CAPWAP Timers
+</td>
+<td>
+12
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+CAPWAP Transport Protocol
+</td>
+<td>
+51
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Data Transfer Data
+</td>
+<td>
+13
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Data Transfer Mode
+</td>
+<td>
+14
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Decryption Error Report
+</td>
+<td>
+15
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Decryption Error Report Period
+</td>
+<td>
+16
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Delete MAC ACL Entry
+</td>
+<td>
+17
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Delete Station
+</td>
+<td>
+18
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Reserved
+</td>
+<td>
+19
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Discovery Type
+</td>
+<td>
+20
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Duplicate IPv4 Address
+</td>
+<td>
+21
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Duplicate IPv6 Address
+</td>
+<td>
+22
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ECN Support
+</td>
+<td>
+53
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Idle Timeout
+</td>
+<td>
+23
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Image Data
+</td>
+<td>
+24
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Image Identifier
+</td>
+<td>
+25
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Image Information
+</td>
+<td>
+26
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Initiate Download
+</td>
+<td>
+27
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Location Data
+</td>
+<td>
+28
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Maximum Message Length
+</td>
+<td>
+29
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+MTU Discovery Padding
+</td>
+<td>
+52
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Radio Administrative State
+</td>
+<td>
+31
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Radio Operational State
+</td>
+<td>
+32
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Result Code
+</td>
+<td>
+33
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Returned Message Element
+</td>
+<td>
+34
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Session ID
+</td>
+<td>
+35
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Statistics Timer
+</td>
+<td>
+36
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Vendor Specific Payload
+</td>
+<td>
+37
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+WTP Board Data
+</td>
+<td>
+38
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+WTP Descriptor
+</td>
+<td>
+39
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+WTP Fallback
+</td>
+<td>
+40
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+WTP Frame Tunnel Mode
+</td>
+<td>
+41
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Reserved
+</td>
+<td>
+42
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+
+
+<p>
+详细的Message Element请查看<a href="https://tools.ietf.org/html/rfc5415#section-4.6">RFC section4.6</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="toc_2.5">online resource</h2>
+<ul>
+<li>
+<a href="https://tools.ietf.org/html/rfc5415">IETF RFC5415</a>
+
+<li>
+<a href="http://www.cs.wustl.edu/~jain/cse574-10/ftp/capwap/index.html">Current Status and Overview of the CAPWAP Protocol</a>
+
+<li>
+<a href="http://tools.ietf.org/html/rfc5416">IEFT RFC5416 CAPWAP Protocol Binding for IEEE 802.11</a>
+
+</ul>
+
+</div>
+</body>
+</html>
