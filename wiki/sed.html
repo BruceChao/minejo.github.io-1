@@ -1,0 +1,430 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>Sed基本使用笔记</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_1">Sed基本使用笔记</a>
+<ul>
+<li><a href="#toc_1.1">命令选项</a>
+<li><a href="#toc_1.2">基本使用</a>
+<ul>
+<li><a href="#toc_1.2.1">替换</a>
+<ul>
+<li><a href="#toc_1.2.1.1">替换标记</a>
+<li><a href="#toc_1.2.1.2">替换字符</a>
+</ul>
+<li><a href="#toc_1.2.2">使用地址</a>
+<ul>
+<li><a href="#toc_1.2.2.1">数字寻址</a>
+<li><a href="#toc_1.2.2.2">文本模式过滤</a>
+<li><a href="#toc_1.2.2.3">组合命令</a>
+</ul>
+<li><a href="#toc_1.2.3">删除行</a>
+<li><a href="#toc_1.2.4">插入和附加文本</a>
+<li><a href="#toc_1.2.5">修改行</a>
+</ul>
+<li><a href="#toc_1.3">高级用法</a>
+<ul>
+<li><a href="#toc_1.3.1">保持空间</a>
+<li><a href="#toc_1.3.2">跳转</a>
+<li><a href="#toc_1.3.3">测试</a>
+<li><a href="#toc_1.3.4">模式替代</a>
+</ul>
+<li><a href="#toc_1.4">实用功能</a>
+<ul>
+<li><a href="#toc_1.4.1">加倍行间距</a>
+<li><a href="#toc_1.4.2">添加行号</a>
+<li><a href="#toc_1.4.3">打印末尾行</a>
+<li><a href="#toc_1.4.4">删除连续空白行</a>
+<li><a href="#toc_1.4.5">删除开头空白行</a>
+<li><a href="#toc_1.4.6">删除末尾空白行</a>
+<li><a href="#toc_1.4.7">删除HTML标签</a>
+</ul>
+</ul>
+</ul>
+</div>
+<h1 id="toc_1">Sed基本使用笔记</h1>
+<p>
+sed为流编辑器，通过预先定义的规则来处理数据流。
+</p>
+<h2 id="toc_1.1">命令选项</h2>
+<table>
+<tr>
+<th>
+选项
+</th>
+<th>
+描述
+</th>
+</tr>
+<tr>
+<td>
+-e script
+</td>
+<td>
+将script中指定的命令添加到运行的命令中
+</td>
+</tr>
+<tr>
+<td>
+-f file
+</td>
+<td>
+将file中指定的命令添加到运行的命令中
+</td>
+</tr>
+<tr>
+<td>
+-n
+</td>
+<td>
+不为每个命令生成输出，等待print命令输出
+</td>
+</tr>
+<tr>
+<td>
+-i
+</td>
+<td>
+保存修改结果
+</td>
+</tr>
+</table>
+
+<hr />
+<ul>
+<li>
+sed不对源文件进行修改，而是将处理结果输出到STDOUT上
+
+<li>
+sed在命令行上运行多个命令是用-e选项，命令间用<code>;</code>分割，如:
+
+</ul>
+
+<p>
+ <code>$sed -e 's/brown/green/;s/dog/cat/' file1</code>
+</p>
+<ul>
+<li>
+从文件中读取用<code>-f</code>参数，一行一个命令，不要<code>;</code>分割符号
+
+</ul>
+
+<h2 id="toc_1.2">基本使用</h2>
+<h3 id="toc_1.2.1">替换</h3>
+<h4 id="toc_1.2.1.1">替换标记</h4>
+<p>
+<code>s/pattern/replacement/flags</code>
+</p>
+
+<p>
+有四种可用的替换标记:
+</p>
+<ul>
+<li>
+数字，表示替换第几处
+
+<li>
+g，表示替换所有
+
+<li>
+p，表明将原来行的内容打印出来（配合-n使用可只输出修改过的行）
+
+<li>
+w file，将替换的结果写入的文件中去
+
+</ul>
+
+<h4 id="toc_1.2.1.2">替换字符</h4>
+<p>
+由于<code>/</code>经常出现在路径中，要替换的话必须要用<code>\</code>来转移，非常麻烦哦
+</p>
+
+<p>
+在sed中可以用其他字符来作为substitute命令中的分隔符，比如：
+</p>
+
+<p>
+<code>$ sed 's!/bin/bash!/bin/zsh!' /etc/passwd</code>
+</p>
+
+<h3 id="toc_1.2.2">使用地址</h3>
+<p>
+sed有两种寻址方式：
+</p>
+<ul>
+<li>
+行的数字范围
+
+<li>
+用文本模式来过滤出行
+
+</ul>
+
+<p>
+命令各位可以为：<code>[address]command</code>
+</p>
+
+<p>
+也可以为
+</p>
+<pre>
+    address {
+        command1
+        command2
+        command3
+    }
+</pre>
+<h4 id="toc_1.2.2.1">数字寻址</h4>
+<ul>
+<li>
+替换单行：<code> sed '2s/dog/cat' file</code>
+
+<li>
+替换行范围： <code> sed '2,$s/dog/cat' file</code>
+
+</ul>
+
+<h4 id="toc_1.2.2.2">文本模式过滤</h4>
+<p>
+格式为<code>/pattern/command</code>
+pattern可以为简单的文本匹配，也可以使用正则表达式
+</p>
+
+<h4 id="toc_1.2.2.3">组合命令</h4>
+<p>
+使用花括号将多条命令组合在一起。
+</p>
+<pre>
+    $ sed '2{
+    &gt; s/re/re1/
+    &gt; s/re2/re22/
+    &gt;}' data
+</pre>
+
+<h3 id="toc_1.2.3">删除行</h3>
+<p>
+基本模式和替换差不多，只不过换成了d，而且后无替换内容。
+</p>
+
+<p>
+值得注意的是在使用文本模式来删除某个范围的行时，指定的第一个模式会打开删除功能，第二个会关闭删除功能，如果找不到第二个模式，则一直删除到文件末尾。
+如：
+</p>
+<pre>
+    $ cat data
+    Line1
+    Line2
+    Line1
+    Line3
+
+    $ sed '/1/,/2/d' data
+    Line3
+</pre>
+
+<h3 id="toc_1.2.4">插入和附加文本</h3>
+<ul>
+<li>
+插入i，在指定行前增加一行
+
+<li>
+追加a，在指定行后增加一行
+
+</ul>
+
+<p>
+格式如下：
+</p>
+
+<p>
+<code>sed '[address]command\new line'</code>
+</p>
+
+<h3 id="toc_1.2.5">修改行</h3>
+
+
+<h2 id="toc_1.3">高级用法</h2>
+<h3 id="toc_1.3.1">保持空间</h3>
+<p>
+模式空间是一块活动缓冲区，另一块缓冲区域为保持空间。
+<table>
+<tr>
+<th>
+命令
+</th>
+<th>
+描述
+</th>
+</tr>
+<tr>
+<td>
+h
+</td>
+<td>
+将模式空间复制到保持空间
+</td>
+</tr>
+<tr>
+<td>
+H
+</td>
+<td>
+将模式空间附加到保持空间
+</td>
+</tr>
+<tr>
+<td>
+g
+</td>
+<td>
+将保持空间复制到模式空间
+</td>
+</tr>
+<tr>
+<td>
+G
+</td>
+<td>
+将保持空间附加到模式空间
+</td>
+</tr>
+<tr>
+<td>
+x
+</td>
+<td>
+交换模式空间与保持空间的内容
+</td>
+</tr>
+</table>
+</p>
+
+<h3 id="toc_1.3.2">跳转</h3>
+<p>
+[address]b [label]
+如果没有label则默认跳到文件结尾，标签格式为：label
+实例：
+</p>
+<pre>
+    sed '{/first/b jump1 ; s/test/test1/
+   &gt; :jump1
+   &gt; s/test/test2/}'
+</pre>
+<h3 id="toc_1.3.3">测试</h3>
+<p>
+[address]t [label]
+与t的区别在于，只有匹配成功后才跳转。
+</p>
+<h3 id="toc_1.3.4">模式替代</h3>
+<p>
+用&amp;符号代替预定义模式的文本，比如：
+</p>
+<pre>
+    $ echo "I am jonathan" | sed 's/.onathan/"&amp;"/g'
+    I am "jonathan"
+</pre>
+
+<h2 id="toc_1.4">实用功能</h2>
+<h3 id="toc_1.4.1">加倍行间距</h3>
+<p>
+<code>sed 'G' data2//末尾也加空行</code>
+</p>
+
+<p>
+<code>sed '$!G' data2 //末尾不加空行</code>
+</p>
+
+<p>
+<code>sed '/^$/d;$)!G' data //先删除所有空行，然后加倍行距</code>
+PS: 保持空间默认是一个空行，所以把保持空间附加到模式空间后即可加倍行距
+</p>
+
+<h3 id="toc_1.4.2">添加行号</h3>
+<p>
+<code>sed '=' data | sed 'N; s/\n/ /'</code>
+</p>
+
+<h3 id="toc_1.4.3">打印末尾行</h3>
+<pre>
+    sed '{
+    &gt; :start
+    &gt; $q
+    &gt; N
+    &gt; 11,$D
+    &gt; b start
+    &gt; }' /etc/passwd
+</pre>
+
+<h3 id="toc_1.4.4">删除连续空白行</h3>
+<p>
+<code>sed '/./,/^$/!d' data</code>
+</p>
+
+<p>
+区间开始地址会匹配任何含有一个字符的行，区间的结束地址会匹配一个空行。
+</p>
+
+<h3 id="toc_1.4.5">删除开头空白行</h3>
+<p>
+<code>sed '/./,$!d' data</code>
+</p>
+
+<h3 id="toc_1.4.6">删除末尾空白行</h3>
+<pre>
+    sed '{
+        &gt; :start
+        &gt; /^\n*$/{$d; N; b start}
+    }' data
+</pre>
+<h3 id="toc_1.4.7">删除HTML标签</h3>
+<p>
+<code>sed 's/&lt;[^&gt;]*&gt;//g;/^$d' data</code>
+</p>
+
+</div>
+</body>
+</html>

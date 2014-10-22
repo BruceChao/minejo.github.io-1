@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gnome | Jonathan's Blog]]></title>
+  <link href="http://jonathan-li.me/blog/categories/gnome/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-22T17:09:32+08:00</updated>
+  <id>http://jonathan-li.me/</id>
+  <author>
+    <name><![CDATA[Jonathan]]></name>
+    <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Gnome3中部分程序无法使用fcitx的问题与解决方法]]></title>
+    <link href="http://jonathan-li.me/blog/2013/08/12/gnome3zhong-bu-fen-fcifa-de-wen/"/>
+    <updated>2013-08-12T11:32:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/08/12/gnome3zhong-bu-fen-fcifa-de-wen</id>
+    <content type="html"><![CDATA[<p>一直习惯用fcitx输入法，转到gnome3后，发现gnome3默认ibus输入法，而且ibus也是gnome3的依赖，不能删除掉。</p>
+
+<p>可是这样子用fcitx问题就来了，有些QT写的程序里就无法使用输入法了，查看一下
+<code>$ env | grep IM</code>
+如果显示QT_IM_MODULE为ibus的话，知道改成fcitx就行了。一开始是在<code>~/.xprofile</code>中写入如下语句:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">GTK_IM_MODULE</span><span class="o">=</span>fcitx
+</span><span class='line'><span class="nb">export </span><span class="nv">QT_IM_MODULE</span><span class="o">=</span>fcitx
+</span><span class='line'><span class="nb">export </span><span class="nv">XMODIFIERS</span><span class="o">=</span><span class="p">&amp;</span>ldquo<span class="p">;</span>@im<span class="o">=</span>fcitx<span class="p">&amp;</span>rdquo<span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>但后来发现QT_IM_MODULE和XMODIFIERS=&ldquo;@im=fcitx&#8221;经常会被Gnome初始化后给篡改掉，又变成了ibus，所以无赖之下，只好把后2个语句加入到了<code>~/.zshrc</code>(如果你用bash的话就是<code>~/.bashrc</code>),才得以解决。</p>
+
+<p>PS：如果还是不行的话，建议用<code>$
+fcitx-diagnose</code>检测，该工具会给出所有可能出错的原因。</p>
+
+<p>如果你知道为什么gnome3初始化会改变输入法的原因，请告诉我。</p>
+]]></content>
+  </entry>
+  
+</feed>

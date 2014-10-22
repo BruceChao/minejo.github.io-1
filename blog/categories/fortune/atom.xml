@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: fortune | Jonathan's Blog]]></title>
+  <link href="http://jonathan-li.me/blog/categories/fortune/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-22T17:09:32+08:00</updated>
+  <id>http://jonathan-li.me/</id>
+  <author>
+    <name><![CDATA[Jonathan]]></name>
+    <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[使用kindle笔记来做fortune名言后的玩法]]></title>
+    <link href="http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
+    <updated>2014-02-18T14:48:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
+    <content type="html"><![CDATA[<p>kde桌面上有一个fortune插件，可随机显示名言名句，但是默认的都是英文的名句，看了没什么意思，于是我想到用我在kindle上的笔记来做名言显示给自己看，多有意义，又能经常温习之前读过的好书。</p>
+
+<p>首先说下<code>fortune</code>，这是一个随机显示名言名句的linux命令行软件，算是比较简单而又非常有名的Linux程序了,安装相信应该不用我说了。fortune安装好后默认有许多英文名言，如果装了中文包的话可能还有唐诗300首。fortune支持使用自定义文本来做名言。</p>
+
+<!-- more -->
+
+
+<p>于是我把昨天的写的<code>kindle-clips</code>脚本升级了下，加了个导出到<code>fortune</code>格式的功能。程序见<a href="https://github.com/minejo/kindle-clips">My Github</a>,怎么使用这个脚本导出<code>fortune</code>格式的文本我这里也不说了，github项目的wiki里面写的很清楚，我主要来探索下怎么玩这个<code>fortune</code>。</p>
+
+<h2>玩法1</h2>
+
+<p>使用cowsay和cowthink来图形化kindle摘录，使的看起来不那么枯燥。</p>
+
+<p><a href="https://gist.github.com/minejo/9066719">脚本</a>：
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>!/usr/bin/bash&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>author:jonathan&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>version:1.0&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Cownumber=$(($RANDOM%4+1))
+</span><span class='line'>case $Cownumber in
+</span><span class='line'>0)
+</span><span class='line'>    cow=&ldquo;moose&rdquo;;;
+</span><span class='line'>1)
+</span><span class='line'>    cow=&ldquo;tux&rdquo;;;
+</span><span class='line'>2)
+</span><span class='line'>    cow=&ldquo;daemon&rdquo;;;
+</span><span class='line'>3)
+</span><span class='line'>    cow=&ldquo;surgery&rdquo;;;
+</span><span class='line'>4)
+</span><span class='line'>    cow=&ldquo;elephant&rdquo;;;
+</span><span class='line'>*)
+</span><span class='line'>    cow=&ldquo;tux&rdquo;;;
+</span><span class='line'>esac&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Cmnumber=$(($RANDOM%1+1))
+</span><span class='line'>case $Cmnumber in
+</span><span class='line'>    0)
+</span><span class='line'>        command=&ldquo;cowsay&rdquo;;;
+</span><span class='line'>    1)
+</span><span class='line'>        command=&ldquo;cowthink&rdquo;;;
+</span><span class='line'>    *)
+</span><span class='line'>        command=&ldquo;cowsay&rdquo;;;
+</span><span class='line'>esac&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>/usr/bin/fortune /path/to/kindle-fortune | $command -f $cow</span></code></pre></td></tr></table></div></figure></p>
+
+<p>效果如下：
+<img src="/images/blog_kindle_fortune_t.png"></p>
+
+<p>同时你可以把这个脚本加到<code>.bashrc</code>中，这样每次打开终端就能看到笔记啦。</p>
+
+<h2>玩法2</h2>
+
+<p>利用kde的桌面插件<code>Fortune</code>来显示，很简单，直接在自定义命令那写上：</p>
+
+<pre><code>fortune /path/to/kindle-fortune -l
+</code></pre>
+
+<p>效果图：
+<img src="/images/blog_kindle_fortune.png"></p>
+]]></content>
+  </entry>
+  
+</feed>

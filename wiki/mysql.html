@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>mysql</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">基本操作</a>
+<li><a href="#toc_0.2">Example</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="toc_0.1">基本操作</h2>
+
+<ul>
+<li>
+启动：net start mySql;
+
+<li>
+ 进入：mysql -u root -p/mysql -h localhost -u root -p databaseName;
+
+<li>
+ 列出数据库：show databases;
+
+<li>
+ 选择数据库：use databaseName;
+
+<li>
+ 列出表格：show tables；
+
+<li>
+ 显示表格列的属性：show columns from tableName；
+
+<li>
+ 建立数据库：source fileName.txt;
+
+<li>
+ 匹配字符：可以用通配符_代表任何一个字符，％代表任何字符串;
+
+<li>
+ 增加一个字段：alter table tabelName add column fieldName dateType;
+
+<li>
+ 增加多个字段：alter table tabelName add column fieldName1 dateType,add columns fieldName2 dateType;
+
+<li>
+ 多行命令输入:注意不能将单词断开;当插入或更改数据时，不能将字段的字符串展开到多行里，否则硬回车将被储存到数据中;
+
+<li>
+ 增加一个管理员帐户：grant all on <strong>.</strong> to user@localhost identified by "password";
+
+<li>
+ 每条语句输入完毕后要在末尾填加分号';'，或者填加'\g'也可以；
+
+<li>
+ 查询时间：select now();
+
+<li>
+ 查询当前用户：select user();
+
+<li>
+ 查询数据库版本：select version();
+
+<li>
+ 查询当前使用的数据库：select database();
+
+<li>
+ 运行sql文件： source t.sql
+
+</ul>
+
+<h2 id="toc_0.2">Example</h2>
+
+<p>
+1. 删除student_course数据库中的students数据表：
+ rm -f student_course/students.*
+</p>
+
+
+<p>
+2. 备份数据库：(将数据库test备份)
+ mysqldump -u root -p test&gt;c:\test.txt
+ 备份表格：(备份test数据库下的mytable表格)
+ mysqldump -u root -p test mytable&gt;c:\test.txt
+ 将备份数据导入到数据库：(导回test数据库)
+ mysql -u root -p test
+</p>
+
+
+<p>
+ 3、创建临时表：(建立临时表zengchao)
+ create temporary table zengchao(name varchar(10));
+</p>
+
+
+<p>
+ 4、创建表是先判断表是否存在
+ create table if not exists students(……);
+</p>
+
+
+<p>
+ 5、从已经有的表中复制表的结构
+ create table table2 select * from table1 where 1&lt;&gt;1;
+</p>
+
+
+<p>
+ 6、复制表
+ create table table2 select * from table1;
+</p>
+
+
+<p>
+ 7、对表重新命名
+ alter table table1 rename as table2;
+</p>
+
+
+<p>
+ 8、修改列的类型
+ alter table table1 modify id int unsigned;//修改列id的类型为int unsigned
+ alter table table1 change id sid int unsigned;//修改列id的名字为sid，而且把属性修改为int unsigned
+</p>
+
+
+<p>
+ 9、创建索引
+ alter table table1 add index ind_id (id);
+ create index ind_id on table1 (id);
+ create unique index ind_id on table1 (id);//建立唯一性索引
+</p>
+
+
+<p>
+ 10、删除索引
+ drop index idx_id on table1;
+ alter table table1 drop index ind_id;
+</p>
+
+
+<p>
+ 11、联合字符或者多个列(将列id与":"和列name和"="连接)
+ select concat(id,':',name,'=') from students;
+</p>
+
+
+<p>
+ 12、limit(选出10到20条)&lt;第一个记录集的编号是0&gt;
+ select * from students order by id limit 9,10;
+</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>Rime输入法</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+
+<p>
+<a href="http://code.google.com/p/rimeime/">Rime</a> 输入法是一款适用于 Mac OSX, Linux,
+Windows 的输入法，Rime 在不同平台下的对应名称如下：
+</p>
+
+<ul>
+<li>
+Mac OSX: 鼠鬚管(Squirrel)
+    配置目录：<code>~/Library/Rime/</code>
+
+<li>
+Linux: 中州韻(ibus-rime)
+    配置目录：<code>~/.config/ibus/rime/</code>
+
+<li>
+Windows: 小狼毫(Weasel)
+    配置目录：<code>%APPDATA%\Rime</code>
+
+</ul>
+
+<p>
+Rime 的配置文件不同平台的放置在不同的目录，
+在配置目录中，主要使用 <code>yaml</code> 进行配置。
+目录中自有的配置文件不建议直接修改，因为可能会被自动复写。
+用户配置一般以原始配置文件名增加 .custom 二级后缀的方式，
+例如：Mac OSX 下的原始配置 <code>squirrel.yaml</code>，对应的用户配置就是
+<code>squirrel.custom.yaml</code> 文件。
+</p>
+
+<p>
+修改 <code>.custom</code> 配置后，『重新部署』Rime 输入法会将用户的配置增加或更新到
+对应的原始配置中。
+</p>
+
+<h2 id="toc_0.1">我的Rime配置</h2>
+<p>
+<a href="https://github.com/minejo/rime-config">see on github</a>
+</p>
+
+<h2 id="toc_0.2">设置颜文字</h2>
+<p>
+<a href="https://github.com/hitigon/meow-emoji-rime">meow-emoji-rime</a>
+</p>
+
+<h2 id="toc_0.3">参考</h2>
+<ul>
+<li>
+<a href="http://code.google.com/p/rimeime/wiki/CustomizationGuide">Rime 定製指南</a>
+
+<li>
+<a href="https://github.com/lotem">Author:佛振(lotem)@github</a>
+
+</ul>
+
+</div>
+</body>
+</html>

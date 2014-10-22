@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 乱码 | Jonathan's Blog]]></title>
+  <link href="http://jonathan-li.me/blog/categories/luan-ma/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-22T17:09:32+08:00</updated>
+  <id>http://jonathan-li.me/</id>
+  <author>
+    <name><![CDATA[Jonathan]]></name>
+    <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[使用Mutagen解决mp3文件名乱码问题]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/"/>
+    <updated>2013-10-08T19:12:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti</id>
+    <content type="html"><![CDATA[<p>很多在window上显示正常的mp3到了linux下文件名就乱码了，非常烦人，这无非是mp3标签的编码格式不对。</p>
+
+<p>解决方法之一就是用<code>mutagen</code>来修改mp3文件的标签信息。</p>
+
+<h2>安装mutagen</h2>
+
+<p>在arch中安装<code>mutagen</code>最方便了，直接<code>sudo pacman -S mutagen</code>即可。
+其他发行版的安装类似吧。</p>
+
+<h2>转换整个目录的mp3标签</h2>
+
+<p>此处以GBK/GB18030为例，转换当前目录下的所有mp3（包括子目录）：</p>
+
+<p><code>find . -iname "*.mp3" -execdir mid3iconv -e gbk {}\;</code></p>
+
+<p>这样就搞定了。</p>
+]]></content>
+  </entry>
+  
+</feed>

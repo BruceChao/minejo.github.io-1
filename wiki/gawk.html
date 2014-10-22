@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>Gawk使用笔记</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_1">Gawk 使用笔记</a>
+<ul>
+<li><a href="#toc_1.1">命令格式</a>
+<li><a href="#toc_1.2">选项</a>
+<li><a href="#toc_1.3">使用</a>
+<ul>
+<li><a href="#toc_1.3.1">从命令行读取程序脚本</a>
+<li><a href="#toc_1.3.2">使用数据字段变量</a>
+<li><a href="#toc_1.3.3">使用多个命令</a>
+<li><a href="#toc_1.3.4">从文件读取程序</a>
+<li><a href="#toc_1.3.5">处理前后运行脚本</a>
+</ul>
+</ul>
+</ul>
+</div>
+<h1 id="toc_1">Gawk 使用笔记</h1>
+<p>
+gawk能提供一个类编程环境，允许修改和重新组织文件中的数据。
+</p>
+<h2 id="toc_1.1">命令格式</h2>
+<p>
+<code>gawk options program file</code>
+</p>
+<h2 id="toc_1.2">选项</h2>
+<table>
+<tr>
+<th>
+选项
+</th>
+<th>
+描述
+</th>
+</tr>
+<tr>
+<td>
+-F fs
+</td>
+<td>
+指定行中分隔数据字段的字段分隔符
+</td>
+</tr>
+<tr>
+<td>
+-f file
+</td>
+<td>
+指定程序要处理的文件名
+</td>
+</tr>
+<tr>
+<td>
+-v var=value
+</td>
+<td>
+定义gawk程序中的一个变量及其默认值
+</td>
+</tr>
+<tr>
+<td>
+-mf N
+</td>
+<td>
+指定要处理的数据文件的最大字段数
+</td>
+</tr>
+<tr>
+<td>
+-mr N
+</td>
+<td>
+指定要处理的数据文件的最大行数
+</td>
+</tr>
+<tr>
+<td>
+-W keyword
+</td>
+<td>
+指定gawk的兼容模式和警告级数
+</td>
+</tr>
+</table>
+
+<hr />
+
+<h2 id="toc_1.3">使用</h2>
+<h3 id="toc_1.3.1">从命令行读取程序脚本</h3>
+<p>
+gawk脚本用花括号来定义，命令放在单引号之间，如:<code>gawk '{print "Hello Gawk"}'</code>, 要终止gawk，需要生成EOF字符，bash中Ctrl+D可产生EOF。
+</p>
+<h3 id="toc_1.3.2">使用数据字段变量</h3>
+<p>
+gawk默认使用空格作为分隔符，将每一行分成N个变量，$0表示整行，$)1表示第一个变量，$2表示第二个变量,以此类推。
+<hr />
+使用-F可以指定分隔符，如：
+<code>gawk -F: '{print $1}' /etc/passwd/</code>输出所有用户。
+</p>
+<h3 id="toc_1.3.3">使用多个命令</h3>
+<p>
+命令行输入多个命令可用<code>;</code>间隔，如：
+<code>echo "My Name is Minejo" | gawk '{$4="Jonathan"; print $)0}'</code>
+</p>
+<h3 id="toc_1.3.4">从文件读取程序</h3>
+<p>
+For Example：
+</p>
+<pre>
+    $ cat script2
+    { print $1 "'s home directory is " $6 }
+
+    $gawk -F: -f script2 /etc/passwd 
+    root's home directory is /root 
+    ...
+</pre>
+<p>
+Notice:程序脚本中变量不要加$符号
+</p>
+<h3 id="toc_1.3.5">处理前后运行脚本</h3>
+<p>
+相当于报告的开头结尾一样，在处理数据前后加一段
+</p>
+<pre>
+    $gawk 'BEGIN {print "The data file Contents:" } {print $0 }  END {print "End of file"}' data
+</pre>
+<p>
+Notice：在begin里面可以定义FS
+</p>
+
+</div>
+</body>
+</html>

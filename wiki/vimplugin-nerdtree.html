@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>Vim Plugin:NERDTree</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">常用的快捷键</a>
+<li><a href="#toc_0.2">我的配置</a>
+</ul>
+</ul>
+</div>
+
+<p>
+NERDTree是文件浏览器边栏，在处理大项目，有很多文件时，该插件的功能会比较舒服。
+</p>
+
+<h2 id="toc_0.1">常用的快捷键</h2>
+<ul>
+<li>
+o: 打开文件/预览节点
+
+<li>
+t：在新标签中打开
+
+<li>
+T：在新标签中打开(不自动跳转过去)
+
+<li>
+(g)i: (预览)水平分割打开
+
+<li>
+s：垂直分割打开
+
+<li>
+x：关闭父节点
+
+<li>
+X：关闭所有子节点
+
+<li>
+e：探索该目录
+
+<li>
+D：删除该书签
+
+<li>
+P：跳到根节点
+
+<li>
+p：跳到父节点
+
+<li>
+&lt;C-j&gt;:跳到下一个兄弟节点
+
+<li>
+&lt;C-k&gt;：跳到上一个兄弟节点
+
+<li>
+C：改变根节点为当前目录
+
+<li>
+u：向上移动根节点一层
+
+<li>
+R：刷新当前根节点
+
+<li>
+I：显示/隐藏隐藏文件
+
+<li>
+B：关闭/显示书签
+
+<li>
+q：关闭NERDTree窗户
+
+<li>
+A：最大化NERDTree窗口
+
+<li>
+:Bookmark &lt;name&gt;：添加书签
+
+<li>
+:ClearBookmark &lt;name&gt;：删除书签
+
+<li>
+:ClearAllBookmarks: 删除所有书签
+
+</ul>
+
+<h2 id="toc_0.2">我的配置</h2>
+<pre>
+"NERD Tree
+let NERDChristmasTree=1
+let NERDTreeAutoCenter=1
+let NERDTreeMouseMode=2
+let NERDTreeBookmarksFile='/home/li/.vim/Data/NerdTreeBookmarks.txt'
+let NERDTreeShowBookmarks=1
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=0
+let NERDTreeShowLineNumbers=1
+let NERDTreeWinPos='left'
+let NERDTreeWinSize=31
+nnoremap f :NERDTreeToggle&lt;cr&gt;
+</pre>
+
+</div>
+</body>
+</html>

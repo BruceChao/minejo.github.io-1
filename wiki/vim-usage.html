@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="static/js/wiki.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48998342-1', 'minejo.github.io');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Stylesheet" type="text/css" href="static/css/wiki.css">
+<title>vimusage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+ 
+    <div class="navbar-header">
+<button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Jonathan๏Wiki</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="../blog">博客</a></li>
+            <li><a href="read.html">阅读</a></li>
+            <li><a href="todo.html">TODO</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+<div class="container content-body">
+    
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">这是什么?</a>
+<ul>
+<li><a href="#toc_0.1.1">基本移动</a>
+<li><a href="#toc_0.1.2">区域选择</a>
+<li><a href="#toc_0.1.3">块操作</a>
+<li><a href="#toc_0.1.4">分割窗口</a>
+<ul>
+<li><a href="#toc_0.1.4.1">命令</a>
+<li><a href="#toc_0.1.4.2">窗口间跳转</a>
+<li><a href="#toc_0.1.4.3">窗口移动</a>
+<li><a href="#toc_0.1.4.4">所有窗口指令</a>
+</ul>
+<li><a href="#toc_0.1.5">标签页</a>
+<ul>
+<li><a href="#toc_0.1.5.1">命令</a>
+</ul>
+<li><a href="#toc_0.1.6">复制粘贴</a>
+</ul>
+</ul>
+</ul>
+</div>
+<h2 id="toc_0.1">这是什么?</h2>
+<p>
+该页面主要介绍我经常需要用到的关于vim操作的一些笔记。
+</p>
+<h3 id="toc_0.1.1">基本移动</h3>
+<ul>
+<li>
+0 --- 到行头
+
+<li>
+^ --- 本行第一个非blank字符
+
+<li>
+$ --- 行尾
+
+<li>
+fa --- 到下一个为a的字符处
+
+<li>
+ta --- 到下一个为a的字符前
+
+<li>
+F，T --- 同上，方向相反
+
+</ul>
+<h3 id="toc_0.1.2">区域选择</h3>
+<p>
+在visual 模式下，这些命令很强大，其命令格式为
+</p>
+
+<p>
+&lt;action&gt;a&lt;object&gt; 和 &lt;action&gt;i&lt;object&gt;
+</p>
+
+<p>
+action可以是任何的命令，如 d (删除), y (拷贝), v (可以视模式选择)。
+</p>
+
+<p>
+object 可能是： w 一个单词， W 一个以空格为分隔的单词， s 一个句字， p 一个段落。也可以是一个特别的字符："、 '、 )、 }、 ]。
+</p>
+
+<p>
+假设你有一个字符串 (map (+) ("foo")).而光标键在第一个 o 的位置。
+</p>
+
+<ul>
+<li>
+vi" → 会选择 foo.
+
+<li>
+va" → 会选择 "foo".
+
+<li>
+vi) → 会选择 "foo".
+
+<li>
+va) → 会选择("foo").
+
+<li>
+v2i) → 会选择 map (+) ("foo")
+
+<li>
+v2a) → 会选择 (map (+) ("foo"))
+
+</ul>
+<h3 id="toc_0.1.3">块操作</h3>
+<p>
+块操作，典型的操作： 0 &lt;C-v&gt; &lt;C-d&gt; I-- [ESC]
+</p>
+
+<ul>
+<li>
+^ → 到行头
+
+<li>
+&lt;C-v&gt; → 开始块操作
+
+<li>
+&lt;C-d&gt; → 向下移动 (你也可以使用hjkl来移动光标，或是使用%，或是别的)
+
+</ul>
+<p>
+I-- [ESC] → I是插入，插入“--”，按ESC键来为每一行生效。
+$ A -- [ESC] -&gt; 行后加字符串--
+</p>
+<h3 id="toc_0.1.4">分割窗口</h3>
+<h4 id="toc_0.1.4.1">命令</h4>
+<ul>
+<li>
+:split ---将一个文件分成上下两个窗口，可用来看一个文件的不同部分
+
+<li>
+:close ---关闭窗口
+
+<li>
+:only  ----关闭其他所有窗口
+
+<li>
+:split two.c ---用另一个文件分割窗口
+
+<li>
+:new   ---- 新窗口编辑新文件
+
+<li>
+:nsplit ---- 设置窗口高度，n为数值
+
+<li>
+:vsplit ----在左边打开新窗口
+
+<li>
+:vnew 
+
+</ul>
+<h4 id="toc_0.1.4.2">窗口间跳转</h4>
+<ul>
+<li>
+CTRL-W w ---窗口间轮流跳转
+
+<li>
+CTRL-w h ---跳左
+
+<li>
+CTRL-W j ---跳下
+
+<li>
+CTRL-W k ---跳上
+
+<li>
+CTRL-W l ---跳右
+
+</ul>
+<h4 id="toc_0.1.4.3">窗口移动</h4>
+<ul>
+<li>
+CTRL-W K ---当前窗口移到最上
+
+<li>
+#其他三个相似
+
+</ul>
+<h4 id="toc_0.1.4.4">所有窗口指令</h4>
+<ul>
+<li>
+:wall ---保存 所有
+
+<li>
+:qall ---全部退出
+
+<li>
+vim -o one.txt two.txt three.txt ---o参数为每个文件打开个窗口
+
+</ul>
+    
+<h3 id="toc_0.1.5">标签页</h3>
+<h4 id="toc_0.1.5.1">命令</h4>
+<ul>
+<li>
+:tabedit one.c ---新标签打开一个文件
+
+<li>
+gt ---  窗口间跳转
+
+<li>
+:tab 命令 ---- 新标签执行命令
+
+<li>
+:tabonly  ----你猜～
+
+</ul>
+
+<h3 id="toc_0.1.6">复制粘贴</h3>
+<p>
+Vim有12个粘贴版，分别是0,1,...,9,a,",+，用:reg可查看各剪贴板里的内容，其中"粘贴板是最常用的，y和p命令都是操作的这个粘贴版。另一个特殊的粘贴板是+粘贴板，这是系统粘贴板。
+</p>
+
+<p>
+使用方法：
+</p>
+<ul>
+<li>
+复制：<code>"Ny</code>(N为粘贴板符号）
+
+<li>
+粘贴: <code>"Np</code>
+
+</ul>
+
+</div>
+</body>
+</html>

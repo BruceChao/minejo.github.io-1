@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: life | Jonathan's Blog]]></title>
+  <link href="http://jonathan-li.me/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-22T17:09:32+08:00</updated>
+  <id>http://jonathan-li.me/</id>
+  <author>
+    <name><![CDATA[Jonathan]]></name>
+    <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[self-introduce for interview]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview/"/>
+    <updated>2013-10-12T15:32:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview</id>
+    <content type="html"><![CDATA[<p>   Good morning, my name is Li Chao, it is really a great honor to have this opportunity for a interview. Now I will introduce myself briefly, I am 21 years old, born in jiangsu province. My major is communication engineering.</p>
+
+<p>   During the school, I have obtained a second-class scholarship three times and merit student and outstanding members and other honorary titles.</p>
+
+<p> 　I am a positive man. In the past three years, I learned java, C#, Linux by myself and recommended myself to the INTERNET CENTER studio in our school for development work. Now I have been the team leader of the studio. Also, being the class monitor for about 2 years improves my leadership skills. By the way, I have passed CET4/6 and NCRE-2 Java.</p>
+
+<p> 　When it comes to working experience, I have done many science research projects. Some projects are from my studio, others are from Student Research Training Program.</p>
+
+<p>   Among studio projects, one is to use Discuz open-source framework to develop the BBS of our school. Another is to develop a VPS integrated management system using .NET and SQLSERVER.</p>
+
+<!-- more -->
+
+
+<p>　 Among SRTP projects, I leader two projects.one is developing an android app, which is used to stream media freely when the phone connects to the School Wireless Network.</p>
+
+<p>　 Another is developing a website, which is used to manage grade and information of our college students.</p>
+
+<p> 　Among all those projects, most importantly, I have learned how to learn a new technology quickly.</p>
+
+<p> 　In addition to this, I love reading and playing basketball and biking. My favourite writer is Murakami.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[弃用gnome转向KDE]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/"/>
+    <updated>2013-10-08T20:46:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde</id>
+    <content type="html"><![CDATA[<p>用了好久的gnome，今天终于受不了了，arch里的gnome阉割了ibus功能，但是gnome又依赖ibus，于是就有了各种蛋疼的问题，比如Qt，GTK等程序经常用不了fcitx输入法，即使重定义的im方法都没用，而且NetworkManager也有问题，每次上网都要先手动开网卡，而后手动开无线或拨号，好麻烦，忍无可忍终于切换到KDE了，先<code>sudo pacman -S kde</code>,然后<code>sudo pacman -Rdd gnome</code>就搞定了，就目前的体验来看，kde还挺让我满意的，听说偶尔会有内存泄露的情形，但我估计我运气应该不会那么差吧。</p>
+
+<p>用kde的感觉和window没啥区别，习惯度好一点，gnome的状态栏有点恶心，kde的就很好，自定义度也高。</p>
+
+<p>哈，先使用一段时间吧，希望不会失望，话说好久没用linux了，当然也就好久没写blog了。</p>
+
+<p>以后还是尽量用arch吧，window什么的暂时不管了，基本不会用到了，除非玩游戏了。</p>
+
+<p>另外，开始要练练latex写论文了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[论大四我可以干些什么]]></title>
+    <link href="http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/"/>
+    <updated>2013-09-23T16:39:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao</id>
+    <content type="html"><![CDATA[<p>保研的事经过这些天的忙碌终于定下来了，专硕，其实我不读博的话和学硕是没啥差别的，所以也不怎么在意。</p>
+
+<p>不知不觉开学快一个月了，感觉这一个月啥事都没有做，没有心思去做，反倒没有假期在家学习Linux时的那份逍遥，倒是陪室友LOL的不少。</p>
+
+<p>也罢，从现在起认真规划下吧。</p>
+
+<h2>专业方向</h2>
+
+<h3>专业基础知识</h3>
+
+<p>既然选择了读研，那专业的知识必须是要补一补的，说实话，我前几年的专业知识学得并不怎么样，部分基础概念还是不清楚，有必要重新看下专业书。</p>
+
+<!-- more -->
+
+
+<h3>数学</h3>
+
+<p>大一学的数学到现在基本都忘光了，而每次专业课里用到数学知识时就头疼，要想有所作为，数学这个工具必不可少。</p>
+
+<h3>Paper</h3>
+
+<p>多看看专业方向相关的论文，做做笔记，了解专业前沿的知识，并和老师探讨探讨。这一点很重要。</p>
+
+<h2>毕业设计</h2>
+
+<h2>兴趣方向</h2>
+
+<h3>Programming</h3>
+
+<p>可以继续巩固下Java，学习下C在硬件设计方向上的用法，我认为迟早会用到的。</p>
+
+<h3>开源</h3>
+
+<p>继续了解ArchLinux的运行机制，了解Linux系统的维护，必要时学习下Python和bash编程在系统维护的编程。</p>
+
+<p>如果有想法，尽量写几个开源程序，帮忙维护下开源社区，多参加开源活动。</p>
+
+<h3>看书</h3>
+
+<p>买了kindle后，看书的体验好多了，争取每两周看一本书，多做做读书笔记，多看多想。</p>
+
+<h3>语言学习</h3>
+
+<p>巩固下英语的学习，可以坚持每天在kindle上看China Daily，拓展下词汇量。
+喜欢动漫的话自然想要学一下日语，难得有时间，多看看浙大的日语教程，平时多练练。</p>
+
+<h3>吉他</h3>
+
+<p>自从大二买了后一直没有连续的时间来练习，现在应该可以有时间了，纯当消遣。</p>
+
+<h3>轮滑</h3>
+
+<p>忘了我还有双轮滑鞋，没事还可以玩玩。
+暂时就这么多吧，想到再加。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[保研之事尘埃落，继续努力]]></title>
+    <link href="http://jonathan-li.me/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li/"/>
+    <updated>2013-09-06T23:41:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/09/06/bao-yan-zhi-shi-chen-ai-luo-ji-xu-nu-li</id>
+    <content type="html"><![CDATA[<p>今天是个特殊的日子，so需要mark一下。</p>
+
+<h4>去了趟校医院，屁股挨了一针</h4>
+
+<p>玫瑰糠疹终于还是把我搞的痒的睡不着了，忍无可忍的我只有去看doctor了，结果去校医院，又和往常一样，屁股挨针了，明后天还要去。</p>
+
+<p>不过今天给我打针的医生明显技术不一样啊，几分钟就不疼了，上次那个医生打针疼了我一天。</p>
+
+<h3>接的那个小项目终于写完了，虽然功能简单，做完善还是不容易啊</h3>
+
+<p>花了一天的时间把那个项目改好了，本来Linux里面各种配source没有问题，结果到了window下后才发现ffplay在window下的那个版本各种bug，一运行就死机，吐嘈无力了，又没有时间去手动编译，而且还不一定有用。最后一怒之后在window后用potplayer替代ffplay了，直接把potplayer整个硬盘版目录放到项目里了，用java直接调用，效果比ffplay好多了哟，我到现在都佩服当初想到的解决方案233333.</p>
+
+<!-- more -->
+
+
+<p>PS：以后这种项目还是少接吧，钱又少（好吧，我承认，我是冲钱来的），又花时间，最主要的是闹心。项目需求改了几次，呵呵。</p>
+
+<h2>新学期工作室开会了，薛考研去了，我一个人当组长压力有点大，还好时间多，可以弥补</h2>
+
+<p>新学期又开始了，邓老师把这学期的开发任务讲了下，首先是把上学期没搞完的网络中心vps综合管理系统搞定，然后重点就是抓PT，额，这是个苦力活，对了，我近期还要把服务器重装下系统，我是用ArchLinux还是ArchLinux呢23333</p>
+
+<p>末了，老师还把7-8月放假的时间的工资也给我们补上，纯粹福利。</p>
+
+<h1>晚上十一点回到寝室，突然收到方老师的邮件，用颤抖的手打开后</h1>
+
+<blockquote><p> On 2013年09月05日 22:09, Xuming Fang wrote:
+   李超：你好！</p>
+
+<pre><code>经慎重考虑，同意你跟随我继续研究生阶段的学习。
+
+ 祝好！
+
+  方旭明
+</code></pre></blockquote>
+
+<p>oh, Yes,给老师回了封邮件后，心情顿时非常开心了好多，那些名额你们去争吧，不管我的事了，安心敲我的代码咯～</p>
+]]></content>
+  </entry>
+  
+</feed>

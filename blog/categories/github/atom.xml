@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: github | Jonathan's Blog]]></title>
+  <link href="http://jonathan-li.me/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-22T17:09:32+08:00</updated>
+  <id>http://jonathan-li.me/</id>
+  <author>
+    <name><![CDATA[Jonathan]]></name>
+    <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linux下SSH到Github]]></title>
+    <link href="http://jonathan-li.me/blog/2013/08/09/linuxxia-sshdao-github/"/>
+    <updated>2013-08-09T17:17:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/08/09/linuxxia-sshdao-github</id>
+    <content type="html"><![CDATA[<p>本来不想写这篇的，但由于之前ssh到github的时候费了好多劲，
+还是mark一下吧，作为以后的参考</p>
+
+<h2>Step1: 检查已有的Key</h2>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
+</span><span class='line'>    <span class="nv">$ </span>ls
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>如果有id_rsa.pub，说明已经生成了keypair了，直接去Step3</p>
+
+<h2>Step2：生成新的SSH Key</h2>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span>ssh-keygen -t rsa -C <span class="p">&amp;</span>ldquo<span class="p">;</span>&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#x3a;&amp;#121;&amp;#x6f;&amp;#117;&amp;#114;&amp;#95;&amp;#101;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#x40;&amp;#x65;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&quot;</span>&gt;<span class="p">&amp;</span><span class="c">#121;&amp;#111;&amp;#x75;&amp;#114;&amp;#x5f;&amp;#x65;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x40;&amp;#x65;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&amp;rdquo;</span>
+</span><span class='line'>    Generating public/private rsa key pair.
+</span><span class='line'>    Enter file in which to save the key <span class="o">(</span>/home/you/.ssh/id_rsa<span class="o">)</span>:
+</span><span class='line'>    Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: <span class="o">[</span>Type a passphrase<span class="o">]</span>
+</span><span class='line'>    Enter same passphrase again: <span class="o">[</span>Type passphrase again<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>passphrase就相当如密码一样。</p>
+
+<!-- more -->
+
+
+<h2>Step3：添加你的SSH key到Github</h2>
+
+<p>通过xclip从文件中把数据拷贝到剪贴板中（你也可以直接手工粘贴，但是这样更cool
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span>sudo pacman -S xlicp
+</span><span class='line'>    <span class="nv">$ </span>xclip -sel clip <span class="p">&amp;</span>lt<span class="p">;</span> ~/.ssh/id_rsa.pub
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>去自己的github账户选项里的Add SSH key中添加key，直接粘贴即可（标题可不要）</p>
+
+<h2>Step4：测试是否成功</h2>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span>ssh -T &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#111;&amp;#58;&amp;#103;&amp;#x69;&amp;#116;&amp;#64;&amp;#103;&amp;#105;&amp;#x74;&amp;#x68;&amp;#117;&amp;#x62;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;</span>&gt;<span class="p">&amp;</span><span class="c">#103;&amp;#x69;&amp;#x74;&amp;#x40;&amp;#103;&amp;#105;&amp;#x74;&amp;#104;&amp;#117;&amp;#x62;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>如果出现这样的结果：
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="p">&amp;</span>hellip<span class="p">;</span>
+</span><span class='line'>    Agent admitted failure to sign using the key.
+</span><span class='line'>    debug1: No more authentication methods to try.
+</span><span class='line'>    Permission denied <span class="o">(</span>publickey<span class="o">)</span>.
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>说明key导入有问题，github的key应该没问题，那应该是本地key的问题了
+查了半天才发现，由于Linux的安全性， 必须好要手工导入下ssh-key， 运行
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span>ssh-add
+</span><span class='line'>    Enter passphrase <span class="k">for</span> /home/you/.ssh/id_rsa: <span class="o">[</span>tippy tap<span class="o">]</span>
+</span><span class='line'>    Identity added: /home/you/.ssh/id_rsa <span class="o">(</span>/home/you/.ssh/id_rsa<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>再试一遍：<code>ssh -T git@github.com</code></p>
+
+<p>如果出现这样的结果：
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    Hi username! You<span class="p">&amp;</span>rsquo<span class="p">;</span>ve successfully authenticated, but GitHub does not
+</span><span class='line'>    provide shell access.
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>至此，ssh连接至github已完成，下面就可以直接用git与账户交互了。</p>
+
+<p>引用：</p>
+
+<blockquote><p><a href="https://help.github.com/articles/generating-ssh-keys">help.github.com</a></p>
+
+<p><a href="https://help.github.com/articles/error-agent-admitted-failure-to-sign">admitted-failure</a></p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

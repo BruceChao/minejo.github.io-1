@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | Jonathan's Blog]]></title>
+  <link href="http://jonathan-li.me/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-22T17:09:32+08:00</updated>
+  <id>http://jonathan-li.me/</id>
+  <author>
+    <name><![CDATA[Jonathan]]></name>
+    <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[重新部署octopress]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/10/zhong-xin-bu-shu-octopress/"/>
+    <updated>2013-10-10T15:27:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/10/zhong-xin-bu-shu-octopress</id>
+    <content type="html"><![CDATA[<p>今天不小心手贱把博客目录给删了，没办法只好去github重新clone了一遍，结果配置了几次都不对，最后还是网上搜了一下才搞对的，看来我对git的用法还不是很了解啊。</p>
+
+<p>重新配置时的基本操作我就不说，我这篇文章里有<a href="http://minejo.github.io/blog/2013/08/09/shi-yong-github-plus-octopresszuo-blog/">使用Github+Octopress做Blog</a>,重新配置只要把github上的那个代码clone下来即可。</p>
+
+<h2>第一步：clone source分支</h2>
+
+<p><code>git clone -b source git@github.com:minejo/minejo.github.io.git</code></p>
+
+<h2>第二步：clone master分支</h2>
+
+<p><code>cd minejo.github.io #进入source分支</code></p>
+
+<p><code>git clone -b master git@github.com:minejo/minejo.github.io.git _deploy</code></p>
+
+<p>ok了，虽然很简单，但还是花了我不少时间，mark一下。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[修改Octopress主题fabric为Vimwiki站点模板]]></title>
+    <link href="http://jonathan-li.me/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban/"/>
+    <updated>2013-08-17T22:04:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/08/17/xiu-gai-octopressfabricwei-vimwikizhan-dian-mo-ban</id>
+    <content type="html"><![CDATA[<p> 整Vimwiki的模板也有2-3天了，先是自己DIY，然后用bootstrap来DIY，但总是达不到我要的效果，唉，我果然是没有做UI的天赋啊。</p>
+
+<p> 无奈之下，只好求助于开源模板，恰好想顺便换下Octopress主题，于是就开始找Octopress的开源主题，找了好久终于发现了一个好看又简洁的模板<a href="http://panks.me/blog/2013/01/new-octopress-theme-fabric/">fabric</a>,Octopress主题的安装我就不说了，直接开始修改wiki模板吧。</p>
+
+<p> 由于wiki是用来做个人笔记用的，所以砍掉了很多没必要的JS，把Social和搜索也去掉了.</p>
+
+<p> 效果图如下：
+ <img src="/images/sample.png" title="Sample" alt="Alt sample" /></p>
+
+<p> 我修改后的template如下：
+ File /home/li/Octopress/source/downloads/code/template.html could not be found</p>
+
+<!-- more -->
+
+
+<h2>一些细节的修改</h2>
+
+<h3>css 的修改</h3>
+
+<p>由于怕文件重复，我wiki里template的css和js是直接引用的Octopress的，所以能保持到Theme基本一致，但有个问题就是，Octopress里的css没有Vimwiki生成的特定css样式，比如<code>= title =</code>生成了.justcenter的样式，原来的Css就无法解析，So 缺什么，往里面加就是了。</p>
+
+<p><figure class='code'><figcaption><span>添加CSS </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.todo</span> <span class="p">{</span><span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span> <span class="k">background-color</span><span class="o">:</span> <span class="m">#f0ece8</span><span class="p">;</span> <span class="k">color</span><span class="o">:</span> <span class="m">#a03020</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.justleft</span> <span class="p">{</span><span class="k">text-align</span><span class="o">:</span> <span class="k">left</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.justright</span> <span class="p">{</span><span class="k">text-align</span><span class="o">:</span> <span class="k">right</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.justcenter</span> <span class="p">{</span><span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;}</span>
+</span><span class='line'><span class="nc">.center</span> <span class="p">{</span><span class="k">margin-left</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span> <span class="k">margin-right</span><span class="o">:</span> <span class="k">auto</span><span class="p">;}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;/&lt;</span><span class="nt">em</span><span class="o">&gt;</span> <span class="nt">classes</span> <span class="nt">for</span> <span class="nt">items</span> <span class="nt">of</span> <span class="nt">todo</span> <span class="nt">lists</span> <span class="o">&lt;/</span><span class="nt">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="nc">.done0</span> <span class="p">{</span>
+</span><span class='line'>    <span class="o">/&lt;</span><span class="n">em</span><span class="o">&gt;</span> <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
+</span><span class='line'>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAA7SURBVCiR7dMxEgAgCANBI3yVRzF5KxNbW6wsuH7LQ2YKQK1mkswBVERYF5Os3UV3gwd/jF2SkXy66gAZkxS6BniubAAAAABJRU5ErkJggg==)</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">.2em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin-left</span><span class="o">:</span> <span class="m">-2em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding-left</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.done1</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABtSURBVCiR1ZO7DYAwDER9BDmTeZQMFXmUbGYpOjrEryA0wOvO8itOslFrJYAug5BMM4BeSkmjsrv3aVTa8p48Xw1JSkSsWVUFwD05IqS1tmYzk5zzae9jnVVVzGyXb8sALjse+euRkEzu/uirFomVIdDGOLjuAAAAAElFTkSuQmCC)</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">.15em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin-left</span><span class="o">:</span> <span class="m">-2em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding-left</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.done2</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAB1SURBVCiRzdO5DcAgDAVQGxjAYgTvxlDIu1FTIRYAp8qlFISkSH7l5kk+ZIwxKiI2mIyqWoeILYRgZ7GINDOLjnmF3VqklKCUMgTee2DmM661Qs55iI3Zm/1u5h9sm4ig9z4ERHTFzLyd4G4+nFlVrYg8+qoF/c0kdpeMsmcAAAAASUVORK5CYII=)</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">.15em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin-left</span><span class="o">:</span> <span class="m">-2em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding-left</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.done3</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABoSURBVCiR7dOxDcAgDATA/0DtUdiKoZC3YhLkHjkVKF3idJHiztKfvrHZWnOSE8Fx95RJzlprimJVnXktvXeY2S0SEZRSAAAbmxnGGKH2I5T+8VfxPhIReQSuuY3XyYWa3T2p6quvOgGrvSFGlewuUAAAAABJRU5ErkJggg==)</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">.15em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin-left</span><span class="o">:</span> <span class="m">-2em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding-left</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nc">.done4</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAzgAAAM4BlP6ToAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIISURBVDiNnZQ9SFtRFMd/773kpTaGJoQk1im4VDpWQcTNODhkFBcVTCNCF0NWyeDiIIiCm82QoIMIUkHUxcFBg1SEQoZszSat6cdTn1qNue92CMbEr9Sey+XC/Z/zu+f8h6ukUil3sVg0+M+4cFxk42/jH2wAqqqKSCSiPQdwcHHAnDHH9s/tN1h8V28ETdP+eU8fT9Nt62ancYdIPvJNtsu87bmjrJlrTDVM4RROJs1JrHPrD4Bar7A6cpc54iKOaTdJXCUI2UMVrQZ0Js7YPN18ECKkYNQcJe/OE/4dZsw7VqNXQMvHy3QZXQypQ6ycrtwDjf8aJ+PNEDSCzLpn7+m2pD8ZKHlKarYhy6XjEoCYGcN95qansQeA3fNdki+SaJZGTMQIOoL3W/Z89rxv+tokubNajlvk/vm+LFpF2XnUKZHI0I+QrI7Dw0OZTqdzUkpsM7mZTyfy5OPGyw1tK7AFSvmB/Ks8w8YwbUYbe6/3QEKv0vugfxWPnMLJun+d/kI/WLdizpNjMbAIKrhMF4OuwadBALqqs+RfInwUvuNi+fBd+wjogfogAFVRmffO02q01mZZ0HHdgXIzdz0QQLPezIQygX6llxNKKgOFARYCC49CqhoHIUTlss/Vx2phlYwjw8j1CAlfAiwQiJpiy7o1VHnsG5FISkoJu7Q/2YmmaV+i0ei7v38L2CBguSi5AAAAAElFTkSuQmCC)</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">.15em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">margin-left</span><span class="o">:</span> <span class="m">-2em</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">padding-left</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span><span class="nc">.well</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">min-height</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">19px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">margin-bottom</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">background-color</span><span class="o">:</span> <span class="m">#f5f5f5</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#e3e3e3</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">4px</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">4px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">4px</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="k">inset</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">05</span><span class="p">);</span>
+</span><span class='line'>  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="k">inset</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">05</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="k">inset</span> <span class="m">0</span> <span class="m">1px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">05</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<h3>修改显示的细节</h3>
+
+<p>给生成目录添加深色背景，在js中加入：</p>
+
+<p><code>$(".toc").addClass("well");</code></p>
+
+<h3>Disable Ajaxification</h3>
+
+<p>把template.html里面的<code>id=="aax"</code>全给删掉，不然在wiki里目录会跳转失效。</p>
+
+<p>引用：</p>
+
+<blockquote><p><a href="http://panks.me/blog/2013/01/new-octopress-theme-fabric/">Fabric</a></p>
+
+<p><a href="http://www.berlinix.com/vim/vimwiki_with_bootstrap_jquery.php">用jQuery和Bootstrap美化VimWiki输出</a></p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linux下自动提交Octopress脚本]]></title>
+    <link href="http://jonathan-li.me/blog/2013/08/16/linuxxia-zi-dong-ti-jiao-octopressjiao-ben/"/>
+    <updated>2013-08-16T17:55:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/08/16/linuxxia-zi-dong-ti-jiao-octopressjiao-ben</id>
+    <content type="html"><![CDATA[<p>用blog每次提交的时候总是好麻烦，于是就写了个脚本,
+用来自动提交源码到source分支，同时更新blog。</p>
+
+<p>该脚本支持preview和git commit message参数，参数分别为-p， -m message</p>
+
+<p>File /home/li/Octopress/source/downloads/code/autorake could not be found</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[解决ArchLinux中Octopress无法代码高亮]]></title>
+    <link href="http://jonathan-li.me/blog/2013/08/10/jie-jue-archlinuxzhong-octopresswu-fa-dai-ma-gao-liang/"/>
+    <updated>2013-08-10T13:06:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/08/10/jie-jue-archlinuxzhong-octopresswu-fa-dai-ma-gao-liang</id>
+    <content type="html"><![CDATA[<p>一开始使用octopress无法使用高亮，比如在用codeblock时一旦指定了挺定的lang就会报下面的错：
+<figure class='code'><figcaption><span>Error </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>devel/octopress/plugins/pygments_code.rb:27:in &lt;code&gt;rescue in pygments<span class="s1">&#39;: Pygments</span>
+</span><span class='line'><span class="s1">can&#39;</span>t parse unknown language: text. <span class="o">(</span>RuntimeError<span class="o">)</span>
+</span><span class='line'>from devel/octopress/plugins/pygments_code.rb:24:in&lt;/code&gt;pygments<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from devel/octopress/plugins/pygments_code.rb:14:in &lt;code&gt;highlight&#39;</span>
+</span><span class='line'>from devel/octopress/plugins/backtick_code_block.rb:37:in&lt;/code&gt;block in
+</span><span class='line'>render_code_block<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from devel/octopress/plugins/backtick_code_block.rb:13:in &lt;code&gt;gsub&#39;</span>
+</span><span class='line'>from devel/octopress/plugins/backtick_code_block.rb:13:in&lt;/code&gt;render_code_block<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from devel/octopress/plugins/octopress_filters.rb:12:in   &lt;code&gt;pre_filter&#39;</span>
+</span><span class='line'>from devel/octopress/plugins/octopress_filters.rb:28:in  &lt;/code&gt;pre_render<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from devel/octopress/plugins/post_filters.rb:112:in `block in   pre_render&#39;</span>
+</span><span class='line'><span class="p">&amp;</span>hellip<span class="p">;</span>.
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>后来才发现，用来解析高亮的Pygments需要的python版本是2.7,而arch默认的python版本是3.x， 这就好办了，在rvm处修改，使得调用的python版本为2.7.</p>
+
+<p><figure class='code'><figcaption><span>~/.rvm/gems/ruby-1.9.3-p392/gems/pygments.rb-0.3.4/lib/pygments/mentos.py </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">!</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">python</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-&lt;</span><span class="n">em</span><span class="o">&gt;-</span> <span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span> <span class="o">-&lt;/</span><span class="n">em</span><span class="o">&gt;-&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><figure class='code'><figcaption><span>~/.rvm/gems/ruby-1.9.3-p392/gems/pygments.rb-0.3.4/lib/pygments/mentos.py </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">!</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">python2</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;-&lt;</span><span class="n">em</span><span class="o">&gt;-</span> <span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span> <span class="o">-&lt;/</span><span class="n">em</span><span class="o">&gt;-&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>这样就搞定了，rake generate就不会报错了，尽情的使用高亮吧。</p>
+
+<p>引用：</p>
+
+<blockquote><p><a href="http://www.nonsenseby.me/blog/2013/04/13/arch-linux/">Arch Linux, Octopress, and Misbehaving Pygments</a></p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress添加相册功能]]></title>
+    <link href="http://jonathan-li.me/blog/2013/08/09/octopresstian-jia-xiang-ce-gong-neng/"/>
+    <updated>2013-08-09T20:42:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/08/09/octopresstian-jia-xiang-ce-gong-neng</id>
+    <content type="html"><![CDATA[<p>给博客加个相册是个梦寐以求的功能了，之前在Wordpress上的相册功能不够满意，太臃肿了，自定义性不强，转到Octopress后发现自定义太强了，相册功能反而不知从何下手，索性今天找到了这个插件<a href="http://fancyapps.com/fancybox/#license">FancyBox</a>.</p>
+
+<p>FanyBox主要用于在网站上显示相册，而且有好多种特效，我只用了最简单的那种特效，感觉还可以，就懒得再折腾了（时间拙急啊），各位感兴趣的话可以下载demo去自己研究下。</p>
+
+<p><img src="/images/usegallery.png"></p>
+
+<p>现在开始修改这个插件，使之适用于octopress</p>
+
+<h3>修改导航栏</h3>
+
+<p>修改<code>/source/_includes/costom/navigation.html</code></p>
+
+<p>根据上下文加一个列：
+   <code>&lt;li&gt;&lt;a href="http://jonathan-li.me/blog/gallery"&gt;Gallery&lt;/a&gt;&lt;/li&gt;</code></p>
+
+<h3>导入插件文件</h3>
+
+<p>把解压后的文件夹<code>lib</code>,<code>source</code>还有demo里的文件复制到<code>/source/blog/gallery</code>中</p>
+
+<h3>修改index.html</h3>
+
+<p>选择你要的样式，其他的样式可以全部删掉，我的<a href="https://github.com/minejo/minejo.github.io/blob/master/blog/gallery/index.html">index.html</a></p>
+
+<p>然后把<code>&lt;html&gt;</code>,<code>&lt;body&gt;</code>,<code>&lt;head&gt;</code>等独立标签去掉，在第一行加上：
+    &mdash;
+    layout: page
+    title: Gallery
+    footer: false
+    &mdash;</p>
+
+<p>使相册嵌入到网站中。</p>
+
+<h3>添加图片缩放JS</h3>
+
+<p><figure class='code'><figcaption><span>change picture size function </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">function</span> <span class="nx">AutoResizeImage</span><span class="p">(</span><span class="nx">maxWidth</span><span class="p">,</span> <span class="nx">maxHeight</span><span class="p">,</span> <span class="nx">objImg</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">objImg</span><span class="p">.</span><span class="nx">src</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">hRatio</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">wRatio</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">Ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">wRatio</span> <span class="o">=</span> <span class="nx">maxWidth</span> <span class="o">/</span> <span class="nx">w</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">hRatio</span> <span class="o">=</span> <span class="nx">maxHeight</span> <span class="o">/</span> <span class="nx">h</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">maxHeight</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">Ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">hRatio</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">Ratio</span> <span class="o">=</span> <span class="nx">hRatio</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">maxHeight</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">wRatio</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">Ratio</span> <span class="o">=</span> <span class="nx">wRatio</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">wRatio</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">hRatio</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">Ratio</span> <span class="o">=</span> <span class="p">(</span><span class="nx">wRatio</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">=</span> <span class="nx">hRatio</span> <span class="o">?</span> <span class="nx">wRatio</span> <span class="o">:</span> <span class="nx">hRatio</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">Ratio</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span> <span class="o">*</span> <span class="nx">Ratio</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">h</span> <span class="o">=</span> <span class="nx">h</span> <span class="o">*</span> <span class="nx">Ratio</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">objImg</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">h</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">objImg</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">w</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>然后在图片属性中加入<code>onload="AutoResizeImage(250,0,this)"</code>，长宽自己定即可。</p>
+
+<h3>Tips</h3>
+
+<p>至于添加图片，我在gallery下建了不同的分类，用于放不同类别的图片，然后在index中编辑来源，至于框架展示和美观就要靠你的css和html功底了。</p>
+
+<p>搞定了。</p>
+
+<p>感谢Zhao, Xuhai同学的博文。</p>
+
+<p>引用：</p>
+
+<blockquote><p><a href="http://seagg.github.io/blog/2012/09/06/support-gallery/">向Octopress博客添加相册功能</a></p>
+
+<p><a href="http://www.qianyunlai.com/post-397.html">JS控制图片显示的大小（图片等比例缩放)</a></p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

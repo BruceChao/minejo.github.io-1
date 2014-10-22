@@ -1,16 +1,1229 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://minejo.github.io/atom.xml" rel="self"/>
-  <link href="http://minejo.github.io/"/>
-  <updated>2014-10-22T16:45:18+08:00</updated>
-  <id>http://minejo.github.io/</id>
+  <title><![CDATA[Jonathan's Blog]]></title>
+  <link href="http://jonathan-li.me/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-22T17:09:32+08:00</updated>
+  <id>http://jonathan-li.me/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Jonathan]]></name>
+    <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[《陆犯焉识》读书笔记]]></title>
+    <link href="http://jonathan-li.me/blog/2014/06/08/criminal-lu-readnote/"/>
+    <updated>2014-06-08T13:14:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/06/08/criminal-lu-readnote</id>
+    <content type="html"><![CDATA[<blockquote><p>要是他跑到婉喻面前，跟她说，我和你发生了一场误会……也许我跟自己发生了一场误会；我爱的，却认为不爱。一代代的小说家戏剧家苦苦地写了那么多，就是让我们人能了解自己，而我们人还是这么不了解自己。一定要倾国倾城，一定要来一场灭顶之灾，一场无期流放才能了解自己，知道自己曾经是爱的。</p></blockquote>
+
+<p>-At Kindle page:1395-1398</p>
+
+<hr />
+
+<blockquote><p>从他记事开始，他就为了不让别人为难，常常做别人为难他的事，做别人要他做的人。他做了别人要他做的人，得到“随和大度”、“与世无争”的评语，甚至“大咧咧”、“心不在焉”的好意嗔怪，他是满足的。这满足似乎抵消了他因为扮出“随和大度”引起的内心紧张，这满足也似乎补偿了他那“与世无争”带来的真正失去。</p></blockquote>
+
+<p>-At Kindle page:2121-2124</p>
+
+<hr />
+
+<blockquote><p>我祖父用了无数种形容，来表达镐头落地时他手臂的感觉，有一种感觉我觉得很有意思：每一镐落下，大荒地都通过镐头和他的臂骨撞击他的内脏，而不是他的手臂和镐头撞击大荒地。因此不是人垦荒，是荒垦人。</p></blockquote>
+
+<p>-At Kindle page:221-223</p>
+
+<hr />
+
+<!-- more -->
+
+
+<blockquote><p>外面是打牌的叫嚷声，吃东西的吧唧嘴声，气味也渐渐肥腻起来，人这种杂食动物挤在一块比任何动物的气味都坏，对此住了近十年监房的陆焉识一再感悟。</p></blockquote>
+
+<p>-At Kindle page:2361-2362</p>
+
+<hr />
+
+<blockquote><p>他怕自己爱念痕其实是假，爱自己的自由是真；他是没种公开地爱自己的自由的。他从小到大，大事情自己从来没做过主，只有跟念痕的恋爱是自由自主的。假如他把爱自由投射到爱念痕上面，对这个在他身边一天天辛勤搭窝的年轻女人多么不公正。</p></blockquote>
+
+<p>-At Kindle page:2679-2682</p>
+
+<hr />
+
+<blockquote><p>“老早呢，觉得你没用场好，心底里不龌龊，人做得清爽。太有用场的人都是有点下作的。现在看看，没用场就是没用场。”恩娘说。“中国是个啥地方？做学问做三分，做人做七分。外国的人要紧的是发明这种机器发明那种机器，中国人呢，要紧的就是你跟我搞，我跟你斗。你不懂这个学问，你在中国就是个没用场的人。”</p></blockquote>
+
+<p>-At Kindle page:3246-3248</p>
+
+<hr />
+
+<blockquote><p>不为别的，就为婉喻不是他自己挑来的，是强塞给他的。他一直以为自己怀恨婉喻，后来发现自己不恨她，恨的是把她塞给他的那种主宰，那个传统，那个方式。</p></blockquote>
+
+<p>-At Kindle page:3638-3639</p>
+
+<hr />
+
+<blockquote><p>革命我不反对，但是革命者认为他的命比百姓的命更值钱，碰到性命攸关的时候就拿百姓牺牲，我不能跟这样的革命者来往。”</p></blockquote>
+
+<p>-At Kindle page:4099-4100</p>
+
+<hr />
+
+<blockquote><p>二十岁一个中国男人，应该可以不动声色地防御，甚至进攻，不露痕迹地交换利益甚至勾当，只要不被抓住永远不算作弊。二十岁，他应该习惯了人的那种淡淡的无耻，把它当成是正常的人味</p></blockquote>
+
+<p>-At Kindle page:4116-4117</p>
+
+<hr />
+
+<blockquote><p>人应该给自己足够的民主自由选择跟谁交往，并且坦荡地承认一份交往的失败。</p></blockquote>
+
+<p>-At Kindle page:4138-4138</p>
+
+<hr />
+
+<blockquote><p>正因为她的寻常和安静，以及那点寡趣和乏味，她偶然的那些小水妖般的风情流盼才珍奇，才宛若神鬼附体。她其实是摸不着底的。他不知道她究竟可以疯成什么样，野成什么样，也许她自己也不知道。</p></blockquote>
+
+<p>-At Kindle page:4908-4909</p>
+
+<hr />
+
+<blockquote><p>大学正式招生了，邓小平复职了，中美建交了，叫邓丽君的台湾女人的歌声在大陆登堂入室了，福建广东人走私的立体声录音机进入上海了，私人舞会、音乐会开始举办了，外滩出现公开拥抱接吻的情侣了，第一批留学美国和欧洲的学生出国了，美国的大姑母丹琼把冯学雷留学的I-20寄来了……这些都是她和他们曾经等待过的，等来了，又总会来一声暗自叹息：不过如此。至</p></blockquote>
+
+<p>-At Kindle page:5697-5700</p>
+
+<hr />
+
+<blockquote><p>焉识想这样告诉焉得，他的福气不小：饥饿一场，遭罪一场，生死一场，结果领略了真的福气是什么。福气是他知道自己是个有福之人，因为他有冯婉喻这样的女人爱他，为他生养了三个孩子，并让他亲自见证了她怎样苦等他。冯婉喻对他焉识的情分，就是他的福气。</p></blockquote>
+
+<p>-At Kindle page:5880-5882</p>
+
+<hr />
+
+<blockquote><p>一次次政治运动和社会变迁假如能使那房产幸免，到了“文革”是无论如何也保不住的。终究要失去的东西，不如主动失去。能够主动地丢失便是施者。怎么办呢？不这样施舍，弱者怎样表达对于压迫他们的强者的宽容大度呢？</p></blockquote>
+
+<p>-At Kindle page:5969-5971</p>
+
+<hr />
+
+<blockquote><p>妻子悄悄问：“他回来了吗？” 丈夫于是明白了，她打听的是她一直在等的那个人，虽然她已经忘了他的名字叫陆焉识。 “回来了。”丈夫悄悄地回答她。 “还来得及吗？”妻子又问。 “来得及的。他已经在路上了。” “哦。路很远的。” 婉喻最后这句话是袒护她的焉识：就是焉识来不及赶到也不是他的错，是路太远。</p></blockquote>
+
+<p>-At Kindle page:6187-6191</p>
+
+<hr />
+
+<blockquote><p>我想这就是我太祖母冯仪芳说的“没用场”。一般此类“没用场的人”都有一身本事，误以为本事可以让他们凌驾于人，让人们有求于他们的本事，在榨取他们本事的同时，至少可以容他们清高，容他们独立自由地过完一生。但是他们从来不懂，他们的本事孤立起来很少派得上用场，本事被榨干也没人会饶过他们，不知如何自身已陷入一堆卑琐，已经参与了勾结和纷争，失去了他们最看重的独立自由。</p></blockquote>
+
+<p>-At Kindle page:6405-6408</p>
+
+<hr />
+
+<blockquote><p>原来在他这里，恋爱是一回事，和谁去熬完一生是另一回事。与之去熬完一生的女人，必定引起他的无限怜悯。</p></blockquote>
+
+<p>-At Kindle page:671-672</p>
+
+<hr />
+
+<blockquote><p>在此地谁有块心病，有块暗伤，一定会有人来揭它戳它，你的痛不欲生可以舒缓大家的痛不欲生，一份不幸给大家拿去，医治集体的不幸</p></blockquote>
+
+<p>-At Kindle page:733-734</p>
+
+<hr />
+
+<blockquote><p>葫芦给折磨得越狠，他的替死鬼功能发挥得越彻底。让十六岁的死刑犯替大家疼，替大家皮开肉绽吧。</p></blockquote>
+
+<p>Note:<strong>唉</strong></p>
+
+<p>-At Kindle page:752-753</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[《围城》读书笔记]]></title>
+    <link href="http://jonathan-li.me/blog/2014/05/17/fortress-besieged/"/>
+    <updated>2014-05-17T08:37:11+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/05/17/fortress-besieged</id>
+    <content type="html"><![CDATA[<blockquote><p>这一张文凭，仿佛有 亚当、夏娃下身那片树叶的功用，可以遮羞包丑；小小一方纸能把一个人的空疏 、寡陋、愚笨都掩盖起来。</p></blockquote>
+
+<p>-At Kindle page:149-151</p>
+
+<hr />
+
+<blockquote><p>又如前天的日记写他叫鸿渐到周家去辞行，鸿渐不肯，骂 周太太鄙吝势利，他怎样教训儿子“君子躬自厚而薄责于人，亲无失亲，故无失 故”，结果儿子怎样帖然“无词”。其实鸿渐并没骂周太太。是豚翁自己对她不 满意，所以用这种皮里阳秋的笔法来褒贬。鸿</p></blockquote>
+
+<p>-At Kindle page:1677-1680</p>
+
+<hr />
+
+<blockquote><p>他想也许女孩子第一次有男朋友的心境也像白水冲了红酒，说 不上爱情，只是一种温淡的兴奋。</p></blockquote>
+
+<p>-At Kindle page:1922-1923</p>
+
+<hr />
+
+<!-- more -->
+
+
+<blockquote><p>每逢它不肯走，汽车夫就破口臭 骂，此刻骂得更利害了。骂来骂去，只有一个意思：汽车夫愿意跟汽车的母亲和 祖母发生肉体恋爱。骂的话虽然欠缺变化，骂的力气愈来愈足。</p></blockquote>
+
+<p>-At Kindle page:1958-1960</p>
+
+<hr />
+
+<blockquote><p>辛楣很喜欢那个女孩子，这一望而知的 ，但是好像并非热烈的爱，否则，他讲她的语气，不会那样幽默。他对她也许不 过像自己对柔嘉，可见结婚无需太伟大的爱情，彼此不讨厌已经够结婚资本了。</p></blockquote>
+
+<p>-At Kindle page:3712-3714</p>
+
+<hr />
+
+<blockquote><p>这好像开无线电。你把针在面上转一圈，听见东一个电台半句京戏，西一个电台 半句报告，忽然又是半句外国歌啦，半句昆曲啦，鸡零狗碎，凑在一起，莫名其 妙。可是每一个破碎的片段，在它本电台广播的节目里，有上文下文并非胡闹。 你只要认定一个电台听下去，就了解它的意义。</p></blockquote>
+
+<p>-At Kindle page:3915-3917</p>
+
+<hr />
+
+<blockquote><p>他入世多年，明白在一切机关里，人总有人可替，坐位总有人来坐。怄气辞职只是辞的人吃亏，被辞的职位漠然不痛不痒；人不肯坐椅子，苦了自己的腿，椅子空着不会饿，椅子立着不会酸的。不过椅子空得多些，可以造成不景气的印象。</p></blockquote>
+
+<p>-At Kindle page:4547-4549</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[《遇见未知的自己》读书笔记]]></title>
+    <link href="http://jonathan-li.me/blog/2014/03/14/run-into-the-unkown-myself-readnote/"/>
+    <updated>2014-03-14T15:03:29+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/03/14/run-into-the-unkown-myself-readnote</id>
+    <content type="html"><![CDATA[<blockquote><p>“所以呀，记住，管好自己的事最重要。”老人提醒她，“为我们的亲人担心，其实是一种不负责任的加害行为！”</p></blockquote>
+
+<p>-At Kindle page:1191-1192</p>
+
+<hr />
+
+<blockquote><p>无论你多么爱他，多余的担心就是最差的礼物，不如给他祝福吧！</p></blockquote>
+
+<p>-At Kindle page:1217-1218</p>
+
+<hr />
+
+<blockquote><p>思想来来去去，却影响不了内在的我。我有思想，但我并非自己的思想</p></blockquote>
+
+<p>-At Kindle page:1276-1276</p>
+
+<hr />
+
+<blockquote><p>我们的思想总是在过去和未来，但我们的身体和呼吸却永远是在当下的</p></blockquote>
+
+<p>-At Kindle page:1661-1662</p>
+
+<hr />
+
+<!-- more -->
+
+
+<blockquote><p>当你真心想要一样东西的时候，你身上散发出来的就是会吸引那样东西的那种振动频率，然后全宇宙就会联合起来帮助你得到你想要的东西</p></blockquote>
+
+<p>-At Kindle page:2086-2087</p>
+
+<hr />
+
+<blockquote><p>所有的人、事、物都是你内在的投射，就像镜子一样地反映你的内在</p></blockquote>
+
+<p>-At Kindle page:2206-2207</p>
+
+<hr />
+
+<blockquote><p>该是你展翅高飞的时刻了。我看到你的成长、茁壮，心中有无比的喜悦。记得，要把你的祝福跟所有的人分享，因为分享就跟感恩一样，分享出去的越多，你回收的就越多。又到我云游四方的时候了，临走前我送你一句话，记住——亲爱的，外面没有别人，只有你自己。 所有的人、事、物都是你内在的投射，就像镜子一样地反映你的内在。当外境有任何东西触动你的时候，记得，要往内看。看看自己哪个地方的旧伤又被碰触了，看看自己有哪些阴影还没有整理好。不要浪费能量在那些外在的、不可改变、不可抗拒的东西上。先在内在层面做一个调和整理，然后再集中精力去应付外在可以改更的部分。 记得，每个发生在你身上的事件都是一个礼物，只是有的礼物包装得很难看，让我们心怀怨怼或是心存恐惧。所以，它可以是一个灾难，也可以是一个礼物。如果你能带着信心，给它一点儿时间，耐心、细心地拆开这个惨不忍睹的包装外壳，你会享受到它的内在蕴含着丰盛、美好，而且是精心为你量身打造的礼物。 祝福你，孩子。</p></blockquote>
+
+<p>-At Kindle page:2213-2223</p>
+
+<hr />
+
+<blockquote><p>我们从小到大，都有一个意识，那个意识在你小时候有记忆以来，就一直存在，陪着你上学、读书、结婚、工作。所以，有一个东西，在我们里面是一直没有变的，尽管我们的身体、感情、感受、知识和经验一直都在改变，但是我们仍然保有一个基本的内在真我，作为目睹一切的观察者。 这个内在真我不会随你的身体而生，也不随着死亡而消失，它可以观察人世百态，欣赏日出月落，云起云灭，而岁月的流转，环境的变迁，都不会改变它。</p></blockquote>
+
+<p>-At Kindle page:443-447</p>
+
+<hr />
+
+<blockquote><p>“我们失去了与真我的联结，但人类还是得要有‘自我感’，于是我们向外发展，认同于我们的身体、情绪、思想和角色、身份等，而一般人所谓的‘小我’、‘自我’（ego）于焉产生，汲汲追求外在的、物质的东西，以寻求满足。”</p></blockquote>
+
+<p>-At Kindle page:493-495</p>
+
+<hr />
+
+<blockquote><p>我们自以为可以操控我们的生活，做出自由的选择，但实际上，我们是一部自动化制约模式下的机器，很多时候身不由己</p></blockquote>
+
+<p>-At Kindle page:770-771</p>
+
+<hr />
+
+<blockquote><p>你不是你的工作，你不是你的表现，你不是你的成功，也不是你的失败。这些外在的东西，丝毫动摇不到你那个内在的真我，看清楚小我的虚假认同！</p></blockquote>
+
+<p>-At Kindle page:874-875</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[《没有色彩的多崎作和他的巡礼之年》读书笔记]]></title>
+    <link href="http://jonathan-li.me/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote/"/>
+    <updated>2014-03-02T15:52:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/03/02/colorless-tsukuru-tazaki-and-his-years-of-pilgrimage-readnote</id>
+    <content type="html"><![CDATA[<blockquote><p>长相是端正的，尽管时常被人夸奖，但那也只不过是在“没什么特别破绽”范畴中。他自己看着镜子的脸时，时常会感觉到一种无可救药的乏味。</p></blockquote>
+
+<p>-At Kindle page:118-119</p>
+
+<hr />
+
+<blockquote><p>“其实想想，这也挺不可思议的呢。”沙罗说道。“你不这么觉得么？我们基本上可以说生活在一个冷漠的时代，身边却充斥着那么多无关的他人的信息。只要你有意，轻而易举的就能得到那些信息。但实际上，我们其实并不认识他们。”</p></blockquote>
+
+<p>-At Kindle page:1316-1318</p>
+
+<hr />
+
+<blockquote><p>作觉得，大概。我是毫无内容的一个空虚之人。但也正因为是空荡荡的，就算一段时间也罢，总有人为了这份空缺而来，就像在夜间活动的孤鸟，找一处无人住的阁楼当做白天安全的休憩处那样。鸟儿们好像很喜欢空旷静默而昏暗的空间。这样的话，作倒应该庆幸自己的空虚了。</p></blockquote>
+
+<p>-At Kindle page:2379-2381</p>
+
+<hr />
+
+<!-- more -->
+
+
+<blockquote><p>的确是这样啊，作一边啜着红酒一边想着。不仅仅是和别人解释，就连向自己解释也很难做到。如果勉强去解释清楚的话就会生出谎言来。不管怎么样到了明天，很多事情应该会比现在明朗很多。现在只要静候即可。就算没能弄清楚，那也有何不可呢？那是没办法的事啊。缺乏颜色的多崎作只要继续这么欠缺着颜色地活下去就可以了，这并不会给任何人添麻烦。</p></blockquote>
+
+<p>-At Kindle page:2523-2526</p>
+
+<hr />
+
+<blockquote><p>“我也好你也好，我们都这么活下来了。而活下来的人有其活下来的人应尽的责任。那就是，尽自己所能好好的活下去啊。就算很多事情都有所遗憾也罢。”</p></blockquote>
+
+<p>-At Kindle page:3108-3109</p>
+
+<hr />
+
+<blockquote><p>沙罗说对自己抱有好感，这大概是真的吧。但在这个世上很多时候，仅仅有好感是不够的。人生是那么漫长，有时会过分的残酷，有些情况也会需要牺牲者，那样的角色必须要有人去担当。而人的身体被做成那么脆弱而易受伤，一割破便会流血的。</p></blockquote>
+
+<p>-At Kindle page:3561-3563</p>
+
+<hr />
+
+<blockquote><p>他静下心 ，闭上眼睛睡著了。意识的最後尾灯，像逐渐远去的末班特快列车般 ， 一边徐徐加快速度一 边逐渐变小，被吸进夜之深处消失了。只剩下穿过白桦树林的风声。</p></blockquote>
+
+<p>-At Kindle page:3582-3583</p>
+
+<hr />
+
+<blockquote><p>“就算把记忆封存在一个地方，就算已经尘封在深处了，但无法消去那段带给你的历史啊。”沙罗直视着作的双眼说道。“你要记住这一点为好。历史是既无法消去，也无法重写的东西啊。因为要改变历史的话等同于把你自身的存在杀死一样。”</p></blockquote>
+
+<p>-At Kindle page:385-387</p>
+
+<hr />
+
+<blockquote><p>疏远与孤独像是变成了延绵几百公里的电线，被一台无形的巨大绞车紧紧地搅动着。通过这条被拉紧的电线，不分日夜的传送来难以辨听的留言。那寸断的声响像是穿过树林间的猛烈疾风一般，一阵一阵的刺激着作的耳膜。</p></blockquote>
+
+<p>-At Kindle page:39-41</p>
+
+<hr />
+
+<blockquote><p>“记得有人曾说过，思想像胡须,不成熟就不可能长出来。”作说“虽然不记得是谁说的了。”</p></blockquote>
+
+<p>-At Kindle page:522-523</p>
+
+<hr />
+
+<blockquote><p>“无论什么事都一定有框架这种东西。思考也一样。虽然不会害怕一个一个的框架，但会畏惧打破框架。为了变得自由，最重要的是打破框架。人生中重要的事物大多有两面性，就像对框架的敬意与憎恶。我只能说得出这些。”</p></blockquote>
+
+<p>-At Kindle page:652-654</p>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[通过8个技巧让你成为一个超强的Linux终端用户]]></title>
+    <link href="http://jonathan-li.me/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks/"/>
+    <updated>2014-02-28T16:52:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks</id>
+    <content type="html"><![CDATA[<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/bash-tricks-header.png" alt="ternimal" /></p>
+
+<p>使用Linux终端不仅仅是只输入命令。学习这些基本的技巧，你就会逐渐掌握Bash shell，这个在大多数Linux发行版上默认使用的终端工具。</p>
+
+<p>这篇文章是写给缺乏经验的新手的，我相信大多数高级用户已经知道了所有的这些技巧。但是，你仍然可以看看，也许能学到你一直以来都忽略了的东西。</p>
+
+<h2>Tab键自动补全</h2>
+
+<p>使用Tab键自动补全是基本的技巧。它能节省你很多时间，而且当你不确定一个文件名或者命令怎么拼写时，它也及其有用。</p>
+
+<p>举个例子，比如在当前目录你有一个文件，文件名是“really long file nam”,你想删除这个文件。你可以输入整个文件名，但是你得小心输错空格符（需要用\转义）。如果你输入&#8221;rm r&#8221;，然后按Tab键，Bash会自动为你补全这个文件的名字。</p>
+
+<p>当然，如果当前目录中你有很多以字母r开头的文件，Bash就会不知道你指的是哪一个。比如当前目录你有另一个名字叫做“really very long file name”的文，当你按Tab键时，Bash会补全到“really\”部分，因为两个文件都是以这开头的。然后，再按Tab键你会看到所有能匹配该开头的文件列表，如下图。</p>
+
+<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/tab-completion1.png" alt="tab" /></p>
+
+<!-- more -->
+
+
+<p>接着输入你想要的文件名然后按Tab键。这样，当我们输“l”然后按Tab键时，Bash会自动补全我们想要的文件名。</p>
+
+<p>这种方法对于输入命令来说同样适用。当你不确定你想要的命令是什么，只记得以&#8221;gnome&#8221;开头时，输入“gnome”然后按Tab键，你就会看到所有可能的结果。</p>
+
+<h2>管道命令</h2>
+
+<p>管道命令允许你把一个命令的输出结果转移给另一个命令。在Unix的设计哲学中，每个程序都是只有少而精的功能。举个例子，&#8221;ls&#8221;命令会显示当前目录中所有的文件列表，而&#8221;grep&#8221;命令会在制定的地方搜索输入的字符串。</p>
+
+<p>把这两者通过管道命令（用“|”符号表示)结合起来，你就可以在当前目录搜索某个文件了，以下命令用来搜索“really”：</p>
+
+<pre><code>ls | grep really
+</code></pre>
+
+<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/piping.png" alt="pipe" /></p>
+
+<h2>通配符</h2>
+
+<p>星号&#8221;*&ldquo;是一个可以匹配任何东西的通配符。比如，如果我们想把”really long file name“和”really very long file name“从当前目录都删了，我们可以使用如下命令：</p>
+
+<pre><code>rm really*name
+</code></pre>
+
+<p>这个命令删除了所有以really开头，以name结尾的文件。如果你用&#8221;rm *&ldquo;命令，将会删除该目录下的所有文件，所有需谨慎使用。</p>
+
+<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/wild-card.png" alt="wildcards" /></p>
+
+<h2>输出重定向</h2>
+
+<p>&ldquo;〉&#8221;字符可以把一个命令的输出结果重定向到一个文件，而不需要额外使用另一个命令。比如，下图的代码使用&#8221;ls&#8221;命令来列出当前目录的所有文件，并把输出的列表输入到了一个名为”file1“的文件，而不是仅仅输出显示在终端上。</p>
+
+<pre><code>ls &gt; file1
+</code></pre>
+
+<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/bash-tricks-header1.png" alt="redirection" /></p>
+
+<h2>命令行历史</h2>
+
+<p>Bash会记得你使用过的命令的历史。你可以使用向上键和向下键来翻阅你已经使用过的命令。使用&#8221;history&#8221;命令会把历史命令都打印出来，因此你可以使用管道命令来搜索你最近使用的命令。</p>
+
+<p>关于命令行历史，还有很多可以使用的<a href="http://www.howtogeek.com/howto/44997/how-to-use-bash-history-to-improve-your-command-line-productivity/">技巧</a></p>
+
+<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/history.png" alt="history" /></p>
+
+<h2>~,.&amp; ..</h2>
+
+<p>波浪符&#8221;~&ldquo;代表当前用户的主目录。所以，你可以使用&#8221;cd ~&#8221;切换到你的主目录，而不用输入&#8221;cd /home/name&#8221;。这对相对路径同样使用，比如&#8221;cd ~/Desktop&#8221;会切换到当前用户的桌面目录。</p>
+
+<p>与之类似的是，&#8221;.&ldquo;代表当前目录，&rdquo;..&ldquo;代表父级目录。所有，&#8221;cd ..&#8221;会跳到父级目录。这对相对路径同样有效，比如你在Desktop目录，你想切换到与Desktop目录同级的Document目录，你可以使用&#8221;cd ../Documents&#8221;命令。</p>
+
+<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/characters.png" alt="cd" /></p>
+
+<h2>后台运行命令</h2>
+
+<p>默认情况下，Bash会在当前终端下运行你的命令。正常来说没有问题，但是当你想同时运行一个应用程序而又要继续使用该终端时怎么办？比如你输入&#8221;firefox&#8221;命令来运行火狐浏览器，火狐将会占据你的终端并且显示一些错误信息等输出，直到你关闭它。但是加一个&#8221;&amp;&ldquo;符号在命令后面会使Bash在后台运行该程序：</p>
+
+<pre><code>firefox &amp;
+</code></pre>
+
+<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/background-process.png" alt="background" /></p>
+
+<h2>条件执行</h2>
+
+<p>你同样可以用Bash运行两个命令，一个接着一个。第二个命令只有当第一个命令成功运行完毕后才会运行。要想做到这样，把两个命令在同一行中用&#8221;&amp;&amp;&ldquo;分隔即可。</p>
+
+<p>比如，&#8221;sleep&#8221;命令会以秒为单位接受一个参数，然后倒计时，允许结束。单独来用的话，该命令没有任何用处，但是你可以把它作为运行下一个程序之前的延时。下面的命令会停5秒然后运行gnome的截屏工具：</p>
+
+<pre><code>sleep 5 &amp;&amp; gnome-screenshot
+</code></pre>
+
+<p>你还有任何想要分享的技巧吗？请留言。</p>
+
+<hr />
+
+<p>原文链接： <a href="http://www.howtogeek.com/110150/become-a-linux-terminal-power-user-with-these-8-tricks/">How-To-Geek</a></p>
+
+<p>[ 转载请保留原文出处、译者和译文链接。]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[如何在Linux上提高文本文件的搜索效率]]></title>
+    <link href="http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
+    <updated>2014-02-26T00:00:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently</id>
+    <content type="html"><![CDATA[<p>对于系统管理员或程序员来说，当需要在复杂配置的目录中或者在大型源码树中搜寻特定的文本或模式时，grep类型的工具大概是最受欢迎的。</p>
+
+<p>如果grep是你最喜欢的工具之一，那么你可能会更喜欢ack。ack是一个基于Perl的类似于grep的命令行工具，但是搜索速度更快，能力比grep更强。尤其是当你是程序员时，我强烈推荐你使用ack来取代grep。
+ack的用法非常适用与代码搜索，因此程序员可以在源码树中进行复杂的查询，而只需要更少的按键。</p>
+
+<h1>ack的特性</h1>
+
+<p>ack的一些非常强大的特性：</p>
+
+<ul>
+<li>默认搜索当前工作目录</li>
+<li>默认递归搜索子目录</li>
+<li>忽略元数据目录，比如.svn,.git,CSV等目录</li>
+<li>忽略二进制文件（比如pdf，image，coredumps)和备份文件（比如foo~,*.swp)</li>
+<li>在搜索结果中打印行号，有助于找到目标代码</li>
+<li>能搜索特定文件类型（比如Perl,C++,Makefile),该文件类型可以有多种文件后缀</li>
+<li>高亮搜索结果</li>
+<li>支持Perl的高级正则表达式，比grep所使用GNU正则表达式更有表现力。</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>相比于搜索速度，ack总体上比grep更快。ack的速度只要表现在它的内置的文件类型过滤器。在搜索过程中，ack维持着认可的文件类型的列表，同时跳过未知或不必要的文件类型。它同样避免检查多余的元数据目录。</p>
+
+<h1>在Linux上安装ack</h1>
+
+<p>尽管在大多数Linux发行版中是ack是标准包，可轻易获得（比如在基于debian的系统中，是ack-grep包，而在基于Redhat的系统中则是ack包），但是与发行版捆绑的ack版本仍然是1.x,而ack2.0已经发布，而且拥有更多特性。</p>
+
+<p>因此我准备在官方网站下载，然后安装ack。</p>
+
+<p>方便的是，ack在官网可可作为一个单独的Perl脚本获得，其中整合了所有需要依赖的模块。因此，你不需要额外安装Perl模块来运行这脚本。</p>
+
+<p>为了在你的Linux系统中安装ack，去<a href="http://beyondgrep.com/install/">官网</a>下载最新版本的ack。在写本文时，最新的版本是2.12</p>
+
+<pre><code>$ wget http://beyondgrep.com/ack-2.12-single-file
+$ sudo mv ack-2.12-single-file /usr/local/bin/ack
+$ sudo chmod 0755 /usr/local/bin/ack
+</code></pre>
+
+<p>需要注意的是，在基于Debian的系统中，有一个独立的包也叫ack（汉码转换器）。所以如果你碰巧有使用那个包，那么你就必须重命名ack来避免命名冲突了。</p>
+
+<h1>ack的使用案例</h1>
+
+<ol>
+<li>在当前目录递归搜索单词&#8221;eat&#8221;,不匹配类似于&#8221;feature&#8221;或&#8221;eating&#8221;的字符串:</li>
+</ol>
+
+
+<p><code>$ ack -w eat</code></p>
+
+<ol>
+<li>搜索有特殊字符的字符串&#8217;$path=.&lsquo;,所有的元字符（比如&rsquo;$&lsquo;,&rsquo;.&lsquo;)需要在字面上被匹配:</li>
+</ol>
+
+
+<p><code>$ ack -Q '$path=.' /etc</code></p>
+
+<ol>
+<li>除了dowloads目录，在所有目录搜索&#8221;about&#8221;单词:</li>
+</ol>
+
+
+<p><code>$ ack about --ignore-dir=downloads</code></p>
+
+<ol>
+<li>只搜索包含&#8217;protected&#8217;单词的PHP文件，然后通过文件名把搜索结果整合在一起，打印每个文件对应的搜索结果:</li>
+</ol>
+
+
+<p><code>$ ack --php --group protected</code></p>
+
+<ol>
+<li>获取包含&#8217;CFLAG&#8217;关键字的Makefile的文件名。文件名为*.mk,makefile,Makefile,GNUmakefile的都在考虑范围内:</li>
+</ol>
+
+
+<p><code>$ ack --make -l CFLAG</code></p>
+
+<ol>
+<li>显示整个日志文件时高亮匹配到的字符串:</li>
+</ol>
+
+
+<p><code>$ tail -f /var/log/syslog | ack --passthru 192.168.1.10</code></p>
+
+<ol>
+<li>要换取ack支持的文件过滤类型，运行：</li>
+</ol>
+
+
+<p><code>$ ack --help-type</code></p>
+
+<hr />
+
+<p><a href="http://xmodulo.com/2014/01/search-text-files-patterns-efficiently.html">原文地址</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用kindle笔记来做fortune名言后的玩法]]></title>
+    <link href="http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
+    <updated>2014-02-18T14:48:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
+    <content type="html"><![CDATA[<p>kde桌面上有一个fortune插件，可随机显示名言名句，但是默认的都是英文的名句，看了没什么意思，于是我想到用我在kindle上的笔记来做名言显示给自己看，多有意义，又能经常温习之前读过的好书。</p>
+
+<p>首先说下<code>fortune</code>，这是一个随机显示名言名句的linux命令行软件，算是比较简单而又非常有名的Linux程序了,安装相信应该不用我说了。fortune安装好后默认有许多英文名言，如果装了中文包的话可能还有唐诗300首。fortune支持使用自定义文本来做名言。</p>
+
+<!-- more -->
+
+
+<p>于是我把昨天的写的<code>kindle-clips</code>脚本升级了下，加了个导出到<code>fortune</code>格式的功能。程序见<a href="https://github.com/minejo/kindle-clips">My Github</a>,怎么使用这个脚本导出<code>fortune</code>格式的文本我这里也不说了，github项目的wiki里面写的很清楚，我主要来探索下怎么玩这个<code>fortune</code>。</p>
+
+<h2>玩法1</h2>
+
+<p>使用cowsay和cowthink来图形化kindle摘录，使的看起来不那么枯燥。</p>
+
+<p><a href="https://gist.github.com/minejo/9066719">脚本</a>：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/bash
+</span><span class='line'>#author:jonathan
+</span><span class='line'>#version:1.0
+</span><span class='line'> 
+</span><span class='line'>Cownumber=$(($RANDOM%4+1))
+</span><span class='line'>case $Cownumber in
+</span><span class='line'>0)
+</span><span class='line'>    cow="moose";;
+</span><span class='line'>1)
+</span><span class='line'>    cow="tux";;
+</span><span class='line'>2)
+</span><span class='line'>    cow="daemon";;
+</span><span class='line'>3)
+</span><span class='line'>    cow="surgery";;
+</span><span class='line'>4)
+</span><span class='line'>    cow="elephant";;
+</span><span class='line'>*) 
+</span><span class='line'>    cow="tux";;
+</span><span class='line'>esac
+</span><span class='line'> 
+</span><span class='line'>Cmnumber=$(($RANDOM%1+1))
+</span><span class='line'>case $Cmnumber in
+</span><span class='line'>    0) 
+</span><span class='line'>        command="cowsay";;
+</span><span class='line'>    1)
+</span><span class='line'>        command="cowthink";;
+</span><span class='line'>    *)
+</span><span class='line'>        command="cowsay";;
+</span><span class='line'>esac
+</span><span class='line'> 
+</span><span class='line'>/usr/bin/fortune /path/to/kindle-fortune | $command -f $cow</span></code></pre></td></tr></table></div></figure>
+
+
+<p>效果如下：
+<img src="http://jonathan-li.me/images/blog_kindle_fortune_t.png"></p>
+
+<p>同时你可以把这个脚本加到<code>.bashrc</code>中，这样每次打开终端就能看到笔记啦。</p>
+
+<h2>玩法2</h2>
+
+<p>利用kde的桌面插件<code>Fortune</code>来显示，很简单，直接在自定义命令那写上：</p>
+
+<pre><code>fortune /path/to/kindle-fortune -l
+</code></pre>
+
+<p>效果图：
+<img src="http://jonathan-li.me/images/blog_kindle_fortune.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[我最喜欢的Linux应用]]></title>
+    <link href="http://jonathan-li.me/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong/"/>
+    <updated>2014-02-16T20:25:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong</id>
+    <content type="html"><![CDATA[<ul>
+<li>发行版：Arch</li>
+<li>桌面环境：KDE</li>
+<li>浏览器：Chromium</li>
+<li>终端：Terminator</li>
+<li>编辑器：Vim</li>
+<li>输入法：Fcitx-rime</li>
+<li>云端备份：Dropbox</li>
+<li>音乐客户端：Clementine</li>
+<li>影片客户端：Smplayer</li>
+<li>启动器：Synapse</li>
+<li>桌面启动器：Cairo-dock</li>
+<li>邮件客户端：ThunderBird</li>
+<li>图形处理：GIMP</li>
+<li>图片管理：Shotwell</li>
+<li>即时通讯：Kopete</li>
+<li>FTP管理：Filezilla</li>
+<li>文本处理：WPS office</li>
+<li>图书管理：Calibre</li>
+<li>思维导图：Xmind</li>
+<li>字典软件：StarDict</li>
+<li>流程图处理软件：Dia</li>
+<li>截屏软件：Shutter</li>
+<li>云端笔记：Wiznote</li>
+<li>项目开发：Eclipse,Vim</li>
+<li>MySQL管理：wine带SQLyog</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[解决chromium播放豆瓣fm重影问题]]></title>
+    <link href="http://jonathan-li.me/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/"/>
+    <updated>2014-01-27T12:22:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti</id>
+    <content type="html"><![CDATA[<p>由于在linux下用惯了chroium，更新快，最适合我们这帮爱折腾的人了。但是chromium放豆瓣fm的时候flash会出问题，即歌名会重影。</p>
+
+<p>去论坛查了下，原来是chromium用的flash版本是11.2,而chrome的flash是11.7，要么换成chrome，要么手动装个高版本flash。</p>
+
+<p>还有aur社区有人想到了，发布了AUR/chromium-pepper-flash，自行装上这个，装完之后在chroium的chrome://plugins/的页面，点下detail，然后找到所有和flash有关的item，除了第一个，其他都给禁了就可以了。</p>
+
+<p>mark一下。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Exercises For the Muscle]]></title>
+    <link href="http://jonathan-li.me/blog/2014/01/10/exercises-for-the-muscle/"/>
+    <updated>2014-01-10T22:32:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/01/10/exercises-for-the-muscle</id>
+    <content type="html"><![CDATA[<p>按照视频《8分钟给你6块腹肌》练了一周后，我发现效果真的好不错，而且睡觉还更香了，锻炼身体什么的果然有益啊。</p>
+
+<p>今天练完后顺便去原视频发布的网站上逛了下，<a href="http://www.passion4profession.net/">http://www.passion4profession.net/</a> ,really nice website，顺便注册了下，同时找了下锻炼Pectoral, Biceps and Triceps的方法，直接附youtube视频如下，mark下,勤加练习。</p>
+
+<h1>Push Up</h1>
+
+<p>Separate your legs slightly. Place your hands in a vertical line from your shoulders. Arms half bent. Lower yourself until you barely touch the ground with your chest and then return to the starting position.</p>
+
+<p>Instructions:</p>
+
+<p>Separate your legs slightly. Place your hands in a vertical line from your shoulders. Arms half bent. Lower yourself until you barely touch the ground with your chest and then return to the starting position.</p>
+
+<p>Video:</p>
+
+<object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/BbDcMfu-i4w?fs=1&amp;hl=it_IT&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/BbDcMfu-i4w?fs=1&amp;hl=it_IT&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+
+
+
+
+<!-- more -->
+
+
+<h1>Hindu Push Up</h1>
+
+<p>Hindu Push Up is an advanced exercise used in martial arts, to strengthen simultaneously chest muscles, shoulders muscles and triceps muscles.</p>
+
+<p>Instructions:</p>
+
+<p>Separate your hands, and feet to a distance slightly greater, that the width of your shoulders. Lower your chest, and at the same time, bring it forward, imagining you are drawing, a curved trajectory. Stretch yourself forward, until your legs are totally extended. Make the same movement in the opposite direction, trying to bend your legs, as little as possible, and return to the starting position.</p>
+
+<p>Video：</p>
+
+<object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/DuHnnh3nDJU&hl=en_US&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/DuHnnh3nDJU&hl=en_US&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2013年读过的一些不错的书]]></title>
+    <link href="http://jonathan-li.me/blog/2014/01/01/2013nian-du-shu-zong-jie/"/>
+    <updated>2014-01-01T00:44:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2014/01/01/2013nian-du-shu-zong-jie</id>
+    <content type="html"><![CDATA[<p>总的来说，自从6月7号买了kindle后，今年看的书比往年来说还是比较多的。哈哈，kindle还是物有所值的。但其实看书时间还是远远不够的，现在基本都是晚上在床上看1-2小时，但是每次都看到半夜，第二天效率不太高，所以2014年要更合理的安排读书时间，嗯！</p>
+
+<p>下面我就我看过的书一个一个做个总结吧。</p>
+
+<hr />
+
+<p>《1Q84》</p>
+
+<p>村上向《1984》致敬的书，我记得这是在考试周开始看的，每天复习累了就看一两章，简单而又舒适的感觉。前两本书看的是实体书，第三本虽然也买了实体书，但是看是在kindle上看的，买只是因为觉得不把三本集齐有点遗憾。</p>
+
+<p>书中主要讲的是以空气蛹为主线，天吾和青豆的两个原本平行的奇幻世界逐渐相交的故事。</p>
+
+<blockquote><p>“不管喜不喜欢，我现在正置身于这‘1Q84年’。我所熟知的1984年已经消失无踪不存在了。现在是1Q84年。空气变了，风景变了。我对带有问号的世界的成立方式，必须尽可能快速适应。就像刚被野放到新森林里的动物那样。保护自己的身体，为了生存下去，必须早一刻理解那个场所的规则，配合那个才行。”</p></blockquote>
+
+<p>生活中很多时候不就像坠入了1Q84一样不知所措，不知所云嘛。主人公们和村上其他小说中一样，都是慵懒淡定然而不乏幽默感和毅力果敢的人物，或许这也是村上的生活态度吧。</p>
+
+<p>至于空气蛹，你愿意让小小人帮你制造空气蛹吗？我反正是不愿意，我不想要子体，我就是我，不想被混淆。</p>
+
+<!-- more -->
+
+
+<hr />
+
+<p>《平凡的世界》</p>
+
+<p>平凡的世界是暑期在家的时候用kindle看的，经常看到2-3点。</p>
+
+<p>最让我印象深刻的就是孙少平的生活态度，他的爱情观，他的求知欲。
+当他和晓霞在一起的时候，我是由衷的感到欣喜和佩服。每个人有自己的生活态度，但能做到他这样的，我觉得已经非常了不起了。</p>
+
+<p>同时，通过这本书，我第一次对文革期间的事情产生了兴趣，还和我爸讨论了一些文革的事。时代的变迁也许是最难过的一段时期，整个社会的价值观的改变会让人无法适从。就和我后来看的癌症楼的末尾一样，心里想想都会心酸。</p>
+
+<p>最后，就以书中我最喜欢的一句来勉励我的2014吧。</p>
+
+<blockquote><p>他还应该象往常一样，精神抖擞地跳上新生活的马车，坐在驾辕的位置上，绷紧全身的肌肉和神经，吆喝着，呐喊着，继续走向前去！</p></blockquote>
+
+<hr />
+
+<p>《三体》</p>
+
+<p>三体这本书完全是当科幻小说来看的，背景也是在文革时期，叶文洁如何与外星人联系又是如何组建了三体组织，其实整本书印象不是很深，唯有最后谈到了星际间的弱肉强势关系让我印象深刻，我若发现了你，不是你亡就是我亡，没有其他可能性。这种人恶论在后面逃亡中后因资源问题而自相残杀的星际舰队中体现的淋漓尽致，为了生存，你必须这样，而思想转变的过程便是小说中所说的生病了一般的无精打采。</p>
+
+<hr />
+
+<p>《看见》</p>
+
+<p>会看这本书完全是奔着柴静去的，之前早就听过她的各种事迹，印象中一直是不畏强权的女记者，想通过这本书了解一下她的世界呢。</p>
+
+<p>看完这本书后，印象深刻的观点没有留下，主要是她作为记者对于世界，人生发出的一些见解。虽然当时看的时候觉的挺有道理的，但是看过后却没有留下多深刻的影响，这本书这么火主要是因为柴静本人的缘故吧，人们想了解她。</p>
+
+<p>在做的读书笔记中，我最喜欢的一句：</p>
+
+<blockquote><p>我就生活在这里，没有完美新世界，没有需要等待的未来，没有要向外界索求的理解，也不需要通过跟谁比较才能判断自己，要做的就是此时，就在此地，就是此身。</p></blockquote>
+
+<hr />
+
+<p>《拎发条鸟年代记》</p>
+
+<p>这书是这学期看的，又名奇鸟行状录，但我更喜欢拧发条鸟这书名，时间就像拧上了发条一样滴答滴答的走着。</p>
+
+<p>我记得看这本书的时候就仿佛真的走进了这个奇幻的世界，画面感十足，经常下午在图书馆前的小树林那坐着一看就是一下午，时间滴答滴答就没了。</p>
+
+<p>该书的奇幻程度确实无与伦比，难怪称为当代一千零一夜。看完后每每能想起戴着红帽子的加纳马尔他，福尔摩斯式的肉桂，可爱的邻家女孩笠原May，深邃的一口井。</p>
+
+<p>如果是我，我能独自在深井里思考多久，我能忍受那份孤独多久，不知道这辈子有没有机会验证下。</p>
+
+<p>另，现在每次在路上看到戴红帽子的女生，我都会想到加纳马尔他，嗨，占卜师你好。</p>
+
+<hr />
+
+<p>《世界尽头与冷酷仙境》</p>
+
+<p>又是村上的一本书哈，快把他的书都看完了，哈哈。</p>
+
+<p>世界尽头，冷酷仙境两个主线同时进行，最后交叉，嗯，村上的一贯作风。然而此书却又异常让我难懂，看完了都不能明确的感到作者想要表达的思想，就像一个抽象函数，作者给了定义，具体怎么干你玩去吧。所以该书的书评都是见仁见智。</p>
+
+<p>现实世界是一个计算士，因与地下的老科学家相识，获得了独角兽头骨，与老科学家体型较胖的女儿相识。后被人逼着交出头骨，不从而受伤。事后前去救援老科学家，却被告知自己是老人的实验品，由于计算失误，一天后即将去世，前去世界尽头，一个平和却没有心的世界，在世界尽头里主人公每天的工作就是从独角兽的头骨里解读梦。主人公同图书馆女馆员度过了空虚而又充足的几小时后，驱车前往码头，等待着世界尽头的到来。</p>
+
+<p>世界尽头存在于主人公脑海中，情形有点像现在的植物人呢，只不过主人公生活的世界从现实变到了脑海中，主人公的影子一直劝他逃出去，然而他最后还是选择和女助手活在远离人烟的森林中。</p>
+
+<p>看此书，最后我想的最多的就是我的世界尽头是什么样呢，一片祥和的冰天雪地还是繁华堵车的大都市，我会解读谁的梦，又会读出什么。</p>
+
+<p>还有就是，如果我被告知，嗨，你只有24小时活了，收拾收拾准备去另一个世界吧。我会干些什么？</p>
+
+<p>我大概会先挨个给喜欢和关心的人打个电话，收拾下东西，该送人的送人，该销毁的销毁，然后去尽力的打场球or跑步，尽力的出汗，然后泡个澡。也许还会抽根烟，喝点酒，然后早点上床睡觉。如果时间允许的话，会早起看日出，之后随便找个长凳坐下吧，看看路人，直到世界尽头。</p>
+
+<p>然而或许这都不重要，重要的是我现在踏实的踩着脚下的路，且行且珍惜。</p>
+
+<hr />
+
+<p>《树上的男爵》</p>
+
+<p>卡尔维诺三部曲之一，柯西莫的树上生涯，走自己的路，让别人说去吧，所以，叫我树上的Coder，加油，2014！</p>
+
+<hr />
+
+<p>《分成两半的子爵》</p>
+
+<p>又是卡尔维诺，小说不长，我记得我在毕业照采集排队的时候看了大半，每个人都有善与恶的一面，只有善与恶的斗争形成的才是你自己，不能太恶，也不能太善，这个世界不需要。</p>
+
+<hr />
+
+<p>《1984》</p>
+
+<p>一直知道1Q84是向1984致敬的，却是最后才看1984的。我记得我是在地铁回来的路上看完的。</p>
+
+<p>以为是像1Q84那样的玄幻，结果是类似的文革时期，这作品的伟大之处在于写出了社会的共性以及阶级的本质，在那个时期的人，有人说这是希特勒时期的写真，有人说是俄罗斯斯大林时期的写真，在中国，不用说了。历史在一遍一遍的重演。</p>
+
+<p>该书是在千篇一律的时代，孤独的时代，老大哥的时代，双重思想的时代，向未来，向过去，向一个思想自由、人们各不相同、但并不孤独生活的时代——向一个真理存在、做过的事不能抹掉的时代致敬！</p>
+
+<p>看完后感触很深，可以体会出上一代对于此书热烈追捧的原因，就像一句话击中了灵魂一样。</p>
+
+<p>拒绝洗脑，理性判断。</p>
+
+<hr />
+
+<p>《当我们谈论爱情时我们在谈论什么》</p>
+
+<p>雷蒙德卡佛的著名短篇小说集，看完后印象不是很深，倒是对题目名还有作者精炼的话语比较有印象，家门口就有这么多水，这题目，哈哈，印象深刻。</p>
+
+<hr />
+
+<p>《黑客与画家》</p>
+
+<p>保罗·格雷厄姆，硅谷创业之父，主要讲的是优秀程序员的爱好和动机，同时帮助我们了解这个时代，讲了他的世界观和价值观。</p>
+
+<p>在了解这个时代上，保罗确实值得我们尊敬，书中的许多观点非常不错，需要经常复习下，值得一看的好书。</p>
+
+<p>在对于生活的态度上，我想下面这个例子应该能很好的说明：</p>
+
+<blockquote><p>假定你是一个手脚敏捷的小男孩，身后有一条壮硕的大狗正在追你。你跑到楼梯口，这时应该上楼还是下楼？我觉得应该上楼。如果下楼的话，大狗可能跑得跟你一样快。上楼的话，大狗的庞大身躯就将成为劣势。不错，跑上楼你会比较吃力，但是大狗会感到更吃力。</p></blockquote>
+
+<p>不错，我们还很年轻，这是最大的资本，运用它吧。</p>
+
+<hr />
+
+<p>《癌症楼》</p>
+
+<p>看的是索尔仁尼琴的第一本书，一开始有点苦涩，不怎么看的下去，看到后来，逐渐被各位角色的生活态度吸引了，幸福是相似的，不幸却是千千万万的，科斯托格洛托夫等人思想上的斗争也是那么的生动，仿佛身临其中，难怪作者会拿诺贝尔文学奖，这书也相当于他的自传啊！</p>
+
+<p>读到最后，我发现自己真是好幸运，科斯托格洛托夫出医院后走在路上看到飞吹树枝都会感到幸福，我又有什么理由抱怨现在的条件。</p>
+
+<p>不过，看到最后科斯托格洛托夫写给会薇加的那封信时，还是感到一阵心酸，又是时代变迁。</p>
+
+<p>信附在下：</p>
+
+<blockquote><p>心爱的薇加!（我一直想这样称呼您，此刻总算如愿了。） 我可以完全敞开。心扉给您写信了。我跟您交谈的时候从未这样坦率，但想像中不也是这样坦率吗？您主动提供自己的房间和床铺，这就是说，我并不只是您所接诊的一位病人，对吗？ 今天我到您那里去过几次！有一次还真的走到了门口。我去找您的时候非常激动，简直像16岁的孩子似的，这对于有我这样经历的人来说实在不可思议。我感到激动、羞怯、高兴、害怕。要知道，若不是经过那么多年的颠沛流离，还不可能明白什么是“上帝的安排”！ 然而，薇加！倘若我去时您正好在家，我们之间就有可能出现一种不正常的、完全属于虚幻的事情！后来，我走在路上也就明白了：您不在家反倒更好。到目前为止，您所忍受的一切痛苦和我所忍受的一切痛苦，至少可以说出个缘由，可以表白！但是，我们之间所可能发生的事情，甚至对任何人都无法承认！您和我，我们之间，似乎有一条灰色的死蛇，但它愈来愈膨胀！ 我比您年长，这倒不是指岁数，而是就生活经历来说。 因此，请您相信我：您是对的，您在各个方面，在一切方面都是对的！无论是在您的过去，还是在您的现在，都是如此，只是您无法预料自己的未来。您尽可表示反对，但我敢预 言：您不用等深游到对一切都淡漠的老年，就会庆幸今日没有分担我的命运。（我根本不是指自己的流放生涯，现在甚至有风声说那种情况很快就会结束。）您已经把自己的前半生像一只羊羔那样宰了，如今您就烧了自己的后半生吧！ 现在，当我反正要离开这里的时候（即使流放期告终，往后我也不会再到你们医院检查和进一步治疗了，这就是说，我们将从此分手），我要把自己的肾心袒露给您：就连我们在谈论崇高精神的时候，尽管我也是那么真诚地想和真诚地相信这种崇高精神，我还是一直想，一直想把您抱起来，并且吻您的嘴唇！ 这一点您尽可自己去分析。 现在，我不征求您的同意就此吻您。</p></blockquote>
+
+<hr />
+
+<p>尽快准备好2014年的书单吧。</p>
+
+<p>看书无止境，从中汲取经验与能量。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[10000 hours 开源项目设计]]></title>
+    <link href="http://jonathan-li.me/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji/"/>
+    <updated>2013-11-25T17:32:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/11/25/10000-hours-kai-yuan-xiang-mu-she-ji</id>
+    <content type="html"><![CDATA[<p>前天偶然间逛知乎发现了彭莹的<a href="http://yingpeng.me/">blog</a>, 惊叹与她的10000 hour的计划和她超强的自律能力外，我了解了10000 hours of practice。</p>
+
+<pre><code>In the book Outliers, author Malcolm Gladwell says that it takes roughly ten thousand hours of practice to achieve mastery in a field. 
+</code></pre>
+
+<p>同时萌生了以此为题材做一个开源项目，即写一个10000 hours plan的网站，每个人可以设定3个plan，然后通过手机App计时，并分享感想，在网站上用户既可以看到自己的plan进度，同时可以查看别人的进度，并且志趣相投的人可以相互关注和鼓励。</p>
+
+<p>暂时的计划就是这样。今天花了一天的时间把大概思路设计了一下，草稿图<a href="https://www.dropbox.com/sc/xb0kevyyjtg28dl/FbAPwcTGAl">戳这里</a></p>
+
+<p>向朋友咨询后，发现Python的Django框架来做网站非常不错，所以觉得试试这个框架，顺便温习一下python XD</p>
+
+<p>网站基本功能搞定后，就是写android app啦。</p>
+
+<p>又有的忙了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用Gtick做吉他的节拍器]]></title>
+    <link href="http://jonathan-li.me/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi/"/>
+    <updated>2013-11-20T23:40:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/11/20/shi-yong-gtickzuo-ji-ta-de-jie-pai-qi</id>
+    <content type="html"><![CDATA[<p>今天练和弦的时候突然发现节拍什么的真的不好掌握，忽快忽慢的，本来想买个现成的节拍器的，突然想起不就是打节拍吗？这么简单的功能专门买个节拍器有点不划算，于是我就是AUR中心找了下，找到了这个<code>gtick</code>,它的介绍是这样的：
+    A Gtk metronome application supporting different meters and speeds.</p>
+
+<p>安装完之后发现，界面确实挺简单的，不过但从节拍这个功能来说已经够用了。
+<img src="http://jonathan-li.me/images/gtick.png"></p>
+
+<p>不过要理解这个软件，还要对BGM这个概率有所了解，<a href="http://en.wikipedia.org/wiki/Tempo">you can see this</a>,看完后应该就差不多会用了哈，我吉他用的话，好多曲子都是120拍的，可以保存到profile里。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[self-introduce for interview]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview/"/>
+    <updated>2013-10-12T15:32:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/12/self-introduce-for-interview</id>
+    <content type="html"><![CDATA[<p>   Good morning, my name is Li Chao, it is really a great honor to have this opportunity for a interview. Now I will introduce myself briefly, I am 21 years old, born in jiangsu province. My major is communication engineering.</p>
+
+<p>   During the school, I have obtained a second-class scholarship three times and merit student and outstanding members and other honorary titles.</p>
+
+<p> 　I am a positive man. In the past three years, I learned java, C#, Linux by myself and recommended myself to the INTERNET CENTER studio in our school for development work. Now I have been the team leader of the studio. Also, being the class monitor for about 2 years improves my leadership skills. By the way, I have passed CET4/6 and NCRE-2 Java.</p>
+
+<p> 　When it comes to working experience, I have done many science research projects. Some projects are from my studio, others are from Student Research Training Program.</p>
+
+<p>   Among studio projects, one is to use Discuz open-source framework to develop the BBS of our school. Another is to develop a VPS integrated management system using .NET and SQLSERVER.</p>
+
+<!-- more -->
+
+
+<p>　 Among SRTP projects, I leader two projects.one is developing an android app, which is used to stream media freely when the phone connects to the School Wireless Network.</p>
+
+<p>　 Another is developing a website, which is used to manage grade and information of our college students.</p>
+
+<p> 　Among all those projects, most importantly, I have learned how to learn a new technology quickly.</p>
+
+<p> 　In addition to this, I love reading and playing basketball and biking. My favourite writer is Murakami.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[重新部署octopress]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/10/zhong-xin-bu-shu-octopress/"/>
+    <updated>2013-10-10T15:27:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/10/zhong-xin-bu-shu-octopress</id>
+    <content type="html"><![CDATA[<p>今天不小心手贱把博客目录给删了，没办法只好去github重新clone了一遍，结果配置了几次都不对，最后还是网上搜了一下才搞对的，看来我对git的用法还不是很了解啊。</p>
+
+<p>重新配置时的基本操作我就不说，我这篇文章里有<a href="http://minejo.github.io/blog/2013/08/09/shi-yong-github-plus-octopresszuo-blog/">使用Github+Octopress做Blog</a>,重新配置只要把github上的那个代码clone下来即可。</p>
+
+<h2>第一步：clone source分支</h2>
+
+<p><code>git clone -b source git@github.com:minejo/minejo.github.io.git</code></p>
+
+<h2>第二步：clone master分支</h2>
+
+<p><code>cd minejo.github.io #进入source分支</code></p>
+
+<p><code>git clone -b master git@github.com:minejo/minejo.github.io.git _deploy</code></p>
+
+<p>ok了，虽然很简单，但还是花了我不少时间，mark一下。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ArchLinux中用Hostapd创建热点给手机使用]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/"/>
+    <updated>2013-10-10T11:32:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong</id>
+    <content type="html"><![CDATA[<p>折腾了一天，终于把linux的无线共享搞定了，之前总是搞不定是因为hostapd2.0和NetworkManager冲突了，吐嘈无力，
+好不容易从gnome切换到kde，安享NM还没多长时间，没想到又出事了，罢了，只有卸载了NetworkManager了，以后上网就准备转向netctl了。</p>
+
+<p>废话不多说了，开始主题。</p>
+
+<h2>Step1</h2>
+
+<p>首先要确保笔记本支持AP，用<code>iw list</code>查看，若有AP Support即可。</p>
+
+<h2>Step2</h2>
+
+<p>安装hostapd（<code>sudo pacman -S hostapd</code>),先备份<code>hostapd.conf</code>:</p>
+
+<p><code>sudo mv /etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf.bak</code></p>
+
+<p>然后创建<code>hostapd.conf</code>文件如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>interface=wlp5s0 #你的网线网卡端口，一般是wlan0
+</span><span class='line'>driver=nl80211
+</span><span class='line'>ssid=1984  #无线网名称
+</span><span class='line'>channel=5
+</span><span class='line'>hw_mode=g
+</span><span class='line'>ieee80211n=1
+</span><span class='line'>ignore_broadcast_ssid=0
+</span><span class='line'>auth_algs=1
+</span><span class='line'>wpa=2
+</span><span class='line'>wpa_passphrase=xxxxxxxx #无线网密码
+</span><span class='line'>wpa_key_mgmt=WPA-PSK
+</span><span class='line'>wpa_pairwise=TKIP
+</span><span class='line'>rsn_pairwise=CCMP</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<h2>Step3</h2>
+
+<p>创建启动脚本startap。
+以root身份创建startap脚本如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl start hostapd.service
+</span><span class='line'>ifconfig wlp5s0 192.168.0.1 
+</span><span class='line'>sysctl net.ipv4.ip_forward=1 
+</span><span class='line'>iptables -P FORWARD ACCEPT 
+</span><span class='line'>iptables -P OUTPUT ACCEPT 
+</span><span class='line'>iptables -P INPUT ACCEPT 
+</span><span class='line'>iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o ppp0 -j MASQUERADE #adsl上网时为ppp0
+</span><span class='line'>systemctl start dnsmasq.service</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后给脚本加上权限<code>chmod 775 startap</code>即可。</p>
+
+<p>当然也可以写个关闭无线的基本stopap。
+同理，脚本如下：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl stop dnsmasq.service
+</span><span class='line'>systemctl stop hostapd.service</span></code></pre></td></tr></table></div></figure>
+
+
+<p>同样加上个权限即可。</p>
+
+<h2>Step4</h2>
+
+<p>安装dnsmasq（<code>sudo pacman -S dnsmasq</code>),并删除掉文件<code>/etc/dnsmasq.conf</code>中<code>conf-dir=/etc/dnsmasq.d</code>前面的#号。创建文件<code>/etc/dnsmasq.d/dhcpd</code>（可能需要先建立dnsmasq.d目录，只需<code>mkdir /etc/dnsmasq.d</code>），然后写入</p>
+
+<p><code>interface=wlp5s0 dhcp-range=192.168.0.50,192.168.0.150,12h</code></p>
+
+<h2>Step5</h2>
+
+<p>运行脚本即可，<code>sudo ./startap</code>.</p>
+
+<p>题外话：你还可以安装openssh，然后用手机远程登陆电脑，这样在床上用手机上无线用完了后，就可以直接远程关机了，不用把电脑开一晚上。</p>
+
+<p>参考：</p>
+
+<blockquote><p><a href="http://blog.renren.com/share/277634858/14600939452">在Linux平台下建立无线热点+用手机通过SSH控制主机</a>
+<a href="https://wiki.archlinux.org/index.php/Software_Access_Point">Software Access Point</a></p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[弃用gnome转向KDE]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde/"/>
+    <updated>2013-10-08T20:46:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/08/qi-yong-gnomezhuan-xiang-kde</id>
+    <content type="html"><![CDATA[<p>用了好久的gnome，今天终于受不了了，arch里的gnome阉割了ibus功能，但是gnome又依赖ibus，于是就有了各种蛋疼的问题，比如Qt，GTK等程序经常用不了fcitx输入法，即使重定义的im方法都没用，而且NetworkManager也有问题，每次上网都要先手动开网卡，而后手动开无线或拨号，好麻烦，忍无可忍终于切换到KDE了，先<code>sudo pacman -S kde</code>,然后<code>sudo pacman -Rdd gnome</code>就搞定了，就目前的体验来看，kde还挺让我满意的，听说偶尔会有内存泄露的情形，但我估计我运气应该不会那么差吧。</p>
+
+<p>用kde的感觉和window没啥区别，习惯度好一点，gnome的状态栏有点恶心，kde的就很好，自定义度也高。</p>
+
+<p>哈，先使用一段时间吧，希望不会失望，话说好久没用linux了，当然也就好久没写blog了。</p>
+
+<p>以后还是尽量用arch吧，window什么的暂时不管了，基本不会用到了，除非玩游戏了。</p>
+
+<p>另外，开始要练练latex写论文了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用Mutagen解决mp3文件名乱码问题]]></title>
+    <link href="http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti/"/>
+    <updated>2013-10-08T19:12:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/10/08/shi-yong-munjie-jue-mp3wen-jian-ming-luan-ma-wen-ti</id>
+    <content type="html"><![CDATA[<p>很多在window上显示正常的mp3到了linux下文件名就乱码了，非常烦人，这无非是mp3标签的编码格式不对。</p>
+
+<p>解决方法之一就是用<code>mutagen</code>来修改mp3文件的标签信息。</p>
+
+<h2>安装mutagen</h2>
+
+<p>在arch中安装<code>mutagen</code>最方便了，直接<code>sudo pacman -S mutagen</code>即可。
+其他发行版的安装类似吧。</p>
+
+<h2>转换整个目录的mp3标签</h2>
+
+<p>此处以GBK/GB18030为例，转换当前目录下的所有mp3（包括子目录）：</p>
+
+<p><code>find . -iname "*.mp3" -execdir mid3iconv -e gbk {}\;</code></p>
+
+<p>这样就搞定了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[修改VIM ESC键的映射]]></title>
+    <link href="http://jonathan-li.me/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/"/>
+    <updated>2013-09-26T17:23:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she</id>
+    <content type="html"><![CDATA[<p>用了这么长时间的vim，发现每次把手挪动那么远去按个esc键非常麻烦，于是就想把esc键位映射成比怎么用的Caps Lock键，而且还比较靠近。</p>
+
+<p>网上查了一下，由于Caps Lock键位是辅助键位，要配合其他键才能有响应，在vim里面用map映射的话貌似有点问题，于是有人想到了在X里面修改。</p>
+
+<p>很简单，在<code>.xprofile</code>里面加上一句：<code>xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'</code>即可，然后<code>source</code>一下<code>.xprofile</code>就可以看到效果了。</p>
+
+<p>同时为了弥补下Cap键消失的影响，可以加个快捷键，用于vim快速将单词变成大写。</p>
+
+<p>在<code>.vimrc</code>中加入一下映射即可。
+<code>inoremap &lt;C-u&gt; &lt;esc&gt;gUiwea</code></p>
+
+<p>引用：
+    <a href="http://blog.csdn.net/lalor/article/details/7437258">http://blog.csdn.net/lalor/article/details/7437258</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[论大四我可以干些什么]]></title>
+    <link href="http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/"/>
+    <updated>2013-09-23T16:39:00+08:00</updated>
+    <id>http://jonathan-li.me/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao</id>
+    <content type="html"><![CDATA[<p>保研的事经过这些天的忙碌终于定下来了，专硕，其实我不读博的话和学硕是没啥差别的，所以也不怎么在意。</p>
+
+<p>不知不觉开学快一个月了，感觉这一个月啥事都没有做，没有心思去做，反倒没有假期在家学习Linux时的那份逍遥，倒是陪室友LOL的不少。</p>
+
+<p>也罢，从现在起认真规划下吧。</p>
+
+<h2>专业方向</h2>
+
+<h3>专业基础知识</h3>
+
+<p>既然选择了读研，那专业的知识必须是要补一补的，说实话，我前几年的专业知识学得并不怎么样，部分基础概念还是不清楚，有必要重新看下专业书。</p>
+
+<!-- more -->
+
+
+<h3>数学</h3>
+
+<p>大一学的数学到现在基本都忘光了，而每次专业课里用到数学知识时就头疼，要想有所作为，数学这个工具必不可少。</p>
+
+<h3>Paper</h3>
+
+<p>多看看专业方向相关的论文，做做笔记，了解专业前沿的知识，并和老师探讨探讨。这一点很重要。</p>
+
+<h2>毕业设计</h2>
+
+<h2>兴趣方向</h2>
+
+<h3>Programming</h3>
+
+<p>可以继续巩固下Java，学习下C在硬件设计方向上的用法，我认为迟早会用到的。</p>
+
+<h3>开源</h3>
+
+<p>继续了解ArchLinux的运行机制，了解Linux系统的维护，必要时学习下Python和bash编程在系统维护的编程。</p>
+
+<p>如果有想法，尽量写几个开源程序，帮忙维护下开源社区，多参加开源活动。</p>
+
+<h3>看书</h3>
+
+<p>买了kindle后，看书的体验好多了，争取每两周看一本书，多做做读书笔记，多看多想。</p>
+
+<h3>语言学习</h3>
+
+<p>巩固下英语的学习，可以坚持每天在kindle上看China Daily，拓展下词汇量。
+喜欢动漫的话自然想要学一下日语，难得有时间，多看看浙大的日语教程，平时多练练。</p>
+
+<h3>吉他</h3>
+
+<p>自从大二买了后一直没有连续的时间来练习，现在应该可以有时间了，纯当消遣。</p>
+
+<h3>轮滑</h3>
+
+<p>忘了我还有双轮滑鞋，没事还可以玩玩。
+暂时就这么多吧，想到再加。</p>
+]]></content>
+  </entry>
   
 </feed>
