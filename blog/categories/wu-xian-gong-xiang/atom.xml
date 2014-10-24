@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 无线共享 | Jonathan's Blog]]></title>
-  <link href="http://minejo.github.io/blog/categories/wu-xian-gong-xiang/atom.xml" rel="self"/>
-  <link href="http://minejo.github.io/"/>
-  <updated>2014-10-22T18:22:16+08:00</updated>
-  <id>http://minejo.github.io/</id>
+  <link href="http://jonathan-li.me/blog/categories/wu-xian-gong-xiang/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-24T15:58:51+08:00</updated>
+  <id>http://jonathan-li.me/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ArchLinux中用Hostapd创建热点给手机使用]]></title>
-    <link href="http://minejo.github.io/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/"/>
+    <link href="http://jonathan-li.me/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong/"/>
     <updated>2013-10-10T11:32:00+08:00</updated>
-    <id>http://minejo.github.io/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong</id>
+    <id>http://jonathan-li.me/blog/2013/10/10/archlinuxzhong-chuang-jian-re-dian-gei-shou-ji-shi-yong</id>
     <content type="html"><![CDATA[<p>折腾了一天，终于把linux的无线共享搞定了，之前总是搞不定是因为hostapd2.0和NetworkManager冲突了，吐嘈无力，
 好不容易从gnome切换到kde，安享NM还没多长时间，没想到又出事了，罢了，只有卸载了NetworkManager了，以后上网就准备转向netctl了。</p>
 

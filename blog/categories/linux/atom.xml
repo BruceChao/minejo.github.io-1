@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: linux | Jonathan's Blog]]></title>
-  <link href="http://minejo.github.io/blog/categories/linux/atom.xml" rel="self"/>
-  <link href="http://minejo.github.io/"/>
-  <updated>2014-10-22T18:22:16+08:00</updated>
-  <id>http://minejo.github.io/</id>
+  <link href="http://jonathan-li.me/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://jonathan-li.me/"/>
+  <updated>2014-10-24T15:58:51+08:00</updated>
+  <id>http://jonathan-li.me/</id>
   <author>
     <name><![CDATA[Jonathan]]></name>
     <email><![CDATA[jonathan.swjtu@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[通过8个技巧让你成为一个超强的Linux终端用户]]></title>
-    <link href="http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks/"/>
+    <link href="http://jonathan-li.me/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks/"/>
     <updated>2014-02-28T16:52:00+08:00</updated>
-    <id>http://minejo.github.io/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks</id>
+    <id>http://jonathan-li.me/blog/2014/02/28/become-a-linux-terminal-power-user-with-these-8-tricks</id>
     <content type="html"><![CDATA[<p><img src="http://cdn.howtogeek.com/wp-content/uploads/2012/03/bash-tricks-header.png" alt="ternimal" /></p>
 
 <p>使用Linux终端不仅仅是只输入命令。学习这些基本的技巧，你就会逐渐掌握Bash shell，这个在大多数Linux发行版上默认使用的终端工具。</p>
@@ -118,9 +118,9 @@
   
   <entry>
     <title type="html"><![CDATA[如何在Linux上提高文本文件的搜索效率]]></title>
-    <link href="http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
+    <link href="http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently/"/>
     <updated>2014-02-26T00:00:00+08:00</updated>
-    <id>http://minejo.github.io/blog/2014/02/26/search-text-files-patterns-efficiently</id>
+    <id>http://jonathan-li.me/blog/2014/02/26/search-text-files-patterns-efficiently</id>
     <content type="html"><![CDATA[<p>对于系统管理员或程序员来说，当需要在复杂配置的目录中或者在大型源码树中搜寻特定的文本或模式时，grep类型的工具大概是最受欢迎的。</p>
 
 <p>如果grep是你最喜欢的工具之一，那么你可能会更喜欢ack。ack是一个基于Perl的类似于grep的命令行工具，但是搜索速度更快，能力比grep更强。尤其是当你是程序员时，我强烈推荐你使用ack来取代grep。
@@ -223,9 +223,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[使用kindle笔记来做fortune名言后的玩法]]></title>
-    <link href="http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
+    <link href="http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan/"/>
     <updated>2014-02-18T14:48:00+08:00</updated>
-    <id>http://minejo.github.io/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
+    <id>http://jonathan-li.me/blog/2014/02/18/shi-yong-kindlebi-ji-lai-zuo-fortuneming-yan</id>
     <content type="html"><![CDATA[<p>kde桌面上有一个fortune插件，可随机显示名言名句，但是默认的都是英文的名句，看了没什么意思，于是我想到用我在kindle上的笔记来做名言显示给自己看，多有意义，又能经常温习之前读过的好书。</p>
 
 <p>首先说下<code>fortune</code>，这是一个随机显示名言名句的linux命令行软件，算是比较简单而又非常有名的Linux程序了,安装相信应该不用我说了。fortune安装好后默认有许多英文名言，如果装了中文包的话可能还有唐诗300首。fortune支持使用自定义文本来做名言。</p>
@@ -330,9 +330,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[我最喜欢的Linux应用]]></title>
-    <link href="http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong/"/>
+    <link href="http://jonathan-li.me/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong/"/>
     <updated>2014-02-16T20:25:00+08:00</updated>
-    <id>http://minejo.github.io/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong</id>
+    <id>http://jonathan-li.me/blog/2014/02/16/wo-zui-xi-huan-de-linuxying-yong</id>
     <content type="html"><![CDATA[<ul>
 <li>发行版：Arch</li>
 <li>桌面环境：KDE</li>
@@ -366,9 +366,9 @@ $ sudo chmod 0755 /usr/local/bin/ack
   
   <entry>
     <title type="html"><![CDATA[解决chromium播放豆瓣fm重影问题]]></title>
-    <link href="http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/"/>
+    <link href="http://jonathan-li.me/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/"/>
     <updated>2014-01-27T12:22:00+08:00</updated>
-    <id>http://minejo.github.io/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti</id>
+    <id>http://jonathan-li.me/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti</id>
     <content type="html"><![CDATA[<p>由于在linux下用惯了chroium，更新快，最适合我们这帮爱折腾的人了。但是chromium放豆瓣fm的时候flash会出问题，即歌名会重影。</p>
 
 <p>去论坛查了下，原来是chromium用的flash版本是11.2,而chrome的flash是11.7，要么换成chrome，要么手动装个高版本flash。</p>
