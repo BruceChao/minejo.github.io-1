@@ -157,19 +157,25 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/</loc>
-    <lastmod>2014-10-24T15:58:51+08:00</lastmod>
+    <lastmod>2014-10-24T16:09:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/blog/archives/</loc>
-    <lastmod>2014-10-24T15:58:51+08:00</lastmod>
+    <lastmod>2014-10-24T16:09:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/blog/categories/</loc>
-    <lastmod>2014-10-24T15:58:51+08:00</lastmod>
+    <lastmod>2014-10-24T16:09:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://jonathan-li.me/about/</loc>
+    <lastmod>2014-10-24T16:09:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -595,7 +601,7 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/wiki/read.html</loc>
-    <lastmod>2014-10-24T15:58:07+08:00</lastmod>
+    <lastmod>2014-10-24T16:01:59+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -645,7 +651,7 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/wiki/plan.html</loc>
-    <lastmod>2014-10-24T15:58:07+08:00</lastmod>
+    <lastmod>2014-10-24T16:02:49+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
