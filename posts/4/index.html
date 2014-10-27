@@ -9,7 +9,9 @@
 	<meta name="author" content="Jonathan">
 
 	
-	<meta name="description" content="octopress Comments 使用Github+Octopress做Blog 虽然用octopress+github做博客的教程网上已经有很多的了，但还是抽空写下吧，一是加深对这个机制的理解，而是练习下markdown语法. 好啦，废话不说，开始。 安装git以及相关配置 &hellip;">
+	<meta name="description" content="github Comments Linux下SSH到Github 本来不想写这篇的，但由于之前ssh到github的时候费了好多劲，
+还是mark一下吧，作为以后的参考 Step1: 检查已有的Key 1
+2 $ cd ~/.ssh $ ls 如果有id_rsa.pub， &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -128,6 +130,73 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T17:17:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/github/'>github</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/08/09/linuxxia-sshdao-github/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/08/09/linuxxia-sshdao-github/" itemprop="url">Linux下SSH到Github</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>本来不想写这篇的，但由于之前ssh到github的时候费了好多劲，
+还是mark一下吧，作为以后的参考</p>
+
+<h2>Step1: 检查已有的Key</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
+</span><span class='line'>    <span class="nv">$ </span>ls
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果有id_rsa.pub，说明已经生成了keypair了，直接去Step3</p>
+
+<h2>Step2：生成新的SSH Key</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span>ssh-keygen -t rsa -C <span class="s2">&quot;your_email@example.com&quot;</span>
+</span><span class='line'>    Generating public/private rsa key pair.
+</span><span class='line'>    Enter file in which to save the key <span class="o">(</span>/home/you/.ssh/id_rsa<span class="o">)</span>:
+</span><span class='line'>    Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: <span class="o">[</span>Type a passphrase<span class="o">]</span>
+</span><span class='line'>    Enter same passphrase again: <span class="o">[</span>Type passphrase again<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>passphrase就相当如密码一样。</p>
+
+
+		
+		<a href="/blog/2013/08/09/linuxxia-sshdao-github/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">

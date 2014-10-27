@@ -9,7 +9,7 @@
 	<meta name="author" content="Jonathan">
 
 	
-	<meta name="description" content="life Comments 保研之事尘埃落，继续努力 今天是个特殊的日子，so需要mark一下。 去了趟校医院，屁股挨了一针 玫瑰糠疹终于还是把我搞的痒的睡不着了，忍无可忍的我只有去看doctor了，结果去校医院，又和往常一样，屁股挨针了，明后天还要去。 不过今天给我打针的医生明显技术不一样啊， &hellip;">
+	<meta name="description" content="life Comments 论大四我可以干些什么 保研的事经过这些天的忙碌终于定下来了，专硕，其实我不读博的话和学硕是没啥差别的，所以也不怎么在意。 不知不觉开学快一个月了，感觉这一个月啥事都没有做，没有心思去做，反倒没有假期在家学习Linux时的那份逍遥，倒是陪室友LOL的不少。 也罢， &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -128,6 +128,54 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-23T16:39:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/life/'>life</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/" itemprop="url">论大四我可以干些什么</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>保研的事经过这些天的忙碌终于定下来了，专硕，其实我不读博的话和学硕是没啥差别的，所以也不怎么在意。</p>
+
+<p>不知不觉开学快一个月了，感觉这一个月啥事都没有做，没有心思去做，反倒没有假期在家学习Linux时的那份逍遥，倒是陪室友LOL的不少。</p>
+
+<p>也罢，从现在起认真规划下吧。</p>
+
+<h2>专业方向</h2>
+
+<h3>专业基础知识</h3>
+
+<p>既然选择了读研，那专业的知识必须是要补一补的，说实话，我前几年的专业知识学得并不怎么样，部分基础概念还是不清楚，有必要重新看下专业书。</p>
+
+
+		
+		<a href="/blog/2013/09/23/lun-da-si-wo-ke-yi-gan-xie-shi-yao/" class="more-link">Read on &rarr;</a>
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -710,73 +758,6 @@ fcitx-diagnose</code>检测，该工具会给出所有可能出错的原因。</
 
 		
 		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-09T17:17:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/github/'>github</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/08/09/linuxxia-sshdao-github/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/08/09/linuxxia-sshdao-github/" itemprop="url">Linux下SSH到Github</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>本来不想写这篇的，但由于之前ssh到github的时候费了好多劲，
-还是mark一下吧，作为以后的参考</p>
-
-<h2>Step1: 检查已有的Key</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
-</span><span class='line'>    <span class="nv">$ </span>ls
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果有id_rsa.pub，说明已经生成了keypair了，直接去Step3</p>
-
-<h2>Step2：生成新的SSH Key</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nv">$ </span>ssh-keygen -t rsa -C <span class="s2">&quot;your_email@example.com&quot;</span>
-</span><span class='line'>    Generating public/private rsa key pair.
-</span><span class='line'>    Enter file in which to save the key <span class="o">(</span>/home/you/.ssh/id_rsa<span class="o">)</span>:
-</span><span class='line'>    Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>: <span class="o">[</span>Type a passphrase<span class="o">]</span>
-</span><span class='line'>    Enter same passphrase again: <span class="o">[</span>Type passphrase again<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>passphrase就相当如密码一样。</p>
-
-
-		
-		<a href="/blog/2013/08/09/linuxxia-sshdao-github/" class="more-link">Read on &rarr;</a>
 	</div>
 
 </article>

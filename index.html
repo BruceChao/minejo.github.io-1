@@ -9,7 +9,7 @@
 	<meta name="author" content="Jonathan">
 
 	
-	<meta name="description" content="reading Comments 《陆犯焉识》读书笔记 要是他跑到婉喻面前，跟她说，我和你发生了一场误会……也许我跟自己发生了一场误会；我爱的，却认为不爱。一代代的小说家戏剧家苦苦地写了那么多，就是让我们人能了解自己，而我们人还是这么不了解自己。一定要倾国倾城，一定要来一场灭顶之灾， &hellip;">
+	<meta name="description" content="python Comments 用python导入Excel数据到Sqlite 由于学校里面经常需要统计各类的学生信息，每次统计的时候都要上交Excel表格，但是面对众多的Excel表格，想要找到某个确切的信息却又不是那么容易，因而当下次需要某些学生信息时，又要再去找班长统计， &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -128,6 +128,115 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-26T14:19:03+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/python/'>python</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/10/26/using-python-to-import-data-from-excel-to-sqlite/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/10/26/using-python-to-import-data-from-excel-to-sqlite/" itemprop="url">用python导入Excel数据到Sqlite</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>由于学校里面经常需要统计各类的学生信息，每次统计的时候都要上交Excel表格，但是面对众多的Excel表格，想要找到某个确切的信息却又不是那么容易，因而当下次需要某些学生信息时，又要再去找班长统计，这无疑找成了很多信息冗余和步骤的繁琐，于是我便想写一个Python脚本把Excel的数据导入到数据库中，方便以后的查找。</p>
+
+<p>由于数据量不是那么大，而且不考虑安全性的话，轻量级的sqlite数据库是个很不错的选择。选择python写脚本的原因是因为python的第三方的操作excel的库比较完善，可以省下很多coding时间。</p>
+
+<p>一个示例的excel表格如下：</p>
+
+<p><img src="/images/excel_example_10_26.png" title="Excel表格示例" ></p>
+
+<p>首先需要考虑的是Excel中有哪些数据，由于并不是所有数据都需要导入的，e.g.图中的序号就不需要导入数据库。</p>
+
+<p>需要导入的excel有如下：</p>
+
+<p><img src="/images/stuinfo_10_26.png"></p>
+
+<p>脚本如下：</p>
+
+<div><script src='https://gist.github.com/db988db33aab5cae995c.js'></script>
+<noscript><pre><code>#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+###   Author: Jonathan Li&lt;jonathan.swjtu@gmail.com&gt;  ###
+import xlrd
+import sqlite3
+import xdrlib,sys
+import os
+
+def main():
+    sqlfile = &quot;yoinfo.db&quot;
+    con = sqlite3.connect(sqlfile)
+    c = con.cursor()
+    createsql = &quot;&quot;&quot;create table yoinfo(
+        class integer, 
+        stunum integer,
+        name text,
+        major text,
+        field text,
+        gender text,
+        boss text)&quot;&quot;&quot;
+    c.execute(createsql)
+#需要批量导入的excel的目录中的文件列表
+    listfile = os.listdir(&quot;/home/li/Documents/stuinfo&quot;)
+    for file in listfile:
+        #依次导入每个excel文件的数据
+        edata = xlrd.open_workbook(os.path.join(&#39;/home/li/Documents/stuinfo&#39;,file))
+        #使用excel的第一个sheet
+        table = edata.sheets()[0]
+        nrow = table.nrows
+        n = 1
+        while n &lt; nrow:
+            rowdata = table.row_values(n)
+            #删除第一列的序号
+            del rowdata[0]
+            n = n + 1
+            c.execute(&#39;insert into yoinfo values (?,?,?,?,?,?,?)&#39;, rowdata)
+    con.commit()
+    c.close()
+
+if __name__==&quot;__main__&quot;:
+    main()</code></pre></noscript></div>
+
+
+<p><em>NOTE</em>:</p>
+
+<p>如果需要在android中使用该数据库，还需要在数据库中添加一个叫做android_metadata的表，命令行添加方式如下：</p>
+
+<pre><code>CREATE TABLE "android_metadata" ("locale" TEXT DEFAULT 'en_US');
+INSERT INTO "android_metadata" VALUES ('en_US')
+</code></pre>
+
+<p>同时，还需要将其他每个表中的primary id改成_id，以便Android知道如何绑定表中的id字段。</p>
+
+<p><img src="http://d3t8ulfz0ha99x.cloudfront.net/wp-content/uploads/2009/03/sqlite_browser1.png" alt="example" /></p>
+
+<blockquote><p><a href="http://www.reigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/">Using your own SQLite database in Android applications</a></p></blockquote>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -603,61 +712,6 @@ ack的用法非常适用与代码搜索，因此程序员可以在源码树中�
 
 		
 		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-10T22:32:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/exercises/'>exercises</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2014/01/10/exercises-for-the-muscle/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2014/01/10/exercises-for-the-muscle/" itemprop="url">Exercises for the Muscle</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>按照视频《8分钟给你6块腹肌》练了一周后，我发现效果真的好不错，而且睡觉还更香了，锻炼身体什么的果然有益啊。</p>
-
-<p>今天练完后顺便去原视频发布的网站上逛了下，<a href="http://www.passion4profession.net/">http://www.passion4profession.net/</a> ,really nice website，顺便注册了下，同时找了下锻炼Pectoral, Biceps and Triceps的方法，直接附youtube视频如下，mark下,勤加练习。</p>
-
-<h1>Push Up</h1>
-
-<p>Separate your legs slightly. Place your hands in a vertical line from your shoulders. Arms half bent. Lower yourself until you barely touch the ground with your chest and then return to the starting position.</p>
-
-<p>Instructions:</p>
-
-<p>Separate your legs slightly. Place your hands in a vertical line from your shoulders. Arms half bent. Lower yourself until you barely touch the ground with your chest and then return to the starting position.</p>
-
-<p>Video:</p>
-
-<object width="640" height="385"><param name="movie" value="http://www.youtube.com/v/BbDcMfu-i4w?fs=1&amp;hl=it_IT&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/BbDcMfu-i4w?fs=1&amp;hl=it_IT&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
-
-
-
-
-
-		
-		<a href="/blog/2014/01/10/exercises-for-the-muscle/" class="more-link">Read on &rarr;</a>
 	</div>
 
 </article>
