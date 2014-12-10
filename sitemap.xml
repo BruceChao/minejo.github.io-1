@@ -162,25 +162,25 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/</loc>
-    <lastmod>2014-12-04T13:31:02+08:00</lastmod>
+    <lastmod>2014-12-10T20:05:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/blog/archives/</loc>
-    <lastmod>2014-12-04T13:31:02+08:00</lastmod>
+    <lastmod>2014-12-10T20:05:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/blog/categories/</loc>
-    <lastmod>2014-12-04T13:31:02+08:00</lastmod>
+    <lastmod>2014-12-10T20:05:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/about/</loc>
-    <lastmod>2014-12-04T13:31:02+08:00</lastmod>
+    <lastmod>2014-12-10T20:05:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -221,7 +221,7 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/wiki/index.html</loc>
-    <lastmod>2014-11-19T22:39:12+08:00</lastmod>
+    <lastmod>2014-12-10T19:45:41+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -245,6 +245,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>http://jonathan-li.me/wiki/2014winterread.html</loc>
+    <lastmod>2014-12-10T20:05:28+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>http://jonathan-li.me/wiki/vimplugin-nerdtree.html</loc>
     <lastmod>2014-10-24T15:58:09+08:00</lastmod>
     <priority>0.6</priority>
@@ -256,7 +261,7 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/wiki/2014autumnread.html</loc>
-    <lastmod>2014-10-24T15:57:55+08:00</lastmod>
+    <lastmod>2014-12-10T20:05:23+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -611,7 +616,7 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/wiki/read.html</loc>
-    <lastmod>2014-12-04T13:17:10+08:00</lastmod>
+    <lastmod>2014-12-10T20:03:50+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
