@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jonathan-li.me/blog/2015/01/20/travelling-to-guzheng-before-2015-spring-festival/</loc>
+    <lastmod>2015-01-20T21:41:14+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://jonathan-li.me/blog/2014/10/26/using-python-to-import-data-from-excel-to-sqlite/</loc>
     <lastmod>2014-10-26T14:19:03+08:00</lastmod>
     <priority>0.8</priority>
@@ -162,25 +167,25 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/</loc>
-    <lastmod>2015-01-09T22:13:57+08:00</lastmod>
+    <lastmod>2015-01-20T22:24:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/blog/archives/</loc>
-    <lastmod>2015-01-09T22:13:57+08:00</lastmod>
+    <lastmod>2015-01-20T22:24:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/blog/categories/</loc>
-    <lastmod>2015-01-09T22:13:57+08:00</lastmod>
+    <lastmod>2015-01-20T22:24:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://jonathan-li.me/about/</loc>
-    <lastmod>2015-01-09T22:13:57+08:00</lastmod>
+    <lastmod>2015-01-20T22:24:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -246,7 +251,7 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/wiki/2014winterread.html</loc>
-    <lastmod>2014-12-29T13:18:16+08:00</lastmod>
+    <lastmod>2015-01-17T17:22:02+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -621,7 +626,7 @@
   </url>
   <url>
     <loc>http://jonathan-li.me/wiki/read.html</loc>
-    <lastmod>2014-12-29T13:20:13+08:00</lastmod>
+    <lastmod>2015-01-17T17:24:32+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -657,6 +662,11 @@
   <url>
     <loc>http://jonathan-li.me/wiki/gimp.html</loc>
     <lastmod>2014-10-24T15:58:03+08:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://jonathan-li.me/wiki/2015firstthreemonthread.html</loc>
+    <lastmod>2015-01-17T17:25:46+08:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>

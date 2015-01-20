@@ -9,9 +9,7 @@
 	<meta name="author" content="Jonathan">
 
 	
-	<meta name="description" content="github Comments Linux下SSH到Github 本来不想写这篇的，但由于之前ssh到github的时候费了好多劲，
-还是mark一下吧，作为以后的参考 Step1: 检查已有的Key 1
-2 $ cd ~/.ssh $ ls 如果有id_rsa.pub， &hellip;">
+	<meta name="description" content="octopress Comments Octopress添加相册功能 给博客加个相册是个梦寐以求的功能了，之前在Wordpress上的相册功能不够满意，太臃肿了，自定义性不强，转到Octopress后发现自定义太强了，相册功能反而不知从何下手，索性今天找到了这个插件FancyBox. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -130,6 +128,151 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T20:42:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/octopress/'>octopress</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2013/08/09/octopresstian-jia-xiang-ce-gong-neng/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/08/09/octopresstian-jia-xiang-ce-gong-neng/" itemprop="url">Octopress添加相册功能</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>给博客加个相册是个梦寐以求的功能了，之前在Wordpress上的相册功能不够满意，太臃肿了，自定义性不强，转到Octopress后发现自定义太强了，相册功能反而不知从何下手，索性今天找到了这个插件<a href="http://fancyapps.com/fancybox/#license">FancyBox</a>.</p>
+
+<p>FanyBox主要用于在网站上显示相册，而且有好多种特效，我只用了最简单的那种特效，感觉还可以，就懒得再折腾了（时间拙急啊），各位感兴趣的话可以下载demo去自己研究下。</p>
+
+<p><img src="/images/usegallery.png"></p>
+
+<p>现在开始修改这个插件，使之适用于octopress</p>
+
+<h3>修改导航栏</h3>
+
+<p>修改<code>/source/_includes/costom/navigation.html</code></p>
+
+<p>根据上下文加一个列：
+   <code>&lt;li&gt;&lt;a href="/blog/gallery"&gt;Gallery&lt;/a&gt;&lt;/li&gt;</code></p>
+
+<h3>导入插件文件</h3>
+
+<p>把解压后的文件夹<code>lib</code>,<code>source</code>还有demo里的文件复制到<code>/source/blog/gallery</code>中</p>
+
+<h3>修改index.html</h3>
+
+<p>选择你要的样式，其他的样式可以全部删掉，我的<a href="https://github.com/minejo/minejo.github.io/blob/master/blog/gallery/index.html">index.html</a></p>
+
+<p>然后把<code>&lt;html&gt;</code>,<code>&lt;body&gt;</code>,<code>&lt;head&gt;</code>等独立标签去掉，在第一行加上：
+    &mdash;
+    layout: page
+    title: Gallery
+    footer: false
+    &mdash;</p>
+
+<p>使相册嵌入到网站中。</p>
+
+<h3>添加图片缩放JS</h3>
+
+<figure class='code'><figcaption><span>change picture size function </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">function</span> <span class="nx">AutoResizeImage</span><span class="p">(</span><span class="nx">maxWidth</span><span class="p">,</span> <span class="nx">maxHeight</span><span class="p">,</span> <span class="nx">objImg</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">objImg</span><span class="p">.</span><span class="nx">src</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">hRatio</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">wRatio</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">Ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">wRatio</span> <span class="o">=</span> <span class="nx">maxWidth</span> <span class="o">/</span> <span class="nx">w</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">hRatio</span> <span class="o">=</span> <span class="nx">maxHeight</span> <span class="o">/</span> <span class="nx">h</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">maxHeight</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">Ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">maxWidth</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">hRatio</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>          <span class="nx">Ratio</span> <span class="o">=</span> <span class="nx">hRatio</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">maxHeight</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">wRatio</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>          <span class="nx">Ratio</span> <span class="o">=</span> <span class="nx">wRatio</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">wRatio</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">hRatio</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">Ratio</span> <span class="o">=</span> <span class="p">(</span><span class="nx">wRatio</span> <span class="o">&lt;=</span> <span class="nx">hRatio</span> <span class="o">?</span> <span class="nx">wRatio</span> <span class="o">:</span> <span class="nx">hRatio</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">Ratio</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">w</span> <span class="o">=</span> <span class="nx">w</span> <span class="o">*</span> <span class="nx">Ratio</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">h</span> <span class="o">=</span> <span class="nx">h</span> <span class="o">*</span> <span class="nx">Ratio</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nx">objImg</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">h</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">objImg</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">w</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后在图片属性中加入<code>onload="AutoResizeImage(250,0,this)"</code>，长宽自己定即可。</p>
+
+<h3>Tips</h3>
+
+<p>至于添加图片，我在gallery下建了不同的分类，用于放不同类别的图片，然后在index中编辑来源，至于框架展示和美观就要靠你的css和html功底了。</p>
+
+<p>搞定了。</p>
+
+<p>感谢Zhao, Xuhai同学的博文。</p>
+
+<p>引用：</p>
+
+<blockquote><p><a href="http://seagg.github.io/blog/2012/09/06/support-gallery/">向Octopress博客添加相册功能</a></p>
+
+<p><a href="http://www.qianyunlai.com/post-397.html">JS控制图片显示的大小（图片等比例缩放)</a></p></blockquote>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">

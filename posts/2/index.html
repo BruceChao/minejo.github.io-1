@@ -9,7 +9,7 @@
 	<meta name="author" content="Jonathan">
 
 	
-	<meta name="description" content="exercises Comments Exercises for the Muscle 按照视频《8分钟给你6块腹肌》练了一周后，我发现效果真的好不错，而且睡觉还更香了，锻炼身体什么的果然有益啊。 今天练完后顺便去原视频发布的网站上逛了下，http://www. &hellip;">
+	<meta name="description" content="linux Comments 解决chromium播放豆瓣fm重影问题 由于在linux下用惯了chroium，更新快，最适合我们这帮爱折腾的人了。但是chromium放豆瓣fm的时候flash会出问题，即歌名会重影。 去论坛查了下，原来是chromium用的flash版本是11.2, &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -128,6 +128,49 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-27T12:22:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/linux/'>linux</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2014/01/27/jie-jue-chromiumbo-fang-dou-ban-fmzhong-ying-wen-ti/" itemprop="url">解决chromium播放豆瓣fm重影问题</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>由于在linux下用惯了chroium，更新快，最适合我们这帮爱折腾的人了。但是chromium放豆瓣fm的时候flash会出问题，即歌名会重影。</p>
+
+<p>去论坛查了下，原来是chromium用的flash版本是11.2,而chrome的flash是11.7，要么换成chrome，要么手动装个高版本flash。</p>
+
+<p>还有aur社区有人想到了，发布了AUR/chromium-pepper-flash，自行装上这个，装完之后在chroium的chrome://plugins/的页面，点下detail，然后找到所有和flash有关的item，除了第一个，其他都给禁了就可以了。</p>
+
+<p>mark一下。</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -599,55 +642,6 @@
 <p><code>find . -iname "*.mp3" -execdir mid3iconv -e gbk {}\;</code></p>
 
 <p>这样就搞定了。</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-26T17:23:00+08:00" data-updated="true" itemprop="datePublished"></time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/vim/'>vim</a>
-
-
-</div>
-		
-			<span class="comments"><a href="/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/#disqus_thread">Comments</a></span>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/09/26/xiu-gai-vim-escjian-de-ying-she/" itemprop="url">修改VIM ESC键的映射</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>用了这么长时间的vim，发现每次把手挪动那么远去按个esc键非常麻烦，于是就想把esc键位映射成比怎么用的Caps Lock键，而且还比较靠近。</p>
-
-<p>网上查了一下，由于Caps Lock键位是辅助键位，要配合其他键才能有响应，在vim里面用map映射的话貌似有点问题，于是有人想到了在X里面修改。</p>
-
-<p>很简单，在<code>.xprofile</code>里面加上一句：<code>xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'</code>即可，然后<code>source</code>一下<code>.xprofile</code>就可以看到效果了。</p>
-
-<p>同时为了弥补下Cap键消失的影响，可以加个快捷键，用于vim快速将单词变成大写。</p>
-
-<p>在<code>.vimrc</code>中加入一下映射即可。
-<code>inoremap &lt;C-u&gt; &lt;esc&gt;gUiwea</code></p>
-
-<p>引用：
-    <a href="http://blog.csdn.net/lalor/article/details/7437258">http://blog.csdn.net/lalor/article/details/7437258</a></p>
 
 		
 		
